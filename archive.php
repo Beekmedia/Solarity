@@ -61,7 +61,7 @@
 
                 <section class="entry-content cf">
 
-                  <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+                  <?php the_post_thumbnail( 'solarity-thumb-300' ); ?>
 
                   <?php the_excerpt(); ?>
 
@@ -75,7 +75,7 @@
 
               <?php endwhile; ?>
 
-                  <?php bones_page_navi(); ?>
+                  <?php solarity_page_navi(); ?>
 
               <?php else : ?>
 
