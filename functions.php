@@ -1,7 +1,7 @@
 <?php
 /*
-Author: Eddie Machado
-URL: http://themble.com/bones/
+Author: Ben Beekman
+URL: http://benbeekman.com
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
@@ -25,10 +25,10 @@ function solarity_ahoy() {
 	add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
 	// let's get language support going, if you need it
-	load_theme_textdomain( 'solarity', get_template_directory() . '/library/translation' );
+	//load_theme_textdomain( 'solarity', get_template_directory() . '/library/translation' );
 
 	// USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-	require_once( 'library/custom-post-type.php' );
+	//require_once( 'library/custom-post-type.php' );
 
 	// launching operation cleanup
 	add_action( 'init', 'solarity_head_cleanup' );

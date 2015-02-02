@@ -7,7 +7,7 @@ It's turned off by default, but you can call it
 via the functions file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/bones/
+URL: http://benbeekman.com
 
 Special Thanks for code & inspiration to:
 @jackmcconnell - http://www.voltronik.co.uk/

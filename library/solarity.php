@@ -6,7 +6,7 @@ any custom functions, it's best to put them
 in the functions.php file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/bones/
+URL: http://benbeekman.com
 
 	- head cleanup (remove rsd, uri links, junk css, ect)
 	- enqueueing scripts & styles
