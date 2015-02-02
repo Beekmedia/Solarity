@@ -144,8 +144,8 @@ function solarity_theme_customizer($wp_customize) {
 	// $wp_customize->remove_control('blogdescription');
 
 	// Uncomment the following to change the default section titles
-	// $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
-	// $wp_customize->get_section('background_image')->title = __( 'Images' );
+	$wp_customize->get_section('colors')->title = __( 'Theme Colors' );
+	$wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
 add_action( 'customize_register', 'solarity_theme_customizer' );
@@ -164,28 +164,18 @@ function solarity_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
 	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'solarity' ),
-		'description' => __( 'The second (secondary) sidebar.', 'solarity' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'id' => 'banner',
+		'name' => __( 'Banner Sidebar', 'solarity' ),
+		'description' => __( 'The banner sidebar.', 'solarity' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 	));
 
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
+	/*
+	Reference the banner sidebar with sidebar-banner.php
 
 	*/
 } // don't remove this bracket!
@@ -239,7 +229,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function solarity_fonts() {
-	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Signika:400,700,400italic,700italic');
 }
 
 add_action('wp_enqueue_scripts', 'solarity_fonts');
