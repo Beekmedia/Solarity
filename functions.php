@@ -73,35 +73,27 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'solarity-thumb-600', 600, 150, true );
-add_image_size( 'solarity-thumb-300', 300, 100, true );
+	add_image_size( 'landscape-large', 1200, 300, true );
+	add_image_size( 'landscape-med', 600, 200, true );
+	add_image_size( 'landscape-small', 300, 100, true );
 
-/*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
+	add_image_size( 'portrait-large', 600, 1000, true );
+	add_image_size( 'portrait-med', 300, 500, true );
+	add_image_size( 'portrait-small', 150, 250, true );
 
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 100 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'solarity-thumb-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'solarity-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
+	add_image_size( 'icon', 72, 72, true );
 
 add_filter( 'image_size_names_choose', 'solarity_custom_image_sizes' );
 
 function solarity_custom_image_sizes( $sizes ) {
 		return array_merge( $sizes, array(
-				'solarity-thumb-600' => __('600px by 150px'),
-				'solarity-thumb-300' => __('300px by 100px'),
+				'landscape-large' => __('1200px by 300px'),
+				'landscape-med' => __('600px by 150px'),
+				'landscape-small' => __('300px by 100px'),
+				'portrait-large' => __('600px by 1000px'),
+				'portrait-med' => __('300px by 500px'),
+				'portrait-small' => __('150px by 250px'),
+				'icon' => __('72px by 72px')
 		) );
 }
 
@@ -165,9 +157,19 @@ function solarity_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'banner',
-		'name' => __( 'Banner Sidebar', 'solarity' ),
-		'description' => __( 'The banner sidebar.', 'solarity' ),
+		'id' => 'blog',
+		'name' => __( 'Blog Sidebar', 'solarity' ),
+		'description' => __( 'The blog sidebar.', 'solarity' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+
+	register_sidebar(array(
+		'id' => 'single',
+		'name' => __( 'Single Sidebar', 'solarity' ),
+		'description' => __( 'The single post sidebar.', 'solarity' ),
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '',
@@ -229,7 +231,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function solarity_fonts() {
-	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Signika:400,700,400italic,700italic');
+	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
 }
 
 add_action('wp_enqueue_scripts', 'solarity_fonts');

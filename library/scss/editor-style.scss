@@ -32,11 +32,11 @@ body#tinymce.wp-editor {
 	@import "partials/mixins";
 
 	width: 731px;
-	font-family: $signika;
+	font-family: $droidsans;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-  -webkit-font-smoothing: antialiased;
+  	-webkit-font-smoothing: antialiased;
 
   /*********************
 	LINK STYLES

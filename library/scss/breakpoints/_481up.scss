@@ -21,17 +21,29 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
-
+/* at this larger size, we can start to align images */
+.alignleft, img.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright, img.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+}
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
-.nav {}
+.nav {
 
 	/* .menu is clearfixed inside mixins.scss */
-	.menu {
-		ul {
 			li {
 				a {
 
@@ -40,7 +52,7 @@ NAVIGATION STYLES
 					has the possibility of being a mobile device.
 					*/
 					&:hover, &:focus {
-
+					color: $black;
 					}
 				}
 
@@ -70,7 +82,6 @@ NAVIGATION STYLES
 			li.current_page_ancestor {
 				a {}
 			}  /* end current highlighters */
-		} /* end .menu ul */
 	} /* end .menu */
 
 /*********************
@@ -100,6 +111,8 @@ POSTS & CONTENT STYLES
 	}
 
 } /* end .entry-content */
+
+
 
 /*********************
 FOOTER STYLES

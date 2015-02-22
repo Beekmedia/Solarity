@@ -18,12 +18,11 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-
-				</div>
-
-			</footer>
-
+					<?php #echo '<p class="source-org copyright">&copy; ';
+					#echo date('Y');
+					#bloginfo( 'name' );
+					#echo '.</p> ';
+					?>
 		</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>

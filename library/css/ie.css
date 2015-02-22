@@ -183,25 +183,40 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
+/* at this larger size, we can start to align images */
+.alignleft, img.alignleft {
+  display: inline;
+  float: left; }
+
+.alignright, img.alignright {
+  display: inline;
+  float: right; }
+
+.aligncenter, img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
+.nav {
+  /* .menu is clearfixed inside mixins.scss */
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  .nav li {
+    /*
+    plan your menus and drop-downs wisely.
+    */ }
+    .nav li a {
       /*
-      plan your menus and drop-downs wisely.
+      you can use hover styles here even though this size
+      has the possibility of being a mobile device.
       */ }
-      .menu ul li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
+      .nav li a:hover, .nav li a:focus {
+        color: #323944; }
 
 /* end .menu */
 /*********************
@@ -258,6 +273,12 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.logo-wrap {
+  float: left; }
+
+.top-nav {
+  margin-top: 0.25rem; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -283,8 +304,8 @@ NAVIGATION STYLES
       has the possibility of being a mobile device.
       */ }
       .nav li a:hover, .nav li a:focus {
-        color: white;
-        text-decoration: underline; }
+        color: #323943;
+        text-decoration: none; }
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;

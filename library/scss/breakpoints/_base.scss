@@ -10,19 +10,19 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+#gallery-1 {clear:left;}
 
 /*********************
 GENERAL STYLES
 *********************/
 
 body {
-	font-family: $signika;
+	font-family: $droidsans;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
-	background-color: $gray;
-  	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+	color: $text-grey;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /********************
@@ -152,17 +152,21 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
+.slogan {
+	color: black(0.6);
+
+}
 .header {
-	background-color: $black;
+	background-color: white(0.65);
 }
 
-	#logo {
-		margin: 0.75em 0;
+#logo {
+	margin: 0.25rem 0 0 0;
 
-		a {
-			color: $white;
-		}
+	a {
+		color: $black;
 	}
+}
 
 /*********************
 NAVIGATION STYLES
@@ -175,6 +179,13 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+.logo-wrap{
+	padding: 0 0.75em 0 0.75em;
+}
+
+.top-nav {
+	font-size: 1.4rem;
+}
 
 .nav {
 	border-bottom: 0;
@@ -182,9 +193,10 @@ and more scalable.
 
 	li {
 
+
 		a {
 			display: block;
-			color: $white;
+			color: darken($meta-gray,25%);
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -250,25 +262,30 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+#container {background-color: rgba(0, 0, 0, 0.5);}
 
-#content {
-	margin-top: 1.5em;
+#container article {
+	margin: 1rem;
+	padding: 0 1rem;
 }
-
-		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+#content {
+	 // margin:1rem 0 0 1rem;
+	}
+	.gallery-item img {height:auto;}
+	.hentry {
+		background-color: transparent;
+		border-radius: 3px;
+		margin-bottom: 1.5em;
+			// border: 1px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
+				// border-bottom: 1px solid $light-gray;
 				padding: 1.5em;
 			}
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+				// border-top: 1px solid $light-gray;
 
 				p {
 					margin: 0;
@@ -440,7 +457,7 @@ POSTS & CONTENT STYLES
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
+			// background: #eee;
 			padding: 5px;
 
 			/* images inside wp-caption */
@@ -496,54 +513,54 @@ PAGE NAVI STYLES
 .wp-prev-next {
 	margin: 1.5em 0;
 }
-	.pagination{
-    text-align: center;
+.pagination{
+	text-align: center;
 
-    ul {
-      display: inline-block;
-      background-color: $white;
-      white-space: nowrap;
-      padding: 0;
-      clear: both;
-      border-radius: 3px;
-    }
+	ul {
+		display: inline-block;
+		background-color: $white;
+		white-space: nowrap;
+		padding: 0;
+		clear: both;
+		border-radius: 3px;
+	}
 
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      display: inline;
-      overflow: hidden;
-      border-right: 1px solid $gray;
-    }
+	li {
+		padding: 0;
+		margin: 0;
+		float: left;
+		display: inline;
+		overflow: hidden;
+		border-right: 1px solid $gray;
+	}
 
-    a, span {
-      margin: 0;
-      text-decoration: none;
-      padding: 0;
-      line-height: 1em;
-      font-size: 1em;
-      font-weight: normal;
-      padding: 0.75em;
-      min-width: 1em;
-      display: block;
-      color: $blue;
+	a, span {
+		margin: 0;
+		text-decoration: none;
+		padding: 0;
+		line-height: 1em;
+		font-size: 1em;
+		font-weight: normal;
+		padding: 0.75em;
+		min-width: 1em;
+		display: block;
+		color: $blue;
 
-      &:hover, &:focus {
-      	background-color: $blue;
-      	color: $white;
-      }
-    }
+		&:hover, &:focus {
+			background-color: $blue;
+			color: $white;
+		}
+	}
 
-    .current{
-    	cursor: default;
-    	color: $text-color;
+	.current{
+		cursor: default;
+		color: $text-color;
 
-    	&:hover, &:focus {
-    		background-color: $white;
-    		color: $text-color;
-    	}
-    }
+		&:hover, &:focus {
+			background-color: $white;
+			color: $text-color;
+		}
+	}
 
   } /* end .solarity_
 
@@ -766,29 +783,29 @@ COMMENT FORM STYLES
 	border-top: 1px solid $light-gray;
 }
 
-	#reply-title {
-		margin: 0;
-	}
+#reply-title {
+	margin: 0;
+}
 
-	.logged-in-as {
-		color: $meta-gray;
-		font-style: italic;
-		margin: 0;
+.logged-in-as {
+	color: $meta-gray;
+	font-style: italic;
+	margin: 0;
 
-		a {
-			color: $text-color;
-		}
+	a {
+		color: $text-color;
 	}
+}
 
-	.comment-form-comment {
-		margin: 1.5em 0 0.75em;
-	}
+.comment-form-comment {
+	margin: 1.5em 0 0.75em;
+}
 
-	.form-allowed-tags {
-		padding: 1.5em;
-		background-color: $light-gray;
-		font-size: 0.9em;
-	}
+.form-allowed-tags {
+	padding: 1.5em;
+	background-color: $light-gray;
+	font-size: 0.9em;
+}
 
 	/* comment submit button */
 	#submit {
@@ -826,19 +843,19 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
-	.widgettitle {}
+.widgettitle {}
 
-	.widget {
+.widget {
 
-		ul {
+	ul {
 
-			li {
+		li {
 
-				&:first-child {}
+			&:first-child {}
 
-				&:last-child {}
+			&:last-child {}
 
-				a {}
+			a {}
 
 				/* deep nesting */
 				ul {}
@@ -850,10 +867,10 @@ SIDEBARS & ASIDES
 	}
 
 	.no-widgets {
-		background-color: $white;
+		// background-color: $white;
 		padding: 1.5em;
 		text-align: center;
-		border: 1px solid $border-color;
+		// border: 1px solid $border-color;
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
@@ -864,7 +881,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+	background-color: $ghost-white;
 	color: $light-gray;
 }
 
@@ -889,3 +906,21 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+	.qtrans_language_chooser li {float:left;}
+
+//gallery acf additions
+//location map
+.acf-map {
+	max-width: 100%;
+	width: 100%;
+	height: 300px;
+	border: $light-gray solid 2px;
+	margin: 1rem 0;
+}
+
+.gm-style .gm-style-iw {
+    color: black;
+    font-size: 13px;
+    font-weight: 300;
+}
