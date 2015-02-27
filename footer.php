@@ -2,7 +2,7 @@
 
 				<div id="inner-footer" class="wrap cf">
 
-					<nav role="navigation">
+					<nav role="navigation" class="nav">
 						<?php wp_nav_menu(array(
 							'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
 							'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
@@ -18,15 +18,14 @@
 						)); ?>
 					</nav>
 
-					<?php #echo '<p class="source-org copyright">&copy; ';
-					#echo date('Y');
-					#bloginfo( 'name' );
-					#echo '.</p> ';
-					?>
-		</div>
+					<?php  echo '<p class="source-org copyright">&copy; ';
+					echo date('Y');?>
+					<?php echo bloginfo( 'name' );?> • petererskine@earthlink.net • 310-663-4442 • English only, please</p>
+					</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
+		</footer>
 
 	</body>
 
