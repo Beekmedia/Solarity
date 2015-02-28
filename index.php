@@ -1,13 +1,5 @@
 <?=get_header()?>
 
-<section>
-
-	<header>
-
-		<?=get_template_part('includes/partials/content', 'header')?>
-
-	</header>
-
 	<div id="content" class="fix">
 
 		<div id="mainbar" class="m-all t-2of3 d-5of7">
@@ -19,6 +11,8 @@
 					<?=the_post()?>
 
 					<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+						<?=get_template_part('includes/partials/content', 'header')?>
 
 						<section itemprop="articleBody">
 
@@ -44,6 +38,6 @@
 
 		</div> <!-- /#sidebar -->
 
-</section>
+	<?=get_footer()?>
 
-<?=get_footer()?>
+</div>

@@ -10,19 +10,19 @@
 	</a>
 </h3>
 
-<p class="byline entry-meta vcard">
+
 
 
 	<?php
-		printf(
-			__('Posted %1$s by %2$s', 'solarity'),
-			'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-			'<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link(get_the_author_meta('ID')) . '</span>'
-		);
+#		printf(
+#			__('<p class="byline entry-meta vcard">Posted %1$s by %2$s', 'solarity'),
+#			'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+#			'<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link(get_the_author_meta('ID')) . '</span></p>'
+#		);
 	?>
 
 
-</p>
+
 
 <section class="entry-content cf">
 
