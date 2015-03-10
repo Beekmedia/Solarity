@@ -1,6 +1,7 @@
+<? #Template Name: Page with Sidebars ?>
+
 <?=get_header()?>
 
-<? #Template Name: Page with Sidebars
 <?php if (have_posts()): ?>
 
 	<?php while (have_posts()): ?>
@@ -10,8 +11,6 @@
 		<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 			<section id="content" itemprop="articleBody">
-
-				<div class="fix">
 
 					<div id="mainbar" class="m-all t-2of3 d-5of7">
 
@@ -25,7 +24,6 @@
 
 					</div> <!-- /#sidebar -->
 
-				</div> <!-- /.fix -->
 
 			</section> <!-- /#content -->
 

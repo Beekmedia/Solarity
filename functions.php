@@ -243,4 +243,13 @@ add_action('wp_enqueue_scripts', 'solarity_fonts');
 		'comment-form'
 	) );
 
+
+
+function pluralize($count, $singular, $plural = false) //pluralize for values other than 1
+{
+   if (!$plural) $plural = $singular . 's';
+
+  return ($count == 1 ? $singular : $plural) ;
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

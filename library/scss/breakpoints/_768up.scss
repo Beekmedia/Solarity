@@ -11,8 +11,9 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
-
-
+.acf-map {
+height: 600px;
+}
 /*********************
 GENERAL STYLES
 *********************/
@@ -37,7 +38,7 @@ HEADER STYLES
 .header {}
 #logo {}
 
-.top-nav {margin-top:0.25rem;}
+.top-nav {padding-top:0;}
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -60,7 +61,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: white(0.8);
+				background-color: white(0.6);
 				text-decoration: none;
 			}
 		}
@@ -79,11 +80,10 @@ NAVIGATION STYLES
 			position: absolute;
 			visibility: hidden;
 			z-index: 8999;
-			background-color:white(0.75);
-
 			li {
 
 				a {
+					background-color: white(0.6);
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
@@ -93,7 +93,7 @@ NAVIGATION STYLES
 
 					&:hover,
 					&:focus {
-						background-color: white(0.9);
+						background-color: white(0.5);
 						text-decoration: none;
 					}
 

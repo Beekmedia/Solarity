@@ -11,7 +11,7 @@ ________________________________________________________________________________
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Home Sidebar") ) : ?>
 		<?php dynamic_sidebar('Home Sidebar'); ?>
 	<?php endif; ?>
-<?php elseif ( is_home() || is_archive() || is_singular( 'post' ) || is_tag() || is_tax()) : ?>
+<?php elseif ( is_home() || is_archive() || is_singular( 'post' ) || is_tag() || is_tax() || is_page()) : ?>
 
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Blog Sidebar") ) : ?>
 

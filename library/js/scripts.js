@@ -11,7 +11,7 @@
  * need any of it, just remove it. They are meant to be helpers and are
  * not required. It's your world baby, you can do whatever you want.
  */
-(function($) {
+ (function($) {
 
 /*
 *  render_map
@@ -47,7 +47,7 @@ function render_map( $el ) {
 	// add markers
 	$markers.each(function(){
 
-			add_marker( $(this), map );
+		add_marker( $(this), map );
 
 	});
 
@@ -133,8 +133,8 @@ function center_map( map ) {
 	if( map.markers.length == 1 )
 	{
 		// set center of map
-			map.setCenter( bounds.getCenter() );
-			map.setZoom( 16 );
+		map.setCenter( bounds.getCenter() );
+		map.setZoom( 16 );
 	}
 	else
 	{
@@ -158,10 +158,16 @@ function center_map( map ) {
 */
 
 $(document).ready(function(){
-
-	$('.acf-map').each(function(){
-
-		render_map( $(this) );
+	var mapToggled=0;
+	$('.acf-map').toggle();
+	$('.map-link').click(function(event) {
+		$('.acf-map').toggle();
+		if (mapToggled===0) {
+			$('.acf-map').each(function(){
+				render_map( $(this) );
+				mapToggled=mapToggled+1;
+			});
+		}
 
 	});
 
@@ -178,7 +184,7 @@ $(document).ready(function(){
  function updateViewportDimensions() {
 	var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
 	return { width:x,height:y };
-}
+ }
 // setting the viewport width
 var viewport = updateViewportDimensions();
 
@@ -190,11 +196,11 @@ var viewport = updateViewportDimensions();
  var waitForFinalEvent = (function () {
 	var timers = {};
 	return function (callback, ms, uniqueId) {
-	if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
-	if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
-	timers[uniqueId] = setTimeout(callback, ms);
-};
-})();
+		if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
+		if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
+		timers[uniqueId] = setTimeout(callback, ms);
+	};
+ })();
 
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 var timeToWaitForLast = 100;
@@ -250,4 +256,4 @@ var timeToWaitForLast = 100;
 	jQuery(function($){
 
 	});
-}); /* end of as page load scripts */
+ }); /* end of as page load scripts */

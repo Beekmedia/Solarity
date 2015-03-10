@@ -6,7 +6,7 @@
 
 		<?php elseif (is_front_page()): ?>
 
-			<?php ?>
+		<?php ?>
 
 		<?php elseif (is_home()): ?>
 			<?php # Blog page: ?>

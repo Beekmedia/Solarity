@@ -13,7 +13,7 @@
 	</section> <?php // end article section ?>
 
 	<footer class="article-footer">
-		<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'solarity' ) . '</span> ', ', ', '</p>' ); ?>
+		<?php #the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'solarity' ) . '</span> ', ', ', '</p>' ); ?>
 
 	</footer> <?php // end article footer ?>
 

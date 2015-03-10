@@ -16,6 +16,8 @@
 
 <?php else: ?>
 
+	<?=get_template_part('includes/partials/content-header')?>
+
 	<?=get_template_part('includes/partials/content')?>
 
 <?php endif; ?>

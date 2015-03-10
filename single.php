@@ -9,7 +9,7 @@
 		<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 			<?php if( have_rows('locations') ): ?>
-				<div class="m-all t-2of5 d-3of7 last ghostbox">
+				<div class="m-all t-all d-5of7 last ghostbox">
 					<div class="acf-map">
 						<?php while ( have_rows('locations') ) : the_row();
 

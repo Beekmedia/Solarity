@@ -263,6 +263,9 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
+.acf-map {
+  height: 600px; }
+
 /*********************
 GENERAL STYLES
 *********************/
@@ -279,7 +282,7 @@ HEADER STYLES
   float: left; }
 
 .top-nav {
-  margin-top: 0.25rem; }
+  padding-top: 0; }
 
 /*********************
 NAVIGATION STYLES
@@ -306,7 +309,7 @@ NAVIGATION STYLES
       has the possibility of being a mobile device.
       */ }
       .nav li a:hover, .nav li a:focus {
-        background-color: white(0.8);
+        background-color: white(0.6);
         text-decoration: none; }
     .nav li ul.sub-menu,
     .nav li ul.children {
@@ -316,7 +319,6 @@ NAVIGATION STYLES
       position: absolute;
       visibility: hidden;
       z-index: 8999;
-      background-color: white(0.75);
       /* highlight sub-menu current page */ }
       .nav li ul.sub-menu li,
       .nav li ul.children li {
@@ -327,6 +329,7 @@ NAVIGATION STYLES
         */ }
         .nav li ul.sub-menu li a,
         .nav li ul.children li a {
+          background-color: white(0.6);
           padding-left: 10px;
           border-right: 0;
           display: block;
@@ -336,7 +339,7 @@ NAVIGATION STYLES
           .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
           .nav li ul.children li a:hover,
           .nav li ul.children li a:focus {
-            background-color: white(0.9);
+            background-color: white(0.5);
             text-decoration: none; }
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
@@ -409,6 +412,9 @@ be seen on the Desktop.
 ******************************************************************/
 .wrap {
   width: 1040px; }
+
+.acf-map {
+  height: 680px; }
 
 /*
 you can call the larger styles if you want, but there's really no need

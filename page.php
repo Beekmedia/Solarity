@@ -8,8 +8,6 @@
 
 		<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-			<?=get_template_part('includes/partials/content', 'header')?>
-
 			<section id="content" itemprop="articleBody">
 
 						<?=get_template_part('includes/partials/content', 'page')?>
@@ -23,6 +21,7 @@
 <?php else: ?>
 
 	<?=get_template_part('includes/partials/content', 'none')?>
+
 
 <?php endif; ?>
 

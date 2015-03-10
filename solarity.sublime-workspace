@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"cli",
+				"click	.click()"
+			],
+			[
+				"list",
+				"list-style-position"
+			],
+			[
+				"ro",
+				"$row_count〔variable〕"
+			],
+			[
+				"pl",
+				"pluralize($count, $singular, $plural)	mixed"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			],
+			[
+				"ligh",
+				"light-gray	 editor-style.scss"
+			],
+			[
+				"line-",
+				"line-height"
+			],
+			[
+				"und",
+				"underline"
+			],
+			[
+				"meta",
+				"meta-gray	 _base.scss"
+			],
+			[
+				"text-de",
+				"text-decoration"
+			],
+			[
+				"wp_reset_quer",
+				"wp_reset_query"
+			],
+			[
+				"meta-",
+				"meta-gray	 _base.scss"
+			],
+			[
+				"text",
+				"text-color	 _base.scss"
+			],
+			[
 				"is_hop_",
 				"is_hop_cat"
 			],
@@ -59,24 +115,40 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 301.0,
+		"height": 375.0,
 		"selected_items":
 		[
-			[
-				"color",
-				"Colorsublime: Install Theme"
-			],
-			[
-				"reind",
-				"Indentation: Reindent Lines"
-			],
 			[
 				"rein",
 				"Indentation: Reindent Lines"
 			],
 			[
+				"Snippet: html",
+				"Snippet: PHP Comment in HTML"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
 				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
 				"Colorsublime: Install Theme"
+			],
+			[
+				"color: ",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"colo",
@@ -255,10 +327,6 @@
 				"Indentation: Reindent Lines"
 			],
 			[
-				"install p",
-				"Package Control: Install Package"
-			],
-			[
 				"package",
 				"Package Control: Disable Package"
 			],
@@ -277,13 +345,9 @@
 			[
 				"Snippet: ",
 				"Snippet: <?php foreach (…) … <?php endforeach ?>"
-			],
-			[
-				"install pa",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 579.0
+		"width": 597.0
 	},
 	"console":
 	{
@@ -313,31 +377,51 @@
 		"/Users/djbeeker/github/solarity/library/js",
 		"/Users/djbeeker/github/solarity/library/scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints",
-		"/Users/djbeeker/github/solarity/library/scss/partials"
+		"/Users/djbeeker/github/solarity/library/scss/partials",
+		"/Users/djbeeker/github/solarity/post-formats"
 	],
 	"file_history":
 	[
-		"/Users/djbeeker/github/solarity/library/scss/partials/_variables.scss",
-		"/Users/djbeeker/github/solarity/header.php",
-		"/Users/djbeeker/github/solarity/library/js/scripts.js",
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
-		"/Users/djbeeker/github/solarity/index.php",
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
-		"/Users/djbeeker/github/solarity/functions.php",
-		"/Users/djbeeker/github/solarity/sidebar.php",
-		"/Users/djbeeker/github/solarity/single.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-none.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-header.php",
-		"/Users/djbeeker/Sites/webapps/solar/wp-content/themes/solarity/header.php",
-		"/Users/djbeeker/github/solarity/page.php",
-		"/Users/djbeeker/github/solarity/page-with-sidebar.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content.php",
-		"/Users/djbeeker/github/solarity/library/solarity.php",
-		"/Users/djbeeker/github/solarity/footer.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-front.php",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_481up.scss",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1240up.scss",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1030up.scss",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
+		"/Users/djbeeker/github/solarity/header.php",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
+		"/Users/djbeeker/github/solarity/library/js/scripts.js",
+		"/Users/djbeeker/github/solarity/library/css/login.css",
+		"/Users/djbeeker/github/solarity/library/css/editor-style.css",
+		"/Users/djbeeker/github/solarity/library/scss/partials/_ie_grid.scss",
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/djbeeker/github/solarity/readme.md",
+		"/Users/djbeeker/github/solarity/single.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/snippets/PHP Comment in HTML.sublime-snippet",
+		"/Users/djbeeker/github/solarity/.editorconfig",
+		"/Users/djbeeker/github/solarity/includes/partials/content-header.php",
+		"/Users/djbeeker/github/solarity/functions.php",
+		"/Users/djbeeker/github/solarity/page-with-sidebar.php",
+		"/Users/djbeeker/github/solarity/sidebar.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-index.php",
+		"/Users/djbeeker/github/solarity/page.php",
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/untitled",
 		"/Users/djbeeker/github/solarity/includes/partials/content-page.php",
+		"/Users/djbeeker/github/solarity/post-formats/format-gallery.php",
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/djbeeker/github/solarity/index.php",
+		"/Users/djbeeker/github/solarity/library/scss/partials/_functions.scss",
+		"/Users/djbeeker/github/solarity/includes/partials/content.php",
+		"/Users/djbeeker/github/solarity/library/scss/partials/_variables.scss",
+		"/Users/djbeeker/github/solarity/library/scss/editor-style.scss",
+		"/Users/djbeeker/github/solarity/library/scss/style.scss",
+		"/Users/djbeeker/github/solarity/includes/partials/content-404.php",
+		"/Users/djbeeker/github/solarity/library/scss/partials/_normalize.scss",
+		"/Users/djbeeker/github/solarity/footer.php",
+		"/Users/djbeeker/github/solarity/search.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-none.php",
+		"/Users/djbeeker/Sites/webapps/solar/wp-content/themes/solarity/header.php",
+		"/Users/djbeeker/github/solarity/library/solarity.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-front.php",
 		"/Users/djbeeker/github/solarity/includes/partials/content-home.php",
 		"/Users/djbeeker/github/solarity/library/scss/config.rb",
 		"/Users/djbeeker/Sites/webapps/bbcms/.htaccess",
@@ -345,13 +429,9 @@
 		"/Users/djbeeker/github/solarity/library/admin.php",
 		"/Users/djbeeker/github/solarity/archive.php",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_typography.scss",
-		"/Users/djbeeker/github/solarity/library/scss/editor-style.scss",
-		"/Users/djbeeker/github/solarity/.editorconfig",
 		"/Users/djbeeker/.bash_profile",
 		"/Users/djbeeker/github/solarity/comments.php",
 		"/Users/djbeeker/github/solarity/post-formats/format-image.php",
-		"/Users/djbeeker/github/solarity/post-formats/format-gallery.php",
-		"/Users/djbeeker/github/solarity/search.php",
 		"/Users/djbeeker/github/solarity/library/bones.php",
 		"/Users/djbeeker/github/solarity/solarity.sublime-project",
 		"/Users/djbeeker/github/solarity/post-formats/format.php",
@@ -372,7 +452,6 @@
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/WordHighlight/Word Highlight.sublime-settings",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/SyntaxHighlightTools/README.rst",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/CSS Extended Completions/css_style_completions.sublime-settings",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Word Highlight.sublime-settings",
@@ -381,7 +460,6 @@
 		"/Users/djbeeker/github/freshops/library/scss/breakpoints/_768up.scss",
 		"/Users/djbeeker/github/freshops/library/translation/default.mo",
 		"/Users/djbeeker/github/freshops/library/translation/translation.php",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/djbeeker/github/freshops/functions.php",
 		"/Users/djbeeker/github/freshops/library/scss/rhizome/_table.scss",
 		"/Users/djbeeker/github/freshops/includes/partials/content-header.php",
@@ -431,24 +509,11 @@
 		"/Users/djbeeker/github/freshops/includes/cart/single_hop_variety.php",
 		"/Users/djbeeker/github/freshops/footer.php",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/SyntaxMgr.sublime-settings",
-		"/Users/djbeeker/github/freshops/single.php",
-		"/Users/djbeeker/github/freshops/library/scss/rhizome/_accordion.scss",
-		"/Users/djbeeker/github/freshops/header.php",
-		"/Users/djbeeker/github/freshops/includes/partials/content-hop-variety-descriptions.php",
-		"/Users/djbeeker/github/freshops/library/scss/editor-style.scss",
-		"/Users/djbeeker/github/freshops/includes/partials/content-none.php",
-		"/Users/djbeeker/github/freshops/library/js/libs/supersubs.js",
-		"/Users/djbeeker/github/freshops/library/js/rhizome/jquery.dcjqaccordion.2.7.js",
-		"/Users/djbeeker/github/freshops/library/js/rhizome/jquery.nutshell.js",
-		"/Users/djbeeker/github/freshops/library/js/rhizome/rhizome.js",
-		"/Users/djbeeker/github/freshops/library/translation/fr_FR.mo",
-		"/Users/djbeeker/github/freshops/archive-testimonial.php",
-		"/Users/djbeeker/github/freshops/library/scss/rhizome/_utility.scss",
-		"/Users/djbeeker/github/freshops/library/scss/rhizome/_tab.scss"
+		"/Users/djbeeker/github/freshops/single.php"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -496,6 +561,58 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"table",
+			"header",
+			".acf-map",
+			"ghostbox",
+			"#container art",
+			"render",
+			"render_map",
+			"list",
+			"header",
+			".header",
+			"header",
+			"top-nav",
+			"header",
+			".sub-menu",
+			"sub-menu",
+			",0.87)",
+			",0.6)",
+			",0.77)",
+			",0.92)",
+			",0.95)",
+			",0.97)",
+			",0.98)",
+			",0.99)",
+			",1)",
+			",0.9)",
+			",0.96)",
+			",1)",
+			"sidebar",
+			"article",
+			"article .nav",
+			"article nav",
+			"clearfix",
+			"#imagedata",
+			"article h1",
+			".nav",
+			"footer {",
+			".nav",
+			"footer",
+			"footer .n",
+			"footer",
+			".nav",
+			".nav li a",
+			"footer .nav",
+			",0.25)",
+			",1)",
+			"link",
+			"a {",
+			"nav",
+			"category",
+			"#conta",
+			"#logo",
+			"last",
 			"#container",
 			"class=\"fix\"",
 			".logo-wrap",
@@ -571,59 +688,7 @@
 			".dd meter",
 			".percentage-columns",
 			"meter",
-			"_",
-			"meter",
-			"hgoa",
-			"\n\n\n\n",
-			"high_value",
-			"$max",
-			"min",
-			"if",
-			"\n\n\n\n",
-			"\n\n\n",
-			"\n\n\n\n",
-			"\n\n\n\n\n",
-			"\n\n\n\n\n\n",
-			"\n\n\n",
-			"\n\n",
-			"\n\n\n\n\n",
-			"\n\n\n\n\n\n\n",
-			"alternate_form_purchase_link",
-			"crosssell_hops_rhizomes",
-			"	  ",
-			"\n\n\n\n",
-			"alignright",
-			"align",
-			".align-right",
-			"align-right",
-			"}",
-			"{",
-			"dd",
-			"\n\n\n",
-			"\n\n",
-			"\n\n\n\n",
-			"\n\n",
-			"	\n",
-			".alignright",
-			"•",
-			"\n",
-			"\n\n",
-			"widget",
-			"bones_",
-			"http://themble.com/bones",
-			"Eddie Machado",
-			"benbeekman.com",
-			"bones",
-			"bones-thumb-",
-			"bones",
-			"ol",
-			".cf",
-			":",
-			"<dl><dt>",
-			"custom ",
-			"bones",
-			"eightcol",
-			"main"
+			"_"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -631,6 +696,19 @@
 		"regex": false,
 		"replace_history":
 		[
+			",0.29)",
+			",0.31)",
+			",0.19)",
+			",0.24)",
+			",0.32)",
+			",0.33)",
+			",0.34)",
+			",0.35)",
+			",0.28)",
+			",0.31)",
+			",0.35)",
+			",0.5)",
+			",0.25)",
 			"",
 			"$droidsans",
 			"$signika",
@@ -745,10 +823,7 @@
 			"Hop",
 			"hop_variety",
 			"Hop Varieties",
-			"Author: Ben Beekman",
-			"Site Name: Freshops Theme",
-			"@freshops-blue",
-			"@freshops-orange"
+			"Author: Ben Beekman"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -766,7 +841,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -805,12 +880,12 @@
 	},
 	"output.find_results":
 	{
-		"height": 425.0
+		"height": 231.0
 	},
 	"project": "solarity.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -819,12 +894,20 @@
 		"selected_items":
 		[
 			[
-				"_v",
-				"library/scss/partials/_variables.scss"
+				"fun",
+				"functions.php"
+			],
+			[
+				"bas",
+				"library/scss/breakpoints/_base.scss"
 			],
 			[
 				"func",
 				"functions.php"
+			],
+			[
+				"_v",
+				"library/scss/partials/_variables.scss"
 			],
 			[
 				"base",
