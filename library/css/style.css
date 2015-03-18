@@ -1253,33 +1253,15 @@ body {
   color: #f8f9fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: -moz-linear-gradient(left, rgba(191, 139, 147, 0.6) 0%, rgba(192, 139, 147, 0.77) 2%, rgba(193, 139, 146, 0.9) 5%, rgba(193, 139, 146, 0.92) 6%, rgba(193, 139, 145, 0.95) 7%, rgba(193, 139, 145, 0.97) 8%, rgba(193, 138, 144, 0.98) 9%, rgba(190, 138, 142, 0.99) 10%, #c08b8e 11%, #c18b8e 12%, #bf8c87 20%, #b9957e 31%, #a49f76 40%, #82ab73 50%, #74b075 58%, #71b17b 66%, #73ac91 80%, #6fa7a8 90%, rgba(103, 159, 181, 0.96) 97%, rgba(100, 156, 186, 0.87) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(191, 139, 147, 0.6)), color-stop(2%, rgba(192, 139, 147, 0.77)), color-stop(5%, rgba(193, 139, 146, 0.9)), color-stop(6%, rgba(193, 139, 146, 0.92)), color-stop(7%, rgba(193, 139, 145, 0.95)), color-stop(8%, rgba(193, 139, 145, 0.97)), color-stop(9%, rgba(193, 138, 144, 0.98)), color-stop(10%, rgba(190, 138, 142, 0.99)), color-stop(11%, #c08b8e), color-stop(12%, #c18b8e), color-stop(20%, #bf8c87), color-stop(31%, #b9957e), color-stop(40%, #a49f76), color-stop(50%, #82ab73), color-stop(58%, #74b075), color-stop(66%, #71b17b), color-stop(80%, #73ac91), color-stop(90%, #6fa7a8), color-stop(97%, rgba(103, 159, 181, 0.96)), color-stop(100%, rgba(100, 156, 186, 0.87)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(191, 139, 147, 0.6) 0%, rgba(192, 139, 147, 0.77) 2%, rgba(193, 139, 146, 0.9) 5%, rgba(193, 139, 146, 0.92) 6%, rgba(193, 139, 145, 0.95) 7%, rgba(193, 139, 145, 0.97) 8%, rgba(193, 138, 144, 0.98) 9%, rgba(190, 138, 142, 0.99) 10%, #c08b8e 11%, #c18b8e 12%, #bf8c87 20%, #b9957e 31%, #a49f76 40%, #82ab73 50%, #74b075 58%, #71b17b 66%, #73ac91 80%, #6fa7a8 90%, rgba(103, 159, 181, 0.96) 97%, rgba(100, 156, 186, 0.87) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(191, 139, 147, 0.6) 0%, rgba(192, 139, 147, 0.77) 2%, rgba(193, 139, 146, 0.9) 5%, rgba(193, 139, 146, 0.92) 6%, rgba(193, 139, 145, 0.95) 7%, rgba(193, 139, 145, 0.97) 8%, rgba(193, 138, 144, 0.98) 9%, rgba(190, 138, 142, 0.99) 10%, #c08b8e 11%, #c18b8e 12%, #bf8c87 20%, #b9957e 31%, #a49f76 40%, #82ab73 50%, #74b075 58%, #71b17b 66%, #73ac91 80%, #6fa7a8 90%, rgba(103, 159, 181, 0.96) 97%, rgba(100, 156, 186, 0.87) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(191, 139, 147, 0.6) 0%, rgba(192, 139, 147, 0.77) 2%, rgba(193, 139, 146, 0.9) 5%, rgba(193, 139, 146, 0.92) 6%, rgba(193, 139, 145, 0.95) 7%, rgba(193, 139, 145, 0.97) 8%, rgba(193, 138, 144, 0.98) 9%, rgba(190, 138, 142, 0.99) 10%, #c08b8e 11%, #c18b8e 12%, #bf8c87 20%, #b9957e 31%, #a49f76 40%, #82ab73 50%, #74b075 58%, #71b17b 66%, #73ac91 80%, #6fa7a8 90%, rgba(103, 159, 181, 0.96) 97%, rgba(100, 156, 186, 0.87) 100%);
-  /* IE10+ */
-  background: linear-gradient(to right, rgba(191, 139, 147, 0.6) 0%, rgba(192, 139, 147, 0.77) 2%, rgba(193, 139, 146, 0.9) 5%, rgba(193, 139, 146, 0.92) 6%, rgba(193, 139, 145, 0.95) 7%, rgba(193, 139, 145, 0.97) 8%, rgba(193, 138, 144, 0.98) 9%, rgba(190, 138, 142, 0.99) 10%, #c08b8e 11%, #c18b8e 12%, #bf8c87 20%, #b9957e 31%, #a49f76 40%, #82ab73 50%, #74b075 58%, #71b17b 66%, #73ac91 80%, #6fa7a8 90%, rgba(103, 159, 181, 0.96) 97%, rgba(100, 156, 186, 0.87) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99bf8b93', endColorstr='#de649cba',GradientType=1 );
-  /* IE6-9 */ }
+  background-color: RGB(43, 48, 59); }
 
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
 ********************/
-.home .footer {
-  color: #f8f9fa;
-  bottom: 40px;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
-  padding-bottom: 0.8em; }
+.home .footer #inner-footer {
+  display: none;
+  visibility: hidden; }
 
 /* for sites that are read right to left (i.e. hebrew) */
 /* home page */
@@ -1392,28 +1374,12 @@ HEADER STYLES
   -webkit-transition: All 1s ease;
   -moz-transition: All 1s ease;
   -o-transition: All 1s ease;
-  background-color: rgba(255, 255, 255, 0.25); }
+  background-color: rgba(0, 0, 0, 0); }
   .gradient-box:hover, .gradient-box:active {
-    background-color: rgba(255, 255, 255, 0.85); }
+    background-color: black; }
 
 .header {
-  background: -moz-linear-gradient(left, rgba(229, 179, 187, 0) 0%, rgba(230, 180, 183, 0.69) 10%, rgba(230, 183, 178, 0.72) 15%, rgba(228, 194, 172, 0.77) 24%, rgba(218, 212, 164, 0.84) 37%, rgba(182, 220, 163, 0.88) 46%, rgba(178, 221, 163, 0.87) 47%, rgba(165, 223, 166, 0.82) 57%, rgba(163, 223, 172, 0.79) 63%, rgba(164, 222, 195, 0.76) 68%, rgba(160, 218, 220, 0.72) 76%, rgba(159, 214, 222, 0.69) 82%, rgba(157, 203, 227, 0.08) 98%, rgba(157, 203, 227, 0) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(229, 179, 187, 0)), color-stop(10%, rgba(230, 180, 183, 0.69)), color-stop(15%, rgba(230, 183, 178, 0.72)), color-stop(24%, rgba(228, 194, 172, 0.77)), color-stop(37%, rgba(218, 212, 164, 0.84)), color-stop(46%, rgba(182, 220, 163, 0.88)), color-stop(47%, rgba(178, 221, 163, 0.87)), color-stop(57%, rgba(165, 223, 166, 0.82)), color-stop(63%, rgba(163, 223, 172, 0.79)), color-stop(68%, rgba(164, 222, 195, 0.76)), color-stop(76%, rgba(160, 218, 220, 0.72)), color-stop(82%, rgba(159, 214, 222, 0.69)), color-stop(98%, rgba(157, 203, 227, 0.08)), color-stop(100%, rgba(157, 203, 227, 0)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(229, 179, 187, 0) 0%, rgba(230, 180, 183, 0.69) 10%, rgba(230, 183, 178, 0.72) 15%, rgba(228, 194, 172, 0.77) 24%, rgba(218, 212, 164, 0.84) 37%, rgba(182, 220, 163, 0.88) 46%, rgba(178, 221, 163, 0.87) 47%, rgba(165, 223, 166, 0.82) 57%, rgba(163, 223, 172, 0.79) 63%, rgba(164, 222, 195, 0.76) 68%, rgba(160, 218, 220, 0.72) 76%, rgba(159, 214, 222, 0.69) 82%, rgba(157, 203, 227, 0.08) 98%, rgba(157, 203, 227, 0) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(229, 179, 187, 0) 0%, rgba(230, 180, 183, 0.69) 10%, rgba(230, 183, 178, 0.72) 15%, rgba(228, 194, 172, 0.77) 24%, rgba(218, 212, 164, 0.84) 37%, rgba(182, 220, 163, 0.88) 46%, rgba(178, 221, 163, 0.87) 47%, rgba(165, 223, 166, 0.82) 57%, rgba(163, 223, 172, 0.79) 63%, rgba(164, 222, 195, 0.76) 68%, rgba(160, 218, 220, 0.72) 76%, rgba(159, 214, 222, 0.69) 82%, rgba(157, 203, 227, 0.08) 98%, rgba(157, 203, 227, 0) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(229, 179, 187, 0) 0%, rgba(230, 180, 183, 0.69) 10%, rgba(230, 183, 178, 0.72) 15%, rgba(228, 194, 172, 0.77) 24%, rgba(218, 212, 164, 0.84) 37%, rgba(182, 220, 163, 0.88) 46%, rgba(178, 221, 163, 0.87) 47%, rgba(165, 223, 166, 0.82) 57%, rgba(163, 223, 172, 0.79) 63%, rgba(164, 222, 195, 0.76) 68%, rgba(160, 218, 220, 0.72) 76%, rgba(159, 214, 222, 0.69) 82%, rgba(157, 203, 227, 0.08) 98%, rgba(157, 203, 227, 0) 100%);
-  /* IE10+ */
-  background: linear-gradient(to right, rgba(229, 179, 187, 0) 0%, rgba(230, 180, 183, 0.69) 10%, rgba(230, 183, 178, 0.72) 15%, rgba(228, 194, 172, 0.77) 24%, rgba(218, 212, 164, 0.84) 37%, rgba(182, 220, 163, 0.88) 46%, rgba(178, 221, 163, 0.87) 47%, rgba(165, 223, 166, 0.82) 57%, rgba(163, 223, 172, 0.79) 63%, rgba(164, 222, 195, 0.76) 68%, rgba(160, 218, 220, 0.72) 76%, rgba(159, 214, 222, 0.69) 82%, rgba(157, 203, 227, 0.08) 98%, rgba(157, 203, 227, 0) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00e5b3bb', endColorstr='#009dcbe3',GradientType=1 );
-  /* IE6-9 */
-  border-bottom-width: 0.65rem;
-  border-color: rgba(0, 0, 0, 0.15);
-  border-style: none none inset none; }
+  background-color: transparent; }
 
 header {
   transition: All 1s ease;
@@ -1424,10 +1390,10 @@ header {
 #logo {
   margin: 0.25rem 0 0 0; }
   #logo a {
-    color: #5d6a7f; }
+    color: #e6e6e6; }
     #logo a:hover, #logo a:focus {
-      color: #323944;
-      text-shadow: 0 0 20px white; }
+      color: white;
+      text-shadow: 0 0 0px #323944; }
 
 /*********************
 NAVIGATION STYLES
@@ -1448,7 +1414,7 @@ nav .top-nav {
   padding-top: 0;
   margin-top: 0; }
   nav .top-nav li a {
-    padding-top: 1.7rem; }
+    padding-top: 1.6rem; }
 
 .sub-menu {
   margin: 0; }
@@ -1469,19 +1435,27 @@ nav .top-nav {
     */ }
     .nav li a {
       display: block;
-      color: #404040;
+      color: #f2f2f2;
       text-decoration: none;
       padding: 0.75em;
+      text-shadow: 0 0 1px #323944;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      background-color: rgba(255, 255, 255, 0.6);
-      padding-left: 30px; }
+      .nav li a:hover, .nav li a:focus {
+        text-shadow: 0 0 0px transparent; }
+    .nav li ul.sub-menu li,
+    .nav li ul.children li {
+      line-height: 1.2; }
+      .nav li ul.sub-menu li a,
+      .nav li ul.children li a {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 10px 10px 10px 30px;
+        text-shadow: 0px 0px 0px transparent;
+        color: #323944; }
 
 /* end .nav */
 footer .nav ul {
@@ -2075,7 +2049,7 @@ you can add resource intensive styles.
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
-        border: 1px solid #ccc;
+        border: 1px solid white 0.95;
         border-top: 0;
         position: absolute;
         visibility: hidden;
@@ -2090,12 +2064,12 @@ you can add resource intensive styles.
           */ }
           .nav li ul.sub-menu li a,
           .nav li ul.children li a {
-            background-color: rgba(255, 255, 255, 0.6);
-            padding-left: 10px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 10px;
             border-right: 0;
             display: block;
             width: 340px;
-            border-bottom: 1px solid #ccc;
+            border: 1px solid white 0.85;
             text-decoration: none; }
             .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
             .nav li ul.children li a:hover,

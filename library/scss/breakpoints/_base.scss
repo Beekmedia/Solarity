@@ -22,15 +22,7 @@ body {
 	color: $text-grey;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	//background gradient appears until background images (if any) have loaded
-	background: -moz-linear-gradient(left,  rgba(191,139,147,0.6) 0%, rgba(192,139,147,0.77) 2%, rgba(193,139,146,0.9) 5%, rgba(193,139,146,0.92) 6%, rgba(193,139,145,0.95) 7%, rgba(193,139,145,0.97) 8%, rgba(193,138,144,0.98) 9%, rgba(190,138,142,0.99) 10%, rgba(192,139,142,1) 11%, rgba(193,139,142,1) 12%, rgba(191,140,135,1) 20%, rgba(185,149,126,1) 31%, rgba(164,159,118,1) 40%, rgba(130,171,115,1) 50%, rgba(116,176,117,1) 58%, rgba(113,177,123,1) 66%, rgba(115,172,145,1) 80%, rgba(111,167,168,1) 90%, rgba(103,159,181,0.96) 97%, rgba(100,156,186,0.87) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(191,139,147,0.6)), color-stop(2%,rgba(192,139,147,0.77)), color-stop(5%,rgba(193,139,146,0.9)), color-stop(6%,rgba(193,139,146,0.92)), color-stop(7%,rgba(193,139,145,0.95)), color-stop(8%,rgba(193,139,145,0.97)), color-stop(9%,rgba(193,138,144,0.98)), color-stop(10%,rgba(190,138,142,0.99)), color-stop(11%,rgba(192,139,142,1)), color-stop(12%,rgba(193,139,142,1)), color-stop(20%,rgba(191,140,135,1)), color-stop(31%,rgba(185,149,126,1)), color-stop(40%,rgba(164,159,118,1)), color-stop(50%,rgba(130,171,115,1)), color-stop(58%,rgba(116,176,117,1)), color-stop(66%,rgba(113,177,123,1)), color-stop(80%,rgba(115,172,145,1)), color-stop(90%,rgba(111,167,168,1)), color-stop(97%,rgba(103,159,181,0.96)), color-stop(100%,rgba(100,156,186,0.87))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(191,139,147,0.6) 0%,rgba(192,139,147,0.77) 2%,rgba(193,139,146,0.9) 5%,rgba(193,139,146,0.92) 6%,rgba(193,139,145,0.95) 7%,rgba(193,139,145,0.97) 8%,rgba(193,138,144,0.98) 9%,rgba(190,138,142,0.99) 10%,rgba(192,139,142,1) 11%,rgba(193,139,142,1) 12%,rgba(191,140,135,1) 20%,rgba(185,149,126,1) 31%,rgba(164,159,118,1) 40%,rgba(130,171,115,1) 50%,rgba(116,176,117,1) 58%,rgba(113,177,123,1) 66%,rgba(115,172,145,1) 80%,rgba(111,167,168,1) 90%,rgba(103,159,181,0.96) 97%,rgba(100,156,186,0.87) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(191,139,147,0.6) 0%,rgba(192,139,147,0.77) 2%,rgba(193,139,146,0.9) 5%,rgba(193,139,146,0.92) 6%,rgba(193,139,145,0.95) 7%,rgba(193,139,145,0.97) 8%,rgba(193,138,144,0.98) 9%,rgba(190,138,142,0.99) 10%,rgba(192,139,142,1) 11%,rgba(193,139,142,1) 12%,rgba(191,140,135,1) 20%,rgba(185,149,126,1) 31%,rgba(164,159,118,1) 40%,rgba(130,171,115,1) 50%,rgba(116,176,117,1) 58%,rgba(113,177,123,1) 66%,rgba(115,172,145,1) 80%,rgba(111,167,168,1) 90%,rgba(103,159,181,0.96) 97%,rgba(100,156,186,0.87) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(191,139,147,0.6) 0%,rgba(192,139,147,0.77) 2%,rgba(193,139,146,0.9) 5%,rgba(193,139,146,0.92) 6%,rgba(193,139,145,0.95) 7%,rgba(193,139,145,0.97) 8%,rgba(193,138,144,0.98) 9%,rgba(190,138,142,0.99) 10%,rgba(192,139,142,1) 11%,rgba(193,139,142,1) 12%,rgba(191,140,135,1) 20%,rgba(185,149,126,1) 31%,rgba(164,159,118,1) 40%,rgba(130,171,115,1) 50%,rgba(116,176,117,1) 58%,rgba(113,177,123,1) 66%,rgba(115,172,145,1) 80%,rgba(111,167,168,1) 90%,rgba(103,159,181,0.96) 97%,rgba(100,156,186,0.87) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(191,139,147,0.6) 0%,rgba(192,139,147,0.77) 2%,rgba(193,139,146,0.9) 5%,rgba(193,139,146,0.92) 6%,rgba(193,139,145,0.95) 7%,rgba(193,139,145,0.97) 8%,rgba(193,138,144,0.98) 9%,rgba(190,138,142,0.99) 10%,rgba(192,139,142,1) 11%,rgba(193,139,142,1) 12%,rgba(191,140,135,1) 20%,rgba(185,149,126,1) 31%,rgba(164,159,118,1) 40%,rgba(130,171,115,1) 50%,rgba(116,176,117,1) 58%,rgba(113,177,123,1) 66%,rgba(115,172,145,1) 80%,rgba(111,167,168,1) 90%,rgba(103,159,181,0.96) 97%,rgba(100,156,186,0.87) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99bf8b93', endColorstr='#de649cba',GradientType=1 ); /* IE6-9 */
-
+	background-color: RGB(43, 48, 59);
 }
 
 /********************
@@ -39,13 +31,18 @@ style a page via class
 ********************/
 .home {
 	.footer{
-	color: rgb(248, 249, 250);
-	bottom: 40px;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	background-color: black(0.25);
-	padding-bottom: 0.8em;
+	// color: rgb(248, 249, 250);
+	// bottom: 40px;
+	// position: absolute;
+	// text-align: center;
+	// width: 100%;
+	// background-color: black(0.25);
+	// padding-bottom: 0.8em;
+
+	#inner-footer {
+		display:none;
+		visibility: hidden;
+	}
 	}
 }
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
@@ -175,33 +172,23 @@ HEADER STYLES
 
 .slogan {
 	color: black(0.6);
-
 }
+
 .gradient-box {
 	z-index: -1;
 	transition:All 1s ease;
 	-webkit-transition:All 1s ease;
 	-moz-transition:All 1s ease;
 	-o-transition:All 1s ease;
-	background-color: white(0.25);
+	background-color: black(0);
 	&:hover, &:active{
-		background-color: white(0.85);
+		background-color: black(1);
 	}
 }
 
 
 .header {
-
-	background: -moz-linear-gradient(left,  rgba(229,179,187,0) 0%, rgba(230,180,183,0.69) 10%, rgba(230,183,178,0.72) 15%, rgba(228,194,172,0.77) 24%, rgba(218,212,164,0.84) 37%, rgba(182,220,163,0.88) 46%, rgba(178,221,163,0.87) 47%, rgba(165,223,166,0.82) 57%, rgba(163,223,172,0.79) 63%, rgba(164,222,195,0.76) 68%, rgba(160,218,220,0.72) 76%, rgba(159,214,222,0.69) 82%, rgba(157,203,227,0.08) 98%, rgba(157,203,227,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(229,179,187,0)), color-stop(10%,rgba(230,180,183,0.69)), color-stop(15%,rgba(230,183,178,0.72)), color-stop(24%,rgba(228,194,172,0.77)), color-stop(37%,rgba(218,212,164,0.84)), color-stop(46%,rgba(182,220,163,0.88)), color-stop(47%,rgba(178,221,163,0.87)), color-stop(57%,rgba(165,223,166,0.82)), color-stop(63%,rgba(163,223,172,0.79)), color-stop(68%,rgba(164,222,195,0.76)), color-stop(76%,rgba(160,218,220,0.72)), color-stop(82%,rgba(159,214,222,0.69)), color-stop(98%,rgba(157,203,227,0.08)), color-stop(100%,rgba(157,203,227,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(229,179,187,0) 0%,rgba(230,180,183,0.69) 10%,rgba(230,183,178,0.72) 15%,rgba(228,194,172,0.77) 24%,rgba(218,212,164,0.84) 37%,rgba(182,220,163,0.88) 46%,rgba(178,221,163,0.87) 47%,rgba(165,223,166,0.82) 57%,rgba(163,223,172,0.79) 63%,rgba(164,222,195,0.76) 68%,rgba(160,218,220,0.72) 76%,rgba(159,214,222,0.69) 82%,rgba(157,203,227,0.08) 98%,rgba(157,203,227,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(229,179,187,0) 0%,rgba(230,180,183,0.69) 10%,rgba(230,183,178,0.72) 15%,rgba(228,194,172,0.77) 24%,rgba(218,212,164,0.84) 37%,rgba(182,220,163,0.88) 46%,rgba(178,221,163,0.87) 47%,rgba(165,223,166,0.82) 57%,rgba(163,223,172,0.79) 63%,rgba(164,222,195,0.76) 68%,rgba(160,218,220,0.72) 76%,rgba(159,214,222,0.69) 82%,rgba(157,203,227,0.08) 98%,rgba(157,203,227,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(229,179,187,0) 0%,rgba(230,180,183,0.69) 10%,rgba(230,183,178,0.72) 15%,rgba(228,194,172,0.77) 24%,rgba(218,212,164,0.84) 37%,rgba(182,220,163,0.88) 46%,rgba(178,221,163,0.87) 47%,rgba(165,223,166,0.82) 57%,rgba(163,223,172,0.79) 63%,rgba(164,222,195,0.76) 68%,rgba(160,218,220,0.72) 76%,rgba(159,214,222,0.69) 82%,rgba(157,203,227,0.08) 98%,rgba(157,203,227,0) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(229,179,187,0) 0%,rgba(230,180,183,0.69) 10%,rgba(230,183,178,0.72) 15%,rgba(228,194,172,0.77) 24%,rgba(218,212,164,0.84) 37%,rgba(182,220,163,0.88) 46%,rgba(178,221,163,0.87) 47%,rgba(165,223,166,0.82) 57%,rgba(163,223,172,0.79) 63%,rgba(164,222,195,0.76) 68%,rgba(160,218,220,0.72) 76%,rgba(159,214,222,0.69) 82%,rgba(157,203,227,0.08) 98%,rgba(157,203,227,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5b3bb', endColorstr='#009dcbe3',GradientType=1 ); /* IE6-9 */
-	border-bottom-width: 0.65rem;
-	border-color: rgba(0,0,0,0.15);
-	border-style: none none inset none;
+	background-color: transparent;
 }
 
 
@@ -219,10 +206,10 @@ transition:All 1s ease;
 	margin: 0.25rem 0 0 0;
 
 	a {
-		color: lighten($black, 20%);
+		color: darken($white, 10%);
 		&:hover, &:focus {
-			color:$black;
-			text-shadow: 0 0 20px $white;
+			color:$white;
+			text-shadow: 0 0 0px $black;
 		}
 	}
 }
@@ -250,7 +237,7 @@ nav{
 		margin-top: 0;
 		li{
 			a{
-				padding-top: 1.7rem;
+				padding-top: 1.6rem;
 			}
 		}
 	}
@@ -267,10 +254,10 @@ nav{
 
 		a {
 			display: block;
-			color: lighten(black,25%);
+			color: darken($white, 5%);
 			text-decoration: none;
 			padding: 0.75em;
-
+			text-shadow: 0 0 1px $black;
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -278,6 +265,7 @@ nav{
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
+				text-shadow: 0 0 0px transparent;
 
 			}
 		}
@@ -297,15 +285,18 @@ nav{
 		ul.children {
 
 			li {
+				line-height: 1.2;
 
 				a {
-					background-color: white(0.6);
-					padding-left: 30px;
+					background-color: white(0.85);
+					padding: 10px 10px 10px 30px;
+					text-shadow: 0px 0px 0px transparent;
 
 					&:hover,
 					&:focus {}
 
 					&:link {}
+					color: $black;
 
 				}
 

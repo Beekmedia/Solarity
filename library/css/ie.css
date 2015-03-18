@@ -314,7 +314,7 @@ NAVIGATION STYLES
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
-      border: 1px solid #ccc;
+      border: 1px solid white 0.95;
       border-top: 0;
       position: absolute;
       visibility: hidden;
@@ -329,12 +329,12 @@ NAVIGATION STYLES
         */ }
         .nav li ul.sub-menu li a,
         .nav li ul.children li a {
-          background-color: white(0.6);
-          padding-left: 10px;
+          background-color: white(0.85);
+          padding: 10px;
           border-right: 0;
           display: block;
           width: 340px;
-          border-bottom: 1px solid #ccc;
+          border: 1px solid white 0.85;
           text-decoration: none; }
           .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
           .nav li ul.children li a:hover,
