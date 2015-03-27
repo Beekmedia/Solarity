@@ -1,6 +1,6 @@
 <?php
 /*
-The comments page for Bones
+The comments page for Solarity
 */
 
 // don't load it if you can't comment

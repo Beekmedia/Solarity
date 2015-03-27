@@ -20,7 +20,7 @@
 
 					<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 last-col" role="complementary">
 
-						<?=get_sidebar()?>
+						<?=get_sidebar('sidebar1')?>
 
 					</div> <!-- /#sidebar -->
 

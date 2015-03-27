@@ -12,7 +12,7 @@ sidebars, comments, ect.
 require_once( 'library/solarity.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
+require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
@@ -58,7 +58,7 @@ function solarity_ahoy() {
 	// cleaning up excerpt
 	add_filter( 'excerpt_more', 'solarity_excerpt_more' );
 
-} /* end bones ahoy */
+} /* end solarity ahoy */
 
 // let's get this party started
 add_action( 'after_setup_theme', 'solarity_ahoy' );
@@ -73,15 +73,15 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-	add_image_size( 'landscape-large', 1200, 300, true );
-	add_image_size( 'landscape-med', 600, 200, true );
-	add_image_size( 'landscape-small', 300, 100, true );
+add_image_size( 'landscape-large', 1200, 300, true );
+add_image_size( 'landscape-med', 600, 200, true );
+add_image_size( 'landscape-small', 300, 100, true );
 
-	add_image_size( 'portrait-large', 600, 1000, true );
-	add_image_size( 'portrait-med', 300, 500, true );
-	add_image_size( 'portrait-small', 150, 250, true );
+add_image_size( 'portrait-large', 600, 1000, true );
+add_image_size( 'portrait-med', 300, 500, true );
+add_image_size( 'portrait-small', 150, 250, true );
 
-	add_image_size( 'icon', 72, 72, true );
+add_image_size( 'icon', 72, 72, true );
 
 add_filter( 'image_size_names_choose', 'solarity_custom_image_sizes' );
 
@@ -160,10 +160,10 @@ function solarity_register_sidebars() {
 		'id' => 'blog',
 		'name' => __( 'Blog Sidebar', 'solarity' ),
 		'description' => __( 'The blog sidebar.', 'solarity' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
 	));
 
 	register_sidebar(array(
@@ -218,6 +218,7 @@ function solarity_comments( $comment, $args, $depth ) {
 			</section>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 		</article>
+	</div>
 	<?php // </li> is added by WordPress automatically ?>
 <?php
 } // don't remove this bracket!
@@ -245,11 +246,26 @@ add_action('wp_enqueue_scripts', 'solarity_fonts');
 
 
 
-function pluralize($count, $singular, $plural = false) //pluralize for values other than 1
+/************* Enqueue Scripts and Styles *************/
+
+
+
+
+function pluralize($count, $singular, $plural = false) //pluralize a word if count value other than 1 (i.e. Installation(s))
 {
    if (!$plural) $plural = $singular . 's';
 
   return ($count == 1 ? $singular : $plural) ;
 }
+
+
+//Make embedded Vimeo and other videos bigger (screen size permitting)
+#add_filter( 'embed_defaults', 'bigger_embed_size' );
+
+#function bigger_embed_size() {
+# return array(	 'width' => 960,
+# 		'height' => 530,
+# 	);
+#}
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

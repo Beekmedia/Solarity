@@ -47,7 +47,6 @@
 
 	  <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 	  <?php #echo qtrans_generateLanguageSelectCode('image'); ?>
-	  <div class="gradient-box">
 		<div id="inner-header" class="wrap cf">
 
 			  <?php #to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
@@ -75,5 +74,4 @@
 			  </nav>
 
 		</div>
-	</div>
 </header>

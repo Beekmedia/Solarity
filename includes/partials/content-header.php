@@ -38,10 +38,8 @@
 		<?php elseif (is_single() || is_page()): ?>
 			<?php # Single posts or pages: ?>
 			<?=the_title()?>
-		<?php endif; ?>
-	</h1>
-
-	<?php if (has_deck()): ?>
+			<?php if (has_deck()): ?>
+				</h1>
 		<div id="subhead" class="deck"><h2><?php echo get_deck();
 		if (is_singular('post')):
 			if( get_field( "start-date" ) ):
@@ -73,4 +71,7 @@
 	    	</span>
 	    	</h2></div>
 	    <?php endif; ?>
+
+		<?php endif; ?>
+	</h1>
 </header>

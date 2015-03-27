@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"line-",
+				"line-height"
+			],
+			[
 				"cli",
 				"click	.click()"
 			],
@@ -30,10 +34,6 @@
 			[
 				"ligh",
 				"light-gray	 editor-style.scss"
-			],
-			[
-				"line-",
-				"line-height"
 			],
 			[
 				"und",
@@ -377,17 +377,19 @@
 		"/Users/djbeeker/github/solarity/library/js",
 		"/Users/djbeeker/github/solarity/library/scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints",
+		"/Users/djbeeker/github/solarity/library/scss/modules",
 		"/Users/djbeeker/github/solarity/library/scss/partials",
 		"/Users/djbeeker/github/solarity/post-formats"
 	],
 	"file_history":
 	[
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
+		"/Users/djbeeker/github/solarity/functions.php",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_481up.scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1240up.scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1030up.scss",
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
 		"/Users/djbeeker/github/solarity/header.php",
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
 		"/Users/djbeeker/github/solarity/library/js/scripts.js",
 		"/Users/djbeeker/github/solarity/library/css/login.css",
 		"/Users/djbeeker/github/solarity/library/css/editor-style.css",
@@ -399,7 +401,6 @@
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/snippets/PHP Comment in HTML.sublime-snippet",
 		"/Users/djbeeker/github/solarity/.editorconfig",
 		"/Users/djbeeker/github/solarity/includes/partials/content-header.php",
-		"/Users/djbeeker/github/solarity/functions.php",
 		"/Users/djbeeker/github/solarity/page-with-sidebar.php",
 		"/Users/djbeeker/github/solarity/sidebar.php",
 		"/Users/djbeeker/github/solarity/includes/partials/content-index.php",
@@ -513,7 +514,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -561,6 +562,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"video",
+			".sub-menu",
+			"sub-me",
+			".home",
+			"header",
+			"nav",
+			".sub",
 			"table",
 			"header",
 			".acf-map",
@@ -681,14 +689,7 @@
 			"alignright",
 			"the_tags",
 			"tags",
-			"get_the_tag_",
-			"tags",
-			"Tags:",
-			"meter",
-			".dd meter",
-			".percentage-columns",
-			"meter",
-			"_"
+			"get_the_tag_"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -894,6 +895,14 @@
 		"selected_items":
 		[
 			[
+				"base",
+				"library/scss/breakpoints/_base.scss"
+			],
+			[
+				"funct",
+				"functions.php"
+			],
+			[
 				"fun",
 				"functions.php"
 			],
@@ -910,10 +919,6 @@
 				"library/scss/partials/_variables.scss"
 			],
 			[
-				"base",
-				"library/scss/breakpoints/_base.scss"
-			],
-			[
 				"freshops",
 				"library/freshops.php"
 			],
@@ -924,10 +929,6 @@
 			[
 				"mixin",
 				"content/themes/freshops/library/less/_mixins.less"
-			],
-			[
-				"funct",
-				"content/themes/freshops/functions.php"
 			],
 			[
 				"7",

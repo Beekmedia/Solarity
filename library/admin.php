@@ -6,7 +6,8 @@ dashboard. Updates to this page are coming soon.
 It's turned off by default, but you can call it
 via the functions file.
 
-Developed by: Eddie Machado
+Developed by: Ben Beekman
+/*
 URL: http://benbeekman.com
 
 Special Thanks for code & inspiration to:
@@ -42,13 +43,6 @@ function disable_default_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);           // Yoast's SEO Plugin Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['rg_forms_dashboard']);        // Gravity Forms Plugin Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['bbp-dashboard-right-now']);   // bbPress Plugin Widget
-
-	/*
-	have more plugin widgets you'd like to remove?
-	share them with us so we can get a list of
-	the most commonly used. :D
-	https://github.com/eddiemachado/bones/issues
-	*/
 }
 
 /*
@@ -138,7 +132,7 @@ you like.
 
 // Custom Backend Footer
 function solarity_custom_admin_footer() {
-	_e( '<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.', 'solarity' );
+	_e( '<span id="footer-thankyou">Developed by <a href="http://benbeekman.com" target="_blank">Ben Beekman</a></span>. Built using <a href="http://benbeekman.com/web" target="_blank">Solarity</a>.', 'solarity' );
 }
 
 // adding it to the admin area

@@ -82,7 +82,7 @@ https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
 /*
- i imported this one in the functions file so bones would look sweet.
+ i imported this one in the functions file so solarity would look sweet.
  don't forget to remove it for your site.
 */
 /*
@@ -309,7 +309,7 @@ NAVIGATION STYLES
       has the possibility of being a mobile device.
       */ }
       .nav li a:hover, .nav li a:focus {
-        background-color: white(0.6);
+        background-color: white(0.75);
         text-decoration: none; }
     .nav li ul.sub-menu,
     .nav li ul.children {
@@ -353,24 +353,47 @@ NAVIGATION STYLES
       visibility: visible; }
 
 /* end .nav */
+.nav {
+  border-bottom: 0;
+  margin: 0; }
+  .nav li a {
+    display: block;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: .75em;
+    text-shadow: 0 0 1px #323944; }
+    .nav li a:hover, .nav li a:focus {
+      text-shadow: 0 0 0px transparent; }
+  .nav li .sub-menu li, .nav li .children li {
+    line-height: 1.2; }
+    .nav li .sub-menu li a, .nav li .children li a {
+      background-color: white(0.85);
+      padding: 10px 10px 10px 30px;
+      text-shadow: 0px 0px 0px transparent;
+      color: #323944; }
+    .nav li .sub-menu li .sub-menu a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu a, .nav li .children li .children li a {
+      padding-left: 2rem; }
+
+.nav li .sub-menu li .sub-menu li a {
+  padding-left: 2rem; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-  margin-top: 2.2em; }
+  margin-top: 0; }
 
 .widgettitle {
-  border-bottom: 2px solid #444;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.5rem; }
 
 .widget {
   padding: 0 10px;
-  margin: 2.2em 0; }
+  margin: 0 0 1rem 0; }
   .widget ul li {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.25rem;
     /* deep nesting */ }
     .widget ul li ul {
-      margin-top: 0.75em;
+      margin-top: 0.5rem;
       padding-left: 1em; }
 
 /* links widget */

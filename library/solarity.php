@@ -1,11 +1,12 @@
 <?php
-/* Welcome to Bones :)
-This is the core Bones file where most of the
+/* Welcome to Solarity :)
+This is the core Solarity file where most of the
 main functions & features reside. If you have
 any custom functions, it's best to put them
 in the functions.php file.
 
-Developed by: Eddie Machado
+Developed by: Ben Beekman
+/*
 URL: http://benbeekman.com
 
 	- head cleanup (remove rsd, uri links, junk css, ect)
@@ -51,7 +52,7 @@ function solarity_head_cleanup() {
 	// remove Wp version from scripts
 	add_filter( 'script_loader_src', 'solarity_remove_wp_ver_css_js', 9999 );
 
-} /* end bones head cleanup */
+} /* end solarity head cleanup */
 
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
@@ -127,13 +128,13 @@ function solarity_scripts_and_styles() {
 	if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'solarity-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
-		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'solarity-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
 		// ie-only style sheet
-		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+		wp_register_style( 'solarity-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
 		// comment reply script for threaded comments
 		if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -141,14 +142,18 @@ function solarity_scripts_and_styles() {
 		}
 
 		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'solarity-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+
+		//meanmenu for mobile nav
+		wp_register_script ('meanmenu', get_stylesheet_directory_uri() . '/library/js/libs/jquery.meanmenu.js', array('jquery'), 1, TRUE);
+
 
 		// enqueue styles and scripts
-		wp_enqueue_script( 'bones-modernizr' );
-		wp_enqueue_style( 'bones-stylesheet' );
-		wp_enqueue_style( 'bones-ie-only' );
+		wp_enqueue_script( 'solarity-modernizr' );
+		wp_enqueue_style( 'solarity-stylesheet' );
+		wp_enqueue_style( 'solarity-ie-only' );
 
-		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		$wp_styles->add_data( 'solarity-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
 		I recommend using a plugin to call jQuery
@@ -156,7 +161,8 @@ function solarity_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script('meanmenu');
+		wp_enqueue_script( 'solarity-js' );
 
 	}
 }
@@ -215,7 +221,7 @@ function solarity_theme_support() {
 			'footer-links' => __( 'Footer Links', 'solarity' ) // secondary nav in footer
 		)
 	);
-} /* end bones theme support */
+} /* end solarity theme support */
 
 
 /*********************
@@ -224,7 +230,7 @@ RELATED POSTS FUNCTION
 
 // Related Posts Function (call using solarity_related_posts(); )
 function solarity_related_posts() {
-	echo '<ul id="bones-related-posts">';
+	echo '<ul id="solarity-related-posts">';
 	global $post;
 	$tags = wp_get_post_tags( $post->ID );
 	if($tags) {
@@ -247,7 +253,7 @@ function solarity_related_posts() {
 	}
 	wp_reset_postdata();
 	echo '</ul>';
-} /* end bones related posts function */
+} /* end solarity related posts function */
 
 /*********************
 PAGE NAVI

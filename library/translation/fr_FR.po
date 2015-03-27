@@ -258,11 +258,11 @@ msgstr "Récemment sur Themble (Changer dans le fichier admin.php)"
 msgid ""
 "<span id=\"footer-thankyou\">Developed by <a href=\"http://yoursite.com\" "
 "target=\"_blank\">Your Site Name</a></span>. Built using <a href=\"http://"
-"themble.com/bones\" target=\"_blank\">Bones</a>."
+"themble.com/bones\" target=\"_blank\">Solarity</a>."
 msgstr ""
 "<span id=\"footer-thankyou\">Developpé par <a href=\"http://votresite.com\" "
 "target=\"_blank\">Votre Nom</a></span>. Thème basé sur <a href=\"http://"
-"themble.com/bones\" target=\"_blank\">Bones</a>."
+"themble.com/bones\" target=\"_blank\">Solarity</a>."
 
 #: library/bones.php:213 library/bones.php:230
 msgid "The Main Menu"
@@ -488,8 +488,8 @@ msgid "This is the error message in the taxonomy-custom_cat.php template."
 msgstr "Ceci est le message d'erreur de la page taxonomy-custom_cat.php."
 
 #. Theme Name of the plugin/theme
-msgid "Bones (Rename Me!)"
-msgstr "Bones (renommez moi !)"
+msgid "Solarity (Rename Me!)"
+msgstr "Solarity (renommez moi !)"
 
 #. Theme URI of the plugin/theme
 msgid "http://www.themble.com/bones"
@@ -497,16 +497,16 @@ msgstr "http://www.themble.com/bones"
 
 #. Description of the plugin/theme
 msgid ""
-"This site was built using the Bones Development Theme. For more information "
-"about Bones or to view documentation, you can visit the <a href=\"https://"
-"github.com/eddiemachado/bones/issues\" title=\"Bones Issues\">Bones Issues</"
+"This site was built using the Solarity Development Theme. For more information "
+"about Solarity or to view documentation, you can visit the <a href=\"https://"
+"github.com/eddiemachado/bones/issues\" title=\"Solarity Issues\">Solarity Issues</"
 "a> page on Github. You'll want to customize this for your clients with your "
 "own information."
 msgstr ""
-"Site construit à partir du thème de développement Bones. Pour plus "
-"d'informations à propos de Bones ou pour lire la documentation, rendez vous "
+"Site construit à partir du thème de développement Solarity. Pour plus "
+"d'informations à propos de Solarity ou pour lire la documentation, rendez vous "
 "sur la page <a href=\"https://github.com/eddiemachado/bones/issues\" title="
-"\"Bones Issues\">Bones Issues</a> sur Github. Vous pouvez éditer le présent "
+"\"Solarity Issues\">Solarity Issues</a> sur Github. Vous pouvez éditer le présent "
 "texte pour y mettre vos propres informations à destination de vos clients."
 
 #. Author of the plugin/theme

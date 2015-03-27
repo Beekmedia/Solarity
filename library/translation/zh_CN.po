@@ -191,11 +191,11 @@ msgstr ""
 msgid ""
 "<span id=\"footer-thankyou\">Developed by <a href=\"http://yoursite.com\" "
 "target=\"_blank\">Your Site Name</a></span>. Built using <a href=\"http://"
-"themble.com/bones\" target=\"_blank\">Bones</a>."
+"themble.com/bones\" target=\"_blank\">Solarity</a>."
 msgstr ""
 "<span id=\"footer-thankyou\"><a href=\"http://yoursite.com\" target=\"_blank"
 "\">我的站点名称</a></span> 基于 <a href=\"http://themble.com/bones\" target="
-"\"_blank\">Bones</a> 开发。"
+"\"_blank\">Solarity</a> 开发。"
 
 #: library/bones.php:82
 #, php-format

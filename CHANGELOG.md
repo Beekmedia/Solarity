@@ -6,7 +6,8 @@ For more information, please visit:
 
 http://themble.com/bones/
 
-Author: Eddie Machado
+Author: Ben Beekman
+/*
 
 *******************************************************************
 
@@ -93,7 +94,7 @@ Author: Eddie Machado
 - merged base.css into style.css for one less call in the header
 - added styleguide page and styles (oh yea!)
 - added nav class to both menus
-- removed "Powered by Wordpress & Bones" from footer, because let's face it: we all delete this anyway.
+- removed "Powered by Wordpress & Solarity" from footer, because let's face it: we all delete this anyway.
 - added button class to submit comment button
 - removed html5 placeholder fallback (you should be using Gravity Forms)
 - added slug and rewrite to custom post type for easier urls
@@ -132,7 +133,7 @@ Author: Eddie Machado
 - added pubdate and time microformat to all templates
 - changed page navi from div to nav and from ul to ol
 - added Read More filter to replace the [...]
-- removed default "Bones" text in footer if you don't have a menu
+- removed default "Solarity" text in footer if you don't have a menu
 - updated modernizr to 2.0.6 & added FULL support (respond, load, ect)
 - updated jQuery to 1.6.2
 - added IE6 meta to remove toolbar
