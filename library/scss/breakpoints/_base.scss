@@ -964,6 +964,16 @@ SIDEBARS & ASIDES
   width: 120px;
   vertical-align: middle;
 }
+.sidebar .locations h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.sidebar .locations ul {
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
 
 .sidebar button {
  float: left;
@@ -1120,4 +1130,12 @@ article ol {
 
 .aligncenter {text-align: center;}
 
-header h1, .deck {padding-left: 2rem;}
+header h1, .deck {
+  padding-left: 1rem;
+}
+
+.featured-block {
+  text-align: center;
+  padding: .5rem 2rem;
+  background: $white(0.2);
+}

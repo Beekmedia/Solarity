@@ -8,14 +8,21 @@
 ___________________________________________________________________________________________________*/
 ?>
 <?php if (is_front_page()) : ?>
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Home Sidebar") ) : ?>
-		<?php dynamic_sidebar('Home Sidebar'); ?>
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar1") ) : ?>
+		<?php dynamic_sidebar('sidebar1'); ?>
 	<?php endif; ?>
-<?php elseif ( is_home() || is_archive() || is_singular( 'post' ) || is_tag() || is_tax() || is_page()) : ?>
+<?php elseif ( is_home() || is_archive() || is_tag() || is_tax() || is_page()) : ?>
 
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Blog Sidebar") ) : ?>
 
 		<?php dynamic_sidebar('Blog Sidebar'); ?>
+	<?php else: ?>
+	<?php endif; ?>
+<?php elseif (is_singular( 'post' )) :?>
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("single") ) : ?>
+
+		<?php dynamic_sidebar('single'); ?>
+
 	<?php else: ?>
 	<?php endif; ?>
 <?php endif; ?>

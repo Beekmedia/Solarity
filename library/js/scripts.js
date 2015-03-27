@@ -1,14 +1,16 @@
 /*
- * Bones Scripts File
- * Author: Eddie Machado
+ * Custom Scripts
+ * Author: Ben Beekman
  *
  */
-
-
-
  (function($) {
 
  jQuery('header nav').meanmenu({meanScreenWidth: "768"});
+
+ $(".linkcontainer").click(function() {
+  window.location = $(this).find("a").attr("href");
+  return false;
+});
 /*
 *  render_map
 *
