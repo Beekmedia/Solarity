@@ -1,6 +1,6 @@
 <?=get_header()?>
 
-	<div id="content" class="fix">
+	<div id="content" class="fix wrap">
 
 <div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
 
@@ -18,11 +18,7 @@
 
 					<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						<section itemprop="articleBody">
-
-							<?=get_template_part('includes/partials/content', 'index')?>
-
-						</section> <!-- /#content -->
+						<?=get_template_part('includes/partials/content', 'index')?>
 
 					</article>
 

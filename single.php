@@ -1,33 +1,12 @@
 <?=get_header()?>
+<div class="wrap main-content">
+
 <?php if (have_posts()): ?>
 	<?php while (have_posts()): ?>
+
 		<?=get_template_part('includes/partials/content', 'header')?>
-
-
-		<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
-		<? # On single gallery pages, the sidebar is preceded by project details ?>
-		<?php if( have_rows('locations') ): ?>
-			<div class="locations">
-				<? //print a list of locations of the installations
-				$rows = get_field('locations');
-				$row_count = count($rows);
-				echo '<h3>' . pluralize($row_count, 'Installation Location', 'Installation Locations');
-				echo ' <a href="#installation-map" class="map-link">' . '>> View on Map' . '</a></h3>';
-
-				while ( have_rows('locations') ) : the_row(); ?>
-					<ul><strong><?php echo the_sub_field('title'); ?></strong>, <?php echo the_sub_field('description'); ?></ul> <?
-
-				endwhile;
-
-			wp_reset_query();?>
-			</div>
-		<?php endif; ?>
-			<div class="gallery-description"><?=the_field('details');?></div>
-
-			<?=get_sidebar('single') ?>
-		</div> <!-- /#sidebar -->
-
-		<div id="mainbar" class="m-all t-2of3 d-5of7 last-col">
+		<main>
+		<div id="mainbar" class="m-all t-2of3 d-2of3 first-col">
 
 			<?=the_post()?>
 
@@ -65,6 +44,30 @@
 			</article>
 		</div>
 
+		<div id="sidebar" class="sidebar m-all t-1of3 d-1of3 last-col" role="complementary">
+		<? # On single gallery pages, the sidebar is preceded by project details ?>
+		<?php if( have_rows('locations') ): ?>
+			<div class="locations">
+				<? //print a list of locations of the installations
+				$rows = get_field('locations');
+				$row_count = count($rows);
+				echo '<h3>' . pluralize($row_count, 'Installation Location', 'Installation Locations');
+				echo ' <a href="#installation-map" class="map-link">' . '>>View on Map' . '</a></h3>';
+
+				while ( have_rows('locations') ) : the_row(); ?>
+					<ul><strong><?php echo the_sub_field('title'); ?></strong><?php
+					?>, <?php echo the_sub_field('description'); ?></ul> <?
+
+				endwhile;
+
+			wp_reset_query();?>
+
+			</div> <? #.locations ?>
+		<?php endif; ?>
+			<div class="gallery-description"><?=the_field('details');?></div>
+
+			<?=get_sidebar('single') ?>
+		</div> <!-- /#sidebar -->
 	<?php endwhile; ?>
 
 <?php else: ?>
@@ -72,5 +75,6 @@
 	<?=get_template_part('includes/partials/content', 'none')?>
 
 <?php endif; ?>
-
+</div>
+</main>
 <?=get_footer()?>

@@ -1296,9 +1296,6 @@ a.meanmenu-reveal {
       margin-top: 3px; }
       .mean-bar .meanmenu-reveal span:first-child {
         margin-top: 0; }
-  @media all and (min-width: 640px) {
-    .mean-bar {
-      display: none; } }
 
 /*********************
 BASE (MOBILE) SIZE
@@ -1348,13 +1345,17 @@ LAYOUT & GRID STYLES
 /********************
 LINK STYLES
 ********************/
-a, a:visited {
+a,
+a:visited {
   color: #fba504;
   text-decoration: none; }
-  a:hover, a:focus, a:visited:hover, a:visited:focus {
+  a:hover, a:focus,
+  a:visited:hover,
+  a:visited:focus {
     color: #ce8703;
     text-decoration: underline; }
-  a:link, a:visited:link {
+  a:link,
+  a:visited:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 /*****************************************************************
@@ -1384,25 +1385,31 @@ h5,
   .h5 a {
     text-decoration: none; }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.5em;
   line-height: 1.333em;
   margin: .5rem 0; }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin: 0 0 .5rem 0; }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.125em; }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 400;
+  font-variant: small-caps;
   line-height: 1.1; }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: .846em;
   line-height: 2.09em;
   text-transform: uppercase;
@@ -1420,7 +1427,7 @@ header.header {
   -webkit-transition: All 1s ease;
   -moz-transition: All 1s ease;
   -o-transition: All 1s ease;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0); }
   header.header:hover, header.header:active {
     background-color: black; }
 
@@ -1463,38 +1470,16 @@ nav .top-nav {
   font-size: 1.4rem;
   line-height: .8;
   margin-top: 0;
-  padding-top: 0; }
+  padding-top: 0;
+  width: 500px;
+  display: table;
+  table-layout: fixed; }
   nav .top-nav li a {
     padding-top: 1.6rem; }
 
-.nav {
-  border-bottom: 0;
-  margin: 0; }
-  .nav li a {
-    display: block;
-    color: #f2f2f2;
-    text-decoration: none;
-    padding: .75em;
-    text-shadow: 0 0 1px #323944; }
-    .nav li a:hover, .nav li a:focus {
-      text-shadow: 0 0 0px transparent; }
-  .nav li .sub-menu li a {
-    background-color: transparent; }
-  .nav li .children li a {
-    background-color: #323944; }
-  .nav li .sub-menu li, .nav li .children li {
-    line-height: 1.2; }
-    .nav li .sub-menu li a, .nav li .children li a {
-      padding: 10px 10px 10px 30px;
-      text-shadow: 0px 0px 0px transparent;
-      color: white; }
-      .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
-        color: #fba504; }
-    .nav li .sub-menu li .sub-menu a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu a, .nav li .children li .children li a {
-      padding-left: 2rem; }
-
 footer .nav ul {
-  text-align: center; }
+  text-align: center;
+  overflow: auto; }
   footer .nav ul li {
     display: inline-block;
     float: none;
@@ -1507,15 +1492,11 @@ POSTS & CONTENT STYLES
 ********************/
 #container article {
   margin: 0;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.72); }
-
-.home #container article {
-  background-color: transparent; }
+  padding: 1rem 0; }
 
 article h1 {
   margin: 0px;
-  padding: 1rem 0 .75rem 5px; }
+  padding: 0 0 .75rem 5px; }
 
 article h2 {
   padding-left: 5px; }
@@ -1523,16 +1504,16 @@ article h2 {
 .gallery-item img {
   height: auto; }
 
-.hentry {
-  background-color: transparent;
-  border-radius: 3px;
-  margin-bottom: 1.5em; }
-  .hentry header {
-    padding: 1.5em; }
-  .hentry footer {
-    padding: 1.5em; }
-    .hentry footer p {
-      margin: 0; }
+article p {
+  word-wrap: normal;
+  -moz-hyphens: none;
+  hyphens: none; }
+article header {
+  padding: 1.5em 0; }
+article footer {
+  padding: 1.5em; }
+  article footer p {
+    margin: 0; }
 
 .single-title,
 .page-title,
@@ -1585,14 +1566,14 @@ article {
     font-style: italic;
     color: #9fa6b4; }
   article dd {
-    color: #787878;
+    color: #eaedf2;
     font-size: .9em;
     margin-left: 0;
     margin-bottom: 1.5em; }
   article img {
     height: auto;
-    margin: 0 0 1.5em 0;
-    max-width: 100%; }
+    margin: 0;
+    width: 100%; }
   article .size-auto,
   article .size-full,
   article .size-large,
@@ -1638,7 +1619,8 @@ PAGE NAVI STYLES
     white-space: nowrap;
     padding: 0;
     clear: both;
-    border-radius: 3px; }
+    border-radius: 3px;
+    overflow: auto; }
   .pagination li {
     padding: 0;
     margin: 0;
@@ -1646,7 +1628,8 @@ PAGE NAVI STYLES
     display: inline;
     overflow: hidden;
     border-right: 1px solid #eaedf2; }
-  .pagination a, .pagination span {
+  .pagination a,
+  .pagination span {
     margin: 0;
     text-decoration: none;
     padding: 0;
@@ -1657,7 +1640,9 @@ PAGE NAVI STYLES
     min-width: 1em;
     display: block;
     color: #2980b9; }
-    .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+    .pagination a:hover, .pagination a:focus,
+    .pagination span:hover,
+    .pagination span:focus {
       background-color: #2980b9;
       color: white; }
   .pagination .current {
@@ -1794,7 +1779,10 @@ SIDEBARS & ASIDES
 .sidebar {
   padding: 0 .5rem 0 1rem; }
 
-.sidebar textarea, input, select, input[type="search"] {
+.sidebar textarea,
+input,
+select,
+input[type="search"] {
   border: 0 none;
   border-radius: 3px;
   box-shadow: none;
@@ -1810,10 +1798,16 @@ SIDEBARS & ASIDES
   width: 120px;
   vertical-align: middle; }
 
+.sidebar p {
+  word-wrap: normal;
+  -moz-hyphens: none;
+  hyphens: none;
+  padding-right: 1rem; }
+
 .sidebar .locations h3 {
   margin: 0;
   padding: 0;
-  font-weight: bold; }
+  font-variant: small-caps; }
 
 .sidebar .locations ul {
   line-height: 1.2;
@@ -1868,10 +1862,10 @@ FOOTER STYLES
 .acf-map {
   max-width: 100%;
   width: 100%;
-  height: 300px;
+  height: 220px;
   max-height: 80%;
   border: #9fa6b4 solid 2px;
-  margin: 1rem 0; }
+  margin: 0 0 1rem 0; }
 
 .gm-style .gm-style-iw {
   color: #5c6b80;
@@ -1912,7 +1906,11 @@ article ul {
   list-style-type: disc;
   list-style-position: inside; }
 
-article nav ul, article .nav ul {
+.sidebar ul {
+  list-style-type: none; }
+
+article nav ul,
+article .nav ul {
   list-style-type: none; }
 
 article ol {
@@ -1928,13 +1926,31 @@ article ol {
 .aligncenter {
   text-align: center; }
 
-header h1, .deck {
-  padding-left: 1rem; }
+header h1,
+header .deck {
+  margin: 0; }
+
+header h1 {
+  margin: 0;
+  padding: 0; }
+
+header .deck {
+  padding-top: 10px; }
 
 .featured-block {
-  text-align: center;
-  padding: .5rem 2rem;
+  text-align: left;
+  padding: 0;
   background: white 0.2; }
+
+.gallery-caption {
+  text-align: center;
+  padding: 0 2rem; }
+
+.main-content header {
+  margin-top: 1rem; }
+
+.entry-content {
+  margin-top: 20px; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2053,16 +2069,19 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .acf-map {
-    height: 600px; }
+    height: 400px; }
 
   /*********************
   GENERAL STYLES
   *********************/
+  #container article {
+    padding: 0; }
+
   /*********************
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px; }
+    width: 660px; }
 
   /*********************
   HEADER STYLES
@@ -2103,7 +2122,7 @@ you can add resource intensive styles.
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
-        border: 1px solid white 0.95;
+        border: 1px solid white 0.8;
         border-top: 0;
         position: absolute;
         visibility: hidden;
@@ -2118,17 +2137,17 @@ you can add resource intensive styles.
           */ }
           .nav li ul.sub-menu li a,
           .nav li ul.children li a {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 10px;
+            background-color: white 0.95;
+            padding: 10px 5px 10px 10px;
             border-right: 0;
             display: block;
-            width: 340px;
+            width: 170px;
             border: 1px solid white 0.85;
             text-decoration: none; }
             .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
             .nav li ul.children li a:hover,
             .nav li ul.children li a:focus {
-              background-color: rgba(255, 255, 255, 0.5);
+              background-color: white 0.8;
               text-decoration: none; }
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
@@ -2160,11 +2179,9 @@ you can add resource intensive styles.
         padding: 10px 10px 10px 30px;
         text-shadow: 0px 0px 0px transparent;
         color: #323944; }
-      .nav li .sub-menu li .sub-menu a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu a, .nav li .children li .children li a {
-        padding-left: 2rem; }
-
-  .nav li .sub-menu li .sub-menu li a {
-    padding-left: 2rem; }
+      .nav li .sub-menu li .sub-menu li a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a, .nav li .children li .children li a {
+        padding-left: 10px;
+        font-size: 1rem; }
 
   /*********************
   SIDEBARS & ASIDES
@@ -2230,7 +2247,7 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; }
+    width: 900px; }
 
   .acf-map {
     height: 680px; } }
@@ -2250,7 +2267,7 @@ This is for the larger monitors and possibly full screen viewers.
   
   ******************************************************************/
   .wrap {
-    width: 1200px; }
+    width: 1100px; }
 
   .acf-map {
     height: 780px; } }

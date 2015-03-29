@@ -12,11 +12,14 @@ come into play. Have fun!
 
 ******************************************************************/
 .acf-map {
-height: 600px;
+height: 400px;
 }
 /*********************
 GENERAL STYLES
 *********************/
+#container article {
+  padding: 0;
+}
 
 body {}
 
@@ -25,7 +28,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-  width: 760px;
+  width: 660px;
 }
 
 /*********************
@@ -75,7 +78,7 @@ NAVIGATION STYLES
     ul.sub-menu,
     ul.children {
       margin-top: 0;
-      border: 1px solid $white(0.95);
+      border: 1px solid $white(0.8);
       border-top: 0;
       position: absolute;
       visibility: hidden;
@@ -83,17 +86,17 @@ NAVIGATION STYLES
       li {
 
         a {
-          background-color: white(0.85);
-          padding: 10px;
+          background-color: $white(0.95);
+          padding: 10px 5px 10px 10px;
           border-right: 0;
           display: block;
-          width: 340px;
+          width: 170px;
           border: 1px solid $white(0.85);
           text-decoration: none;
 
           &:hover,
           &:focus {
-            background-color: white(0.5);
+            background-color: $white(0.8);
             text-decoration: none;
           }
 
@@ -192,9 +195,9 @@ NAVIGATION STYLES
 
         &:last-child {}
 
-        .sub-menu, .children li { //level 3 menus
-          a {
-            padding-left: 2rem;
+        .sub-menu li, .children li { //level 3 menus
+          a { padding-left: 10px;
+            font-size: 1rem;
           }
          }
       }
@@ -214,9 +217,7 @@ NAVIGATION STYLES
 } // end .nav
 
 
-.nav li .sub-menu li .sub-menu li a{
-  padding-left: 2rem;
-}
+
 
 /*********************
 SIDEBARS & ASIDES

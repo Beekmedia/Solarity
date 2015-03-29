@@ -29,8 +29,7 @@ body {
 WORDPRESS BODY CLASSES
 style a page via class
 *******************/
-
-.home .footer{
+.home .footer {
   // color: rgb(248, 249, 250);
   // bottom: 40px;
   // position: absolute;
@@ -40,51 +39,119 @@ style a page via class
   // padding-bottom: .8em;
 
   #inner-footer {
-    display:none;
+    display: none;
     visibility: hidden;
   }
 }
-
-.rtl {}                           // for sites that are read right to left (i.e. hebrew)
-.home {}                          // home page
-.blog {}                          // blog template page
-.archive {}                       // archive page
-.date {}                          // date archive page
-.date-paged-1 {}                // replace the number to the corresponding page number
-.search {}                        // search page
-.search-results {}              // search result page
-.search-no-results {}           // no results search page
-.search-paged-1 {}              // individual paged search (i.e. body.search-paged-3)
-.error404 {}                      // 404 page
-.single {}                        // single post page
-.postid-1 {}                    // individual post page by id (i.e. body.postid-73)
-.single-paged-1 {}              // individual paged single (i.e. body.single-paged-3)
-.attachment {}                    // attatchment page
-.attachmentid-1 {}              // individual attatchment page (i.e. body.attachmentid-763)
-.attachment-mime-type {}        // style mime type pages
-.author {}                        // author page
-.author-nicename {}             // user nicename (i.e. body.author-samueladams)
-.author-paged-1 {}              // paged author archives (i.e. body.author-paged-4) for page 4
-.category {}                      // category page
-.category-1 {}                  // individual category page (i.e. body.category-6)
-.category-paged-1 {}            // replace the number to the corresponding page number
-.tag {}                           // tag page
-.tag-slug {}                    // individual tag page (i.e. body.tag-news)
-.tag-paged-1 {}                 // replace the number to the corresponding page number
-.page-template {}                 // custom page template page
-.page-template-page-php {}      // individual page template (i.e. body.page-template-contact-php
-.page-paged-1 {}                // replace the number to the corresponding page number
-.page-parent {}                 // parent page template
-.page-child {}                  // child page template
-.parent-pageid-1 {}             // replace the number to the corresponding page number
-.logged-in {}                     // if user is logged in
-.paged {}                         // paged items like search results or archives
-.paged-1 {}                     // individual paged (i.e. body.paged-3)
+.rtl {
+}
+// for sites that are read right to left (i.e. hebrew)
+.home {
+}
+// home page
+.blog {
+}
+// blog template page
+.archive {
+}
+// archive page
+.date {
+}
+// date archive page
+.date-paged-1 {
+}
+// replace the number to the corresponding page number
+.search {
+}
+// search page
+.search-results {
+}
+// search result page
+.search-no-results {
+}
+// no results search page
+.search-paged-1 {
+}
+// individual paged search (i.e. body.search-paged-3)
+.error404 {
+}
+// 404 page
+.single {
+}
+// single post page
+.postid-1 {
+}
+// individual post page by id (i.e. body.postid-73)
+.single-paged-1 {
+}
+// individual paged single (i.e. body.single-paged-3)
+.attachment {
+}
+// attatchment page
+.attachmentid-1 {
+}
+// individual attatchment page (i.e. body.attachmentid-763)
+.attachment-mime-type {
+}
+// style mime type pages
+.author {
+}
+// author page
+.author-nicename {
+}
+// user nicename (i.e. body.author-samueladams)
+.author-paged-1 {
+}
+// paged author archives (i.e. body.author-paged-4) for page 4
+.category {
+}
+// category page
+.category-1 {
+}
+// individual category page (i.e. body.category-6)
+.category-paged-1 {
+}
+// replace the number to the corresponding page number
+.tag {
+}
+// tag page
+.tag-slug {
+}
+// individual tag page (i.e. body.tag-news)
+.tag-paged-1 {
+}
+// replace the number to the corresponding page number
+.page-template {
+}
+// custom page template page
+.page-template-page-php {
+}
+// individual page template (i.e. body.page-template-contact-php
+.page-paged-1 {
+}
+// replace the number to the corresponding page number
+.page-parent {
+}
+// parent page template
+.page-child {
+}
+// child page template
+.parent-pageid-1 {
+}
+// replace the number to the corresponding page number
+.logged-in {
+}
+// if user is logged in
+.paged {
+}
+// paged items like search results or archives
+.paged-1 {
+}
+// individual paged (i.e. body.paged-3)
 
 /********************
 LAYOUT & GRID STYLES
 ********************/
-
 .wrap {
   width: 96%;
   margin: 0 auto;
@@ -93,34 +160,31 @@ LAYOUT & GRID STYLES
 /********************
 LINK STYLES
 ********************/
-
-a, a:visited {
+a,
+a:visited {
   color: $link-color;
   text-decoration: none;
 
   // on hover
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $link-hover;
     text-decoration: underline;
   }
-
   // on click
   &:active {
-
   }
-
   // mobile tap color
   &:link {
-    //  this highlights links on iPhones/iPads. so it basically works like the :hover selector for mobile devices.
+    //  this highlights links on iPhones/iPads. so it basically works like the: hover selector for mobile devices.
 
-    -webkit-tap-highlight-color : rgba( 0, 0, 0, .3 );
+    -webkit-tap-highlight-color:rgba(0, 0, 0, .3);
   }
 }
 
 /*****************************************************************
 H1, H2, H3, H4, H5 STYLES
 *****************************************************************/
-
 h1,
 .h1,
 h2,
@@ -133,35 +197,37 @@ h5,
 .h5 {
   font-weight: 500;
   text-rendering: optimizelegibility;
+
   // removing text decoration from all headline links
   a {
     text-decoration: none;
   }
 }
-
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.5em;
   line-height: 1.333em;
   margin: .5rem 0;
 }
-
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin: 0 0 .5rem 0;
 }
-
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.125em;
 }
-
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 400;
+  font-variant: small-caps;
   line-height: 1.1;
 }
-
-h5, .h5 {
+h5,
+.h5 {
   font-size: .846em;
   line-height: 2.09em;
   text-transform: uppercase;
@@ -171,51 +237,48 @@ h5, .h5 {
 /********************
 HEADER STYLES
 ********************/
-
 .slogan {
   color: black(.6);
 }
-
 header.header {
   z-index: -1;
-  transition:All 1s ease;
-  -webkit-transition:All 1s ease;
-  -moz-transition:All 1s ease;
-  -o-transition:All 1s ease;
-  background-color: black(.6);
-  &:hover, &:active{
+  transition: All 1s ease;
+  -webkit-transition: All 1s ease;
+  -moz-transition: All 1s ease;
+  -o-transition: All 1s ease;
+  background-color: black(0);
+
+  &:hover,
+  &:active {
     background-color: black(1);
   }
 }
-
 .front header.header {
   z-index: -1;
-  transition:All 1s ease;
-  -webkit-transition:All 1s ease;
-  -moz-transition:All 1s ease;
-  -o-transition:All 1s ease;
+  transition: All 1s ease;
+  -webkit-transition: All 1s ease;
+  -moz-transition: All 1s ease;
+  -o-transition: All 1s ease;
   background-color: black(0);
-  &:hover, &:active{
+
+  &:hover,
+  &:active {
     background-color: black(1);
   }
 }
-
 
 .header {
   background-color: transparent;
 }
 
-
 header {
-  transition:All 1s ease;
-  -webkit-transition:All 1s ease;
-  -moz-transition:All 1s ease;
-  -o-transition:All 1s ease;
+  transition: All 1s ease;
+  -webkit-transition: All 1s ease;
+  -moz-transition: All 1s ease;
+  -o-transition: All 1s ease;
 }
 
-header:hover{
-}
-
+header:hover {}
 
 #logo {
   margin: .25rem 0 0 0;
@@ -225,7 +288,8 @@ header:hover{
   color: darken($white, 10%);
   text-shadow: 0 0 1px $black;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $white;
     text-shadow: 0 0 0 $black;
   }
@@ -234,94 +298,26 @@ header:hover{
 /********************
 NAVIGATION STYLES
 ********************/
-
 .logo-wrap {
   padding: 0 .75em 0 .75em;
 }
-
 nav {
   .top-nav {
     font-size: 1.4rem;
     line-height: .8;
     margin-top: 0;
     padding-top: 0;
-    li{
-      a{
+    width: 500px;
+    display: table;
+    table-layout: fixed;
+
+    li {
+      a {
         padding-top: 1.6rem;
       }
     }
   }
 }
-
-.nav {
-  border-bottom: 0;
-  margin: 0;
-
-  li {
-
-
-    a {
-      display: block;
-      color: darken($white, 5%);
-      text-decoration: none;
-      padding: .75em;
-      text-shadow: 0 0 1px $black;
-      //
-
-      &:hover, &:focus {
-        text-shadow: 0 0 0px transparent;
-
-      }
-    }
-
-    &:first-child {}
-
-    &:last-child {}
-    .sub-menu li a {background-color: transparent;}
-    .children li a {background-color: $black;}
-    .sub-menu, .children { //level 2 menus
-
-      li {
-        line-height: 1.2;
-
-
-        a {
-          padding: 10px 10px 10px 30px;
-          text-shadow: 0px 0px 0px transparent;
-
-          &:hover,
-          &:focus {
-            color: $link-color;
-          }
-
-          &:link {}
-           color: $white;
-        }
-
-        &:first-child {}
-
-        &:last-child {}
-
-        .sub-menu, .children li { //level 3 menus
-          a {
-            padding-left: 2rem;
-          }
-         }
-      }
-    }
-
-  } // end .menu li
-
-  // highlight current page
-  li.current-menu-item,
-  li.current_page_item,
-  li.current_page_ancestor {
-
-    a {}
-
-  }  // end current highlighters
-
-} // end .nav
 
 
 
@@ -329,6 +325,7 @@ nav {
 footer .nav {
   ul {
     text-align: center;
+    overflow: auto;
 
     li {
       display: inline-block;
@@ -342,281 +339,278 @@ footer .nav {
   }
 }
 
-
 /********************
 POSTS & CONTENT STYLES
 ********************/
-
 #container article {
   margin: 0;
-  padding: 1rem 2rem;
-  background-color: black(.72);
+  padding: 1rem 0;
 }
-// #container>header {
-//  margin: 0;
-//  background-color: black(.6);
-// }
-.home #container article {background-color: transparent;}
 
 article h1 {
   margin: 0px;
-  padding: 1rem 0 .75rem 5px;
+  padding: 0 0 .75rem 5px;
 }
-
 article h2 {
   padding-left: 5px;
 }
-
 #content {
-   // margin:1rem 0 0 1rem;
- }
- .gallery-item img {
-  height:auto;
+  // margin: 1rem 0 0 1rem;
 }
-.hentry {
-  background-color: transparent;
-  border-radius: 3px;
-  margin-bottom: 1.5em;
-      // border: 1px solid $border-color;
-
-      header {
-        // border-bottom: 1px solid $light-gray;
-        padding: 1.5em;
-      }
-
-      footer {
-        padding: 1.5em;
-        // border-top: 1px solid $light-gray;
-
-        p {
-          margin: 0;
-        }
-      }
-
-    } // end .hentry
-
-    .single-title,
-    .page-title,
-    .entry-title {
-      margin: 0;
+.gallery-item img {
+  height: auto;
+}
+article {
+  p {
+    word-wrap: normal;
+    -moz-hyphens: none;
+    hyphens: none;
     }
+  // border: 1px solid $border-color;
 
-    .single-title {}
-
-    .page-title {}
-
-    .entry-title {}
-
-    .archive-title {}
-
-    // want to style individual post classes? Booya!
-    .post-id {}         // post by id (i.e. post-3)
-    .post {}            // general post style
-    .page {}            // general article on a page style
-    .attachment {}      // general style on an attatchment
-    .sticky {}          // sticky post style
-    .hentry {}          // hentry class
-    .category-slug {}   // style by category (i.e. category-videos)
-    .tag-slug {}        // style by tag (i.e. tag-news)
-
-    // post meta
-    .byline {
-      color: $meta-gray;
-      font-style: italic;
-      margin: 0;
-
-      time {}
-    }
-
-    // entry content
-    article {
-      // padding: 1.5em 1.5em 0;
-
-      p {
-        margin: 0 0 1.5em;
-      }
-
-
-      ul, ol, table, dl {}
-
-      ul, ol {
-
-        li {}
-
-      }
-
-      ul {
-
-        li {}
-
-      }
-
-      ol {
-
-        li {}
-
-      }
-
-      table {
-        width: 100%;
-        border: 1px solid black(.3);
-        margin-bottom: 1.5em;
-
-        caption {
-          color: $meta-gray;
-          font-size: .75em;
-          margin: 0 0 7px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-        }
-      }
-
-      tr {
-        border-bottom: 1px solid black(.4);
-        &:nth-child(even) {
-          background-color: black(.225);
-        }
-        &:nth-child(odd) {
-          background-color: black(.125);
-        }
-      }
-
-      td {
-        padding: 7px;
-        border-right: 1px solid black(.3);
-
-        &:last-child {
-          border-right: 0;
-        }
-      }
-
-      th {
-        background-color: black(.25);
-        border-bottom: 1px solid solid black(.4);
-        border-right: 1px solid black(.4);
-
-        &:last-child {
-          border-right: 0;
-        }
-      }
-
-      blockquote {
-        margin: 0 0 1.5em .75em;
-        padding: 0 0 0 .75em;
-        border-left: 3px solid $blue;
-        font-style: italic;
-        color: $meta-gray;
-
-        &:before {}
-
-      }
-
-      dl {}
-
-      dt {}
-
-      dd {
-        color: #787878;
-        font-size: .9em;
-        margin-left: 0;
-        margin-bottom: 1.5em;
-      }
-
-      img {
-        height: auto;
-        margin: 0 0 1.5em 0;
-        max-width: 100%;
-      }
-
-      //
-     /* image alignment on a screen this size may be
-      a bit difficult. It's set to start aligning
-      and floating images at the next breakpoint,
-      but it's up to you. Feel free to change it up. */
-
-      .alignleft, img.alignleft {}
-      .alignright, img.alignright {}
-      .aligncenter, img.aligncenter {}
-
-      .size-auto,
-      .size-full,
-      .size-large,
-      .size-medium,
-      .size-thumbnail {
-        max-width: 100%;
-        height: auto;
-      }
-
-      pre {
-        background: $black;
-        color: $light-gray;
-        font-size: .9em;
-        padding: 1.5em;
-        margin: 0 0 1.5em;
-        border-radius: 3px;
-      }
-
-    } // end .entry-content
-
-    .wp-caption {
-      max-width: 100%;
-      // background: #eee;
-      padding: 5px;
-
-      // images inside wp-caption
-      img {
-        max-width: 100%;
-        margin-bottom: 0;
-        width: 100%;
-      }
-
-      p.wp-caption-text {
-        font-size: .85em;
-        margin: 4px 0 7px;
-        text-align: center;
-      }
-
-    } // end .wp-caption
-
-    // image gallery styles
-    .gallery {
-
-      dl {
-
-        a {}
-
-        img {}
-
-      }
-
-      dt {}
-
-      dd {}
-
-    } // end .gallery
-
-    // gallery caption styles
-    .gallery-caption {}
-
-    .size-full {}
-    .size-large {}
-    .size-medium {}
-    .size-thumbnail {}
-
-  // the tag output
-  .tags {
-    margin: 0;
+  header {
+    // border-bottom: 1px solid $light-gray;
+    padding: 1.5em 0;
   }
+  footer {
+    padding: 1.5em;
+    // border-top: 1px solid $light-gray;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+// end .hentry
+
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0;
+}
+.single-title {
+}
+.page-title {
+}
+.entry-title {
+}
+.archive-title {
+}
+// want to style individual post classes? Booya!
+.post-id {
+}
+// post by id (i.e. post-3)
+.post {
+}
+// general post style
+.page {
+}
+// general article on a page style
+.attachment {
+}
+// general style on an attatchment
+.sticky {
+}
+// sticky post style
+.hentry {
+}
+// hentry class
+.category-slug {
+}
+// style by category (i.e. category-videos)
+.tag-slug {
+}
+// style by tag (i.e. tag-news)
+
+// post meta
+.byline {
+  color: $meta-gray;
+  font-style: italic;
+  margin: 0;
+
+  time {
+  }
+}
+// entry content
+article {
+  p {
+    margin: 0 0 1.5em;
+  }
+  ul,
+  ol,
+  table,
+  dl {
+  }
+  ul,
+  ol {
+    li {
+    }
+  }
+  ul {
+    li {
+    }
+  }
+  ol {
+    li {
+    }
+  }
+  table {
+    width: 100%;
+    border: 1px solid black(.3);
+    margin-bottom: 1.5em;
+
+    caption {
+      color: $meta-gray;
+      font-size: .75em;
+      margin: 0 0 7px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+  tr {
+    border-bottom: 1px solid black(.4);
+
+    &:nth-child(even) {
+      background-color: black(.225);
+    }
+    &:nth-child(odd) {
+      background-color: black(.125);
+    }
+  }
+  td {
+    padding: 7px;
+    border-right: 1px solid black(.3);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  th {
+    background-color: black(.25);
+    border-bottom: 1px solid solid black(.4);
+    border-right: 1px solid black(.4);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  blockquote {
+    margin: 0 0 1.5em .75em;
+    padding: 0 0 0 .75em;
+    border-left: 3px solid $blue;
+    font-style: italic;
+    color: $meta-gray;
+
+    &:before {
+    }
+  }
+  dl {
+  }
+  dt {
+  }
+  dd {
+    color: $gray;
+    font-size: .9em;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+  img {
+    height: auto;
+    margin: 0;
+    width: 100%;
+  }
+  //
+
+  /* image alignment on a screen this size may be
+   a bit difficult. It's set to start aligning
+   and floating images at the next breakpoint,
+   but it's up to you. Feel free to change it up. */
+  .alignleft,
+  img.alignleft {
+  }
+  .alignright,
+  img.alignright {
+  }
+  .aligncenter,
+  img.aligncenter {
+  }
+  .size-auto,
+  .size-full,
+  .size-large,
+  .size-medium,
+  .size-thumbnail {
+    max-width: 100%;
+    height: auto;
+  }
+  pre {
+    background: $black;
+    color: $light-gray;
+    font-size: .9em;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    border-radius: 3px;
+  }
+}
+// end .entry-content
+
+.wp-caption {
+  max-width: 100%;
+  // background: #eee;
+  padding: 5px;
+
+  // images inside wp-caption
+  img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  p.wp-caption-text {
+    font-size: .85em;
+    margin: 4px 0 7px;
+    text-align: center;
+  }
+}
+// end .wp-caption
+
+// image gallery styles
+.gallery {
+  dl {
+    a {
+    }
+    img {
+    }
+  }
+  dt {
+  }
+  dd {
+  }
+}
+// end .gallery
+
+// gallery caption styles
+.gallery-caption {
+}
+.size-full {
+}
+.size-large {
+}
+.size-medium {
+}
+.size-thumbnail {
+}
+// the tag output
+.tags {
+  margin: 0;
+}
 
 /*****************************************************************
 PAGE NAVI STYLES
 *****************************************************************/
-
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0;
 }
-.pagination{
+.pagination {
   text-align: center;
 
   ul {
@@ -626,8 +620,8 @@ PAGE NAVI STYLES
     padding: 0;
     clear: both;
     border-radius: 3px;
+      overflow: auto;
   }
-
   li {
     padding: 0;
     margin: 0;
@@ -636,8 +630,8 @@ PAGE NAVI STYLES
     overflow: hidden;
     border-right: 1px solid $gray;
   }
-
-  a, span {
+  a,
+  span {
     margin: 0;
     text-decoration: none;
     padding: 0;
@@ -649,40 +643,39 @@ PAGE NAVI STYLES
     display: block;
     color: $blue;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $blue;
       color: $white;
     }
   }
-
-  .current{
+  .current {
     cursor: default;
     color: $text-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $white;
       color: $text-color;
     }
   }
+}
+// end .solarity_
 
-  } // end .solarity_
+page_navi
 
-  page_navi
-
-  // fallback previous & next links
-  .wp-prev-next {
-
-    ul {}
-
-    .prev-link {
-      float: left;
-    }
-
-    .next-link {
-      float: right;
-    }
-
-  } // end .wp-prev-next
+// fallback previous & next links
+.wp-prev-next {
+  ul {
+  }
+  .prev-link {
+    float: left;
+  }
+  .next-link {
+    float: right;
+  }
+}
+// end .wp-prev-next
 
 /*****************************************************************
 COMMENT STYLES
@@ -695,25 +688,19 @@ COMMENT STYLES
   border-top: 1px solid $light-gray;
 
   // number of comments span
-  span {}
-
-}
-
-.comment-nav {
-
-  ul {
-
-    li {}
-
+  span {
   }
 }
-
-
+.comment-nav {
+  ul {
+    li {
+    }
+  }
+}
 .commentlist {
   margin: 0;
   list-style-type: none;
 }
-
 .comment {
   position: relative;
   clear: both;
@@ -725,7 +712,6 @@ COMMENT STYLES
     padding: 7px;
     border: 0;
   }
-
   // vcard
   .vcard {
     margin-left: 50px;
@@ -734,10 +720,9 @@ COMMENT STYLES
       font-weight: 700;
       font-style: normal;
 
-      a.url {}
-
+      a.url {
+      }
     }
-
     time {
       display: block;
       font-size: .9em;
@@ -750,113 +735,120 @@ COMMENT STYLES
         &:hover {
           text-decoration: underline;
         }
-
       }
-
     }
-
-    .photo {}
-
+    .photo {
+    }
     .avatar {
       position: absolute;
       left: 16px;
       border-radius: 50%;
     }
-
-  } // end .commentlist .vcard
+  }
+  // end .commentlist .vcard
 
   &:last-child {
     margin-bottom: 0;
   }
-
   .children {
     margin: 0;
 
-    li {}
-
-      // variations
-      .comment {}
-      .alt {}
-      .odd {}
-      .even {}
-      .depth-1 {}           // change number for different depth
-      .byuser {}
-      .bypostauthor {}
-      .comment-author-admin {}
-
-  } // end children
+    li {
+    }
+    // variations
+    .comment {
+    }
+    .alt {
+    }
+    .odd {
+    }
+    .even {
+    }
+    .depth-1 {
+    }
+    // change number for different depth
+    .byuser {
+    }
+    .bypostauthor {
+    }
+    .comment-author-admin {
+    }
+  }
+  // end children
 
 
   &[class*=depth-] {
     margin-top: 1.1em;
   }
-
   &.depth-1 {
     margin-left: 0;
     margin-top: 0;
   }
-
   &:not(.depth-1) {
     margin-top: 0;
     margin-left: 7px;
     padding: 7px;
   }
-
-  &.depth-2 {}
-  &.depth-3 {}
-  &.depth-4 {}
-  &.depth-5 {}
-
+  &.depth-2 {
+  }
+  &.depth-3 {
+  }
+  &.depth-4 {
+  }
+  &.depth-5 {
+  }
   // general comment classes
-  &.alt {}
+  &.alt {
+  }
   &.odd {
     background-color: $white;
   }
   &.even {
     background: $light-gray;
   }
-  &.parent {}
-  &.comment {}
-  &.children {}
-  &.pingback {}
-  &.bypostauthor {}
-  &.comment-author {}
-  &.comment-author-admin {}
-  &.thread-alt {}
-  &.thread-odd {}
-  &.thread-even {}
+  &.parent {
+  }
+  &.comment {
+  }
+  &.children {
+  }
+  &.pingback {
+  }
+  &.bypostauthor {
+  }
+  &.comment-author {
+  }
+  &.comment-author-admin {
+  }
+  &.thread-alt {
+  }
+  &.thread-odd {
+  }
+  &.thread-even {
+  }
 }
-
 .category #mainbar > header {
-  display:none;
+  display: none;
   visibility: hidden;
 }
-
-
 // comment meta
 .comment-meta {
-
-  a {}
-
+  a {
+  }
 }
-
 .commentmetadata {
-
-  a {}
-
+  a {
+  }
 }
-
 // comment content
 .comment_content {
-
   p {
-
     font-size: 1em;
     line-height: 1.5em;
     margin: .7335em 0 1.5em;
   }
-
-} // end .commentlist .comment_content
+}
+// end .commentlist .comment_content
 
 // comment reply link
 .comment-reply-link {
@@ -864,10 +856,11 @@ COMMENT STYLES
   font-size: .9em;
   float: right;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
   }
-
-} //end .commentlist .comment-reply-link
+}
+//end .commentlist .comment-reply-link
 
 //edit comment link
 .comment-edit-link {
@@ -877,22 +870,17 @@ COMMENT STYLES
   text-decoration: none;
 }
 
-
-
 /*****************************************************************
 COMMENT FORM STYLES
 *****************************************************************/
-
 .comment-respond {
   @extend .cf;
   padding: 1.5em;
   border-top: 1px solid $light-gray;
 }
-
 #reply-title {
   margin: 0;
 }
-
 .logged-in-as {
   color: $meta-gray;
   font-style: italic;
@@ -902,53 +890,51 @@ COMMENT FORM STYLES
     color: $text-color;
   }
 }
-
 .comment-form-comment {
   margin: 1.5em 0 .75em;
 }
-
 .form-allowed-tags {
   padding: 1.5em;
   background-color: $light-gray;
   font-size: .9em;
 }
-
-  // comment submit button
-  #submit {
-    @extend .blue-btn;
-    float: right;
-    font-size: 1em;
+// comment submit button
+#submit {
+  @extend .blue-btn;
+  float: right;
+  font-size: 1em;
+}
+// comment form title
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+// cancel comment reply link
+#cancel-comment-reply {
+  a {
   }
-
-  // comment form title
-  #comment-form-title {
-    margin: 0 0 1.1em;
-  }
-
-  // cancel comment reply link
-  #cancel-comment-reply {
-    a {}
-  }
-
-  // logged in comments
-  .comments-logged-in-as {}
-
-  // allowed tags
-  #allowed_tags {
-    margin: 1.5em 10px .7335em 0;
-  }
-
-  // no comments
-  .nocomments {
-    margin: 0 20px 1.1em;
-  }
+}
+// logged in comments
+.comments-logged-in-as {
+}
+// allowed tags
+#allowed_tags {
+  margin: 1.5em 10px .7335em 0;
+}
+// no comments
+.nocomments {
+  margin: 0 20px 1.1em;
+}
 
 /********************
 SIDEBARS & ASIDES
 ********************/
-.sidebar {padding: 0 .5rem 0 1rem;}
-
-.sidebar textarea, input, select, input[type="search"] {
+.sidebar {
+  padding: 0 .5rem 0 1rem;
+}
+.sidebar textarea,
+input,
+select,
+input[type="search"] {
   border: 0 none;
   border-radius: 3px;
   box-shadow: none;
@@ -964,123 +950,118 @@ SIDEBARS & ASIDES
   width: 120px;
   vertical-align: middle;
 }
+
+.sidebar p {
+  word-wrap: normal;
+  -moz-hyphens: none;
+  hyphens: none;
+  padding-right: 1rem;
+}
 .sidebar .locations h3 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
+  font-variant: small-caps;
 }
 .sidebar .locations ul {
   line-height: 1.2;
   margin: 0;
   padding: 0;
 }
-
 .sidebar button {
- float: left;
- width: 70px;
- position: relative;
+  float: left;
+  width: 70px;
+  position: relative;
 }
-
 label {
- float: left;
-   // padding-top: 0.4em;
-   margin-right: 0.5rem;
-   margin: 0 0.5rem 0 0;
-   display: none;
- }
-
- .sidebar form { width: 90%; }
-
- .sidebar .cat-item a{
+  float: left;
+  // padding-top: 0.4em;
+  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 0;
+  display: none;
+}
+.sidebar form {
+  width: 90%;
+}
+.sidebar .cat-item a {
   font-weight: normal;
   color: darken($gray, 25%);
 }
-.sidebar .current-cat>a{
+.sidebar .current-cat>a {
   font-weight: 700;
   color: $white;
 }
 .sidebar .children {
   padding-left: 1.5em;
 }
-
-.widgettitle {}
-
+.widgettitle {
+}
 .widget {
-
   ul {
-
     li {
-
-      &:first-child {}
-
-      &:last-child {}
-
-      a {}
-
-        // deep nesting
-        ul {}
-
+      &:first-child {
       }
-
+      &:last-child {
+      }
+      a {
+      }
+      // deep nesting
+      ul {
+      }
     }
-
   }
-
-  .no-widgets {
-    // background-color: $white;
-    padding: 1.5em;
-    text-align: center;
-    // border: 1px solid $border-color;
-    border-radius: 2px;
-    margin-bottom: 1.5em;
-  }
+}
+.no-widgets {
+  // background-color: $white;
+  padding: 1.5em;
+  text-align: center;
+  // border: 1px solid $border-color;
+  border-radius: 2px;
+  margin-bottom: 1.5em;
+}
 
 /********************
 FOOTER STYLES
 ********************/
-
 .footer {
   clear: both;
   background-color: black(.3);
   color: $light-gray;
 }
-
 .footer-links {
-
   ul {
-
-    li {}
-
+    li {
+    }
   }
+}
+// end .footer-links
 
-  } // end .footer-links
 
-
-  .copyright {text-align: center;}
-
-  .qtrans_language_chooser li {float:left;}
-
+.copyright {
+  text-align: center;
+}
+.qtrans_language_chooser li {
+  float: left;
+}
 //gallery acf additions
 //location map
 .acf-map {
   max-width: 100%;
   width: 100%;
-  height: 300px;
+  height: 220px;
   max-height: 80%;
   border: $meta-gray solid 2px;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
 }
-
 .gm-style .gm-style-iw {
   color: $text-color;
   font-size: 13px;
   font-weight: 300;
 }
-
-.gallery {clear:both;}
-
+.gallery {
+  clear: both;
+}
 .ghostbox {
-  float:right;
+  float: right;
   background: white(.15);
   padding: 0 .5rem .25rem;
   margin: 0 0 .25rem 1rem;
@@ -1088,54 +1069,77 @@ FOOTER STYLES
 .archive-title {
   padding: 1.5rem 0 .75rem 0;
 }
-
 #supersized {
-  margin:0;
+  margin: 0;
 }
-
 #imageData #caption {
   margin-top: .5rem;
-  color:$text-color;
-  font-size:1.4rem;
+  color: $text-color;
+  font-size: 1.4rem;
   line-height: 1.5rem;
 }
-
 #imageData #numberDisplay {
-  color:$meta-gray;
+  color: $meta-gray;
   font-size: 1.0rem;
   margin-top: .5rem;
   padding-bottom: 0;
 }
-
-img.alignleft {margin-right: 1rem;}
-
+img.alignleft {
+  margin-right: 1rem;
+}
 article ul {
   list-style-type: disc;
   list-style-position: inside;
 }
 
-article nav ul, article .nav ul {list-style-type:none;}
-
+.sidebar ul {list-style-type: none;}
+article nav ul,
+article .nav ul {
+  list-style-type: none;
+}
 article ol {
   list-style-type: decimal;
   list-style-position: inside;
 }
-
 .player .video-wrapper {
   text-align: center;
   width: 100%;
   position: relative !important;
   display: inline-block;
 }
-
-.aligncenter {text-align: center;}
-
-header h1, .deck {
-  padding-left: 1rem;
+.aligncenter {
+  text-align: center;
+}
+header h1,
+header .deck {
+  margin: 0;
 }
 
+header h1 {
+  // padding-right: 2rem;
+  // padding-left: 1rem;
+  // float: left;
+  margin: 0;
+  padding: 0;
+}
+
+header .deck {
+  padding-top: 10px;
+
+}
 .featured-block {
-  text-align: center;
-  padding: .5rem 2rem;
+  text-align: left;
+  padding: 0;
   background: $white(0.2);
+}
+
+.gallery-caption {text-align: center;
+padding: 0 2rem;}
+
+.main-content header {
+  margin-top: 1rem;
+}
+
+.entry-content {
+    margin-top: 20px;
 }

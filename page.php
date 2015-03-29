@@ -1,28 +1,31 @@
 <?=get_header()?>
 
-<?php if (have_posts()): ?>
+<div class="wrap">
 
-	<?php while (have_posts()): ?>
+	<?php if (have_posts()): ?>
 
-		<?=the_post()?>
+		<?php while (have_posts()): ?>
 
-		<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<?=the_post()?>
 
-			<section id="content" itemprop="articleBody">
+			<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						<?=get_template_part('includes/partials/content', 'page')?>
+				<section id="content" itemprop="articleBody">
 
-			</section> <!-- /#content -->
+							<?=get_template_part('includes/partials/content', 'page')?>
 
-		</article>
+				</section> <!-- /#content -->
 
-	<?php endwhile; ?>
+			</article>
 
-<?php else: ?>
+		<?php endwhile; ?>
 
-	<?=get_template_part('includes/partials/content', 'none')?>
+	<?php else: ?>
+
+		<?=get_template_part('includes/partials/content', 'none')?>
 
 
-<?php endif; ?>
+	<?php endif; ?>
+</div>
 
 <?=get_footer()?>

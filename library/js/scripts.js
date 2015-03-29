@@ -5,7 +5,7 @@
  */
  (function($) {
 
- jQuery('header nav').meanmenu({meanScreenWidth: "768"});
+ jQuery('header nav').meanmenu({meanScreenWidth: "860"});
 
  $(".linkcontainer").click(function() {
   window.location = $(this).find("a").attr("href");

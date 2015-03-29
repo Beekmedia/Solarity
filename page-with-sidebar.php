@@ -2,40 +2,44 @@
 
 <?=get_header()?>
 
-<?php if (have_posts()): ?>
+<div class="wrap">
 
-	<?php while (have_posts()): ?>
+	<?php if (have_posts()): ?>
 
-		<?=the_post()?>
+		<?php while (have_posts()): ?>
 
-		<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<?=the_post()?>
 
-			<section id="content" itemprop="articleBody">
+			<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-					<div id="mainbar" class="m-all t-2of3 d-5of7">
+				<section id="content" itemprop="articleBody">
 
-						<?=get_template_part('includes/partials/content', 'page')?>
+						<div id="mainbar" class="m-all t-2of3 d-5of7">
 
-					</div> <!-- /#mainbar -->
+							<?=get_template_part('includes/partials/content', 'page')?>
 
-					<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 last-col" role="complementary">
+						</div> <!-- /#mainbar -->
 
-						<?=get_sidebar('sidebar1')?>
+						<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 last-col" role="complementary">
 
-					</div> <!-- /#sidebar -->
+							<?=get_sidebar('sidebar1')?>
 
-
-			</section> <!-- /#content -->
-
-		</article>
-
-	<?php endwhile; ?>
-
-<?php else: ?>
-
-	<?=get_template_part('includes/partials/content', 'none')?>
+						</div> <!-- /#sidebar -->
 
 
-<?php endif; ?>
+				</section> <!-- /#content -->
+
+			</article>
+
+		<?php endwhile; ?>
+
+	<?php else: ?>
+
+		<?=get_template_part('includes/partials/content', 'none')?>
+
+
+	<?php endif; ?>
+
+</div>
 
 <?=get_footer()?>

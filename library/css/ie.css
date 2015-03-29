@@ -264,16 +264,19 @@ come into play. Have fun!
 
 ******************************************************************/
 .acf-map {
-  height: 600px; }
+  height: 400px; }
 
 /*********************
 GENERAL STYLES
 *********************/
+#container article {
+  padding: 0; }
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 760px; }
+  width: 660px; }
 
 /*********************
 HEADER STYLES
@@ -314,7 +317,7 @@ NAVIGATION STYLES
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
-      border: 1px solid white 0.95;
+      border: 1px solid white 0.8;
       border-top: 0;
       position: absolute;
       visibility: hidden;
@@ -329,17 +332,17 @@ NAVIGATION STYLES
         */ }
         .nav li ul.sub-menu li a,
         .nav li ul.children li a {
-          background-color: white(0.85);
-          padding: 10px;
+          background-color: white 0.95;
+          padding: 10px 5px 10px 10px;
           border-right: 0;
           display: block;
-          width: 340px;
+          width: 170px;
           border: 1px solid white 0.85;
           text-decoration: none; }
           .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
           .nav li ul.children li a:hover,
           .nav li ul.children li a:focus {
-            background-color: white(0.5);
+            background-color: white 0.8;
             text-decoration: none; }
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
@@ -371,11 +374,9 @@ NAVIGATION STYLES
       padding: 10px 10px 10px 30px;
       text-shadow: 0px 0px 0px transparent;
       color: #323944; }
-    .nav li .sub-menu li .sub-menu a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu a, .nav li .children li .children li a {
-      padding-left: 2rem; }
-
-.nav li .sub-menu li .sub-menu li a {
-  padding-left: 2rem; }
+    .nav li .sub-menu li .sub-menu li a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a, .nav li .children li .children li a {
+      padding-left: 10px;
+      font-size: 1rem; }
 
 /*********************
 SIDEBARS & ASIDES
@@ -434,7 +435,7 @@ be seen on the Desktop.
 
 ******************************************************************/
 .wrap {
-  width: 1040px; }
+  width: 900px; }
 
 .acf-map {
   height: 680px; }
