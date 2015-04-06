@@ -342,7 +342,8 @@ NAVIGATION STYLES
           .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
           .nav li ul.children li a:hover,
           .nav li ul.children li a:focus {
-            background-color: white 0.8;
+            background-color: #323944;
+            color: white;
             text-decoration: none; }
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
@@ -374,9 +375,15 @@ NAVIGATION STYLES
       padding: 10px 10px 10px 30px;
       text-shadow: 0px 0px 0px transparent;
       color: #323944; }
+      .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
+        color: white 1;
+        background-color: #323944 0.8; }
     .nav li .sub-menu li .sub-menu li a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a, .nav li .children li .children li a {
       padding-left: 10px;
       font-size: 1rem; }
+      .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus, .nav li .sub-menu li .children li a:hover, .nav li .sub-menu li .children li a:focus, .nav li .children li .sub-menu li a:hover, .nav li .children li .sub-menu li a:focus, .nav li .children li .children li a:hover, .nav li .children li .children li a:focus {
+        color: white 1;
+        background-color: #323944 0.8; }
 
 /*********************
 SIDEBARS & ASIDES
@@ -385,16 +392,16 @@ SIDEBARS & ASIDES
   margin-top: 0; }
 
 .widgettitle {
-  margin-bottom: 0.5rem; }
+  margin-bottom: .5rem; }
 
 .widget {
   padding: 0 10px;
   margin: 0 0 1rem 0; }
   .widget ul li {
-    margin-bottom: 0.25rem;
+    margin-bottom: .25rem;
     /* deep nesting */ }
     .widget ul li ul {
-      margin-top: 0.5rem;
+      margin-top: .5rem;
       padding-left: 1em; }
 
 /* links widget */

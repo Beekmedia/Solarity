@@ -1,4 +1,4 @@
-<? #Template Name: Page with Sidebars ?>
+<? //Template Name: Page with Sidebars ?>
 
 <?=get_header()?>
 

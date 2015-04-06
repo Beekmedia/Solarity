@@ -1405,7 +1405,7 @@ h4,
 .h4 {
   font-size: 1.1em;
   font-weight: 400;
-  font-variant: small-caps;
+  text-transform: uppercase;
   line-height: 1.1; }
 
 h5,
@@ -1422,24 +1422,7 @@ HEADER STYLES
   color: rgba(0, 0, 0, 0.6); }
 
 header.header {
-  z-index: -1;
-  transition: All 1s ease;
-  -webkit-transition: All 1s ease;
-  -moz-transition: All 1s ease;
-  -o-transition: All 1s ease;
-  background-color: rgba(0, 0, 0, 0); }
-  header.header:hover, header.header:active {
-    background-color: black; }
-
-.front header.header {
-  z-index: -1;
-  transition: All 1s ease;
-  -webkit-transition: All 1s ease;
-  -moz-transition: All 1s ease;
-  -o-transition: All 1s ease;
-  background-color: rgba(0, 0, 0, 0); }
-  .front header.header:hover, .front header.header:active {
-    background-color: black; }
+  background-color: black; }
 
 .header {
   background-color: transparent; }
@@ -1451,7 +1434,8 @@ header {
   -o-transition: All 1s ease; }
 
 #logo {
-  margin: .25rem 0 0 0; }
+  margin: .25rem 0 0 1.5rem;
+  font-size: 2rem; }
 
 #logo a {
   color: #e6e6e6;
@@ -1464,18 +1448,19 @@ header {
 NAVIGATION STYLES
 ********************/
 .logo-wrap {
-  padding: 0 .75em 0 .75em; }
+  padding: 0;
+  margin: 0 .5rem 0 0; }
 
 nav .top-nav {
   font-size: 1.4rem;
   line-height: .8;
   margin-top: 0;
-  padding-top: 0;
-  width: 500px;
-  display: table;
-  table-layout: fixed; }
+  padding-top: 0; }
   nav .top-nav li a {
-    padding-top: 1.6rem; }
+    padding-top: 1.2rem; }
+
+.tel {
+  display: inline; }
 
 footer .nav ul {
   text-align: center;
@@ -2147,7 +2132,8 @@ you can add resource intensive styles.
             .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
             .nav li ul.children li a:hover,
             .nav li ul.children li a:focus {
-              background-color: white 0.8;
+              background-color: #323944;
+              color: white;
               text-decoration: none; }
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
@@ -2179,9 +2165,15 @@ you can add resource intensive styles.
         padding: 10px 10px 10px 30px;
         text-shadow: 0px 0px 0px transparent;
         color: #323944; }
+        .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
+          color: white 1;
+          background-color: #323944 0.8; }
       .nav li .sub-menu li .sub-menu li a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a, .nav li .children li .children li a {
         padding-left: 10px;
         font-size: 1rem; }
+        .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus, .nav li .sub-menu li .children li a:hover, .nav li .sub-menu li .children li a:focus, .nav li .children li .sub-menu li a:hover, .nav li .children li .sub-menu li a:focus, .nav li .children li .children li a:hover, .nav li .children li .children li a:focus {
+          color: white 1;
+          background-color: #323944 0.8; }
 
   /*********************
   SIDEBARS & ASIDES
@@ -2190,16 +2182,16 @@ you can add resource intensive styles.
     margin-top: 0; }
 
   .widgettitle {
-    margin-bottom: 0.5rem; }
+    margin-bottom: .5rem; }
 
   .widget {
     padding: 0 10px;
     margin: 0 0 1rem 0; }
     .widget ul li {
-      margin-bottom: 0.25rem;
+      margin-bottom: .25rem;
       /* deep nesting */ }
       .widget ul li ul {
-        margin-top: 0.5rem;
+        margin-top: .5rem;
         padding-left: 1em; }
 
   /* links widget */
@@ -2279,8 +2271,8 @@ query for retina AND a certain size if you want. Go Nuts.
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author:
   
   Stylesheet: Retina Screens & Devices Stylesheet
   
@@ -2289,9 +2281,9 @@ query for retina AND a certain size if you want. Go Nuts.
   place.
   
   ******************************************************************/
-  /* 
+  /*
   
-  EXAMPLE 
+  EXAMPLE
   Let's say you have an image and you need to make sure it looks ok
   on retina screens. Let's say we have an icon which dimension are
   24px x 24px. In your regular stylesheets, it would look something
@@ -2312,10 +2304,10 @@ query for retina AND a certain size if you want. Go Nuts.
   	background-size: 24px 24px;
   }
   
-  So, you would create the same icon, but at double the resolution, meaning 
+  So, you would create the same icon, but at double the resolution, meaning
   it would be 48px x 48px. You'd name it the same, but with a @2x at the end
   (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
+  the original dimensions and you are good to go.
   
   */ }
 /*********************

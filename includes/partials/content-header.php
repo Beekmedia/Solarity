@@ -10,17 +10,16 @@
 
 		<?php elseif (is_home()): ?>
 			<?php # Blog page: ?>
-			Blog page
 
 		<?php # Archive stuff: ?>
 			<? #If it's a post category page or a product category page, print the category title ?>
 		<?php elseif (is_category()): ?>
-			<?=_e('', 'solarity')?>
-			<?=single_cat_title()?>
+			<?php _e('', 'solarity'); ?>
+			<?php single_cat_title();?>
 		<?php elseif (is_tag()): ?>
 			<span><?php _e('', 'solarity'); ?></span>
 			<?php single_tag_title(); ?>
-		<?php elseif (is_author()): ?>
+		<?php elseif (is_author()) : ?>
 			<?php global $post;
 			$author_id = $post->post_author; ?>
 			<span><?=_e('Posts By', 'solarity')?></span>
@@ -52,8 +51,9 @@
 				$m = substr($date, 4, 2);
 				$d = substr($date, 6, 2);
 				echo $m . '.' . $y;
-	    				// format date (23/11/1988)
-				if( get_field( 'end-date' ) ): ?>–<?
+						// format date (23/11/1988)
+				if( get_field( 'end-date' ) ):
+					echo chr(150);
 					$date = get_field('end-date');
 					// $date = 19881123 (23/11/1988)
 
@@ -61,16 +61,16 @@
 					$y = substr($date, 0, 4);
 					$m = substr($date, 4, 2);
 					$d = substr($date, 6, 2);
-	    				// format date (06.2001)
+						// format date (06.2001)
 					echo $m . '.' . $y;
-	    			endif; #end-date
-	    		endif; #start-date
-	    		?></p><?
-	    	endif; #singular post
-	    	?>
-	    	</span>
-	    	</h2></div>
-	    <?php endif; ?>
+					endif; #end-date
+				endif; #start-date
+				?></p><?
+			endif; #singular post
+			?>
+			</span>
+			</h2></div>
+		<?php endif; ?>
 
 		<?php endif; ?>
 	</h1>

@@ -2,51 +2,55 @@
 
 	<div id="content" class="fix wrap">
 
-<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
+        <div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
 
-			<?=get_sidebar('blog')?>
+        <?php get_sidebar('blog'); ?>
 
-</div> <!-- /#sidebar -->
+        </div> <!-- /#sidebar -->
 
-<div id="mainbar" class="m-all t-2of3 d-5of7 last-col">
-<?=get_template_part('includes/partials/content', 'header')?>
-			<?php if (have_posts()): ?>
+        <div id="mainbar" class="m-all t-2of3 d-5of7 last-col">
 
-				<?php while (have_posts()): ?>
+<?php get_template_part('includes/partials/content', 'header');?>
 
-					<?=the_post()?>
+<?php if (have_posts()):
+    while (have_posts()): the_post(); ?>
 
-					<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+        <article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						<?=get_template_part('includes/partials/content', 'index')?>
+            <?php get_template_part('includes/partials/content', 'index');?>
 
-					</article>
+        </article>
 
-				<?php endwhile; ?>
-
-
-
-	<nav class="wp-prev-next">
+    <?php
+    endwhile; ?>
 
 
 
-		<ul class="clearfix">
-			<li class="prev-link"><?=next_posts_link(__('&laquo; Older Installations', 'solarity'))?></li>
-			<li class="next-link"><?=previous_posts_link(__('Newer Installations &raquo;', 'solarity'))?></li>
-		</ul>
+
+        <nav class="wp-prev-next">
 
 
 
-	</nav>
+            <ul class="clearfix">
+                <li class="prev-link"><?=next_posts_link(__('&laquo; Older Installations', 'solarity'))?></li>
+                <li class="next-link"><?=previous_posts_link(__('Newer Installations &raquo;', 'solarity'))?></li>
+            </ul>
 
-			<?php else: ?>
 
-				<?=get_template_part('includes/partials/content', 'none')?>
 
-			<?php endif; ?>
+        </nav>
+    <?php
 
-		</div> <!-- /#mainbar -->
+else: ?>
 
-	<?=get_footer()?>
+    <?php get_template_part('includes/partials/content', 'none'); ?>
 
-</div>
+    <?php
+endif;
+?>
+
+        </div> <!-- /#mainbar -->
+
+<?php get_footer(); ?>
+
+    </div>

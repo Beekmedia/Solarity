@@ -2,27 +2,32 @@
 /*This code tests conditions for 3 separate widget areas:
 •
 'id'            => 'main_sidebar',, 'name'          => __( 'Main Sidebar', 'solarity' ),
-	              							The home page and any other non-blog, non-product pages
+                                            The home page and any other non-blog, non-product pages
 'id'            => 'blog_sidebar', 'name'          => __( 'Blog Sidebar', 'solarity' )
-									The standard blog sidebar.
+                                    The standard blog sidebar.
 ___________________________________________________________________________________________________*/
 ?>
-<?php if (is_front_page()) : ?>
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar1") ) : ?>
-		<?php dynamic_sidebar('sidebar1'); ?>
-	<?php endif; ?>
-<?php elseif ( is_home() || is_archive() || is_tag() || is_tax() || is_page()) : ?>
+<?php
+if(is_front_page()):
+    if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar1')) :
+        dynamic_sidebar('sidebar1');
+    endif;
 
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Blog Sidebar") ) : ?>
+elseif (is_home() || is_archive() || is_tag() || is_tax() || is_page()):
 
-		<?php dynamic_sidebar('Blog Sidebar'); ?>
-	<?php else: ?>
-	<?php endif; ?>
-<?php elseif (is_singular( 'post' )) :?>
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("single") ) : ?>
+    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar')) :
 
-		<?php dynamic_sidebar('single'); ?>
+        dynamic_sidebar('Blog Sidebar');
 
-	<?php else: ?>
-	<?php endif; ?>
-<?php endif; ?>
+    else:
+
+    endif;
+
+elseif (is_singular('post')):
+
+    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('single')):
+        dynamic_sidebar('single');
+    else:
+    endif;
+endif;
+?>

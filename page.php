@@ -1,31 +1,40 @@
-<?=get_header()?>
+<?php
+/** Standard page template without sidebar
+*/
+
+get_header();
+?>
 
 <div class="wrap">
 
-	<?php if (have_posts()): ?>
+<?php if (have_posts()) :
 
-		<?php while (have_posts()): ?>
+    while (have_posts()):
 
-			<?=the_post()?>
+        the_post();
+        ?>
 
-			<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+            <article id="post-<?php echo the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-				<section id="content" itemprop="articleBody">
+                <section id="content" itemprop="articleBody">
 
-							<?=get_template_part('includes/partials/content', 'page')?>
+                    <?php get_template_part('includes/partials/content', 'page');?>
 
-				</section> <!-- /#content -->
+                </section> <!-- /#content -->
 
-			</article>
+            </article>
 
-		<?php endwhile; ?>
+    <?php
 
-	<?php else: ?>
+    endwhile;
 
-		<?=get_template_part('includes/partials/content', 'none')?>
+    else:
 
+            get_template_part('includes/partials/content', 'none');
 
-	<?php endif; ?>
+    endif;
+    ?>
+
 </div>
 
-<?=get_footer()?>
+<?php echo get_footer(); ?>

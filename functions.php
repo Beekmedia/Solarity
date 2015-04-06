@@ -87,13 +87,13 @@ add_filter( 'image_size_names_choose', 'solarity_custom_image_sizes' );
 
 function solarity_custom_image_sizes( $sizes ) {
 		return array_merge( $sizes, array(
-				'landscape-large' => __('1200px by 300px'),
-				'landscape-med' => __('600px by 150px'),
-				'landscape-small' => __('300px by 100px'),
-				'portrait-large' => __('600px by 1000px'),
-				'portrait-med' => __('300px by 500px'),
-				'portrait-small' => __('150px by 250px'),
-				'icon' => __('72px by 72px')
+				'landscape-large' => __('1200px by 300px', 'solarity'),
+				'landscape-med' => __('600px by 150px', 'solarity'),
+				'landscape-small' => __('300px by 100px', 'solarity'),
+				'portrait-large' => __('600px by 1000px', 'solarity'),
+				'portrait-med' => __('300px by 500px', 'solarity'),
+				'portrait-small' => __('150px by 250px', 'solarity'),
+				'icon' => __('72px by 72px', 'solarity')
 		) );
 }
 
@@ -136,8 +136,8 @@ function solarity_theme_customizer($wp_customize) {
 	// $wp_customize->remove_control('blogdescription');
 
 	// Uncomment the following to change the default section titles
-	$wp_customize->get_section('colors')->title = __( 'Theme Colors' );
-	$wp_customize->get_section('background_image')->title = __( 'Images' );
+	$wp_customize->get_section('colors')->title = __( 'Theme Colors', 'solarity' );
+	$wp_customize->get_section('background_image')->title = __( 'Images', 'solarity' );
 }
 
 add_action( 'customize_register', 'solarity_theme_customizer' );
