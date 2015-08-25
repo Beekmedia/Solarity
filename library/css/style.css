@@ -420,12 +420,12 @@ table {
   white-space: nowrap;
   overflow: hidden; }
 
-.clearfix, .cf, .comment-respond {
+.clearfix, .cf {
   zoom: 1; }
-  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
     content: "";
     display: table; }
-  .clearfix:after, .cf:after, .comment-respond:after {
+  .clearfix:after, .cf:after {
     clear: both; }
 
 /*
@@ -903,7 +903,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn {
   display: inline-block;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -919,10 +919,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     color: white;
     text-decoration: none; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:active {
     top: 1px; }
 
 /*
@@ -930,11 +930,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn {
   background-color: #2980b9; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     background-color: #2574a8; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:active {
     background-color: #2472a4; }
 
 /******************************************************************
@@ -1304,8 +1304,8 @@ you set a great foundation, you won't need to add too many styles in
 the other stylesheets. Remember, keep it light: Speed is Important.
 *********************/
 /*****************************************************************
-Site Name:
-Author:
+Site Name: Solarity
+Author: Ben Beekman
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -1319,13 +1319,16 @@ and will be used across all viewports.
 GENERAL STYLES
 ********************/
 body {
+  background-color: #2b303b;
+  color: #f8f9fa;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  line-height: 1.5;
-  color: #f8f9fa;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: RGB(43, 48, 59); }
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5; }
+
+#searchsubmit {
+  font-size: 14px; }
 
 /*******************
 WORDPRESS BODY CLASSES
@@ -1339,8 +1342,8 @@ style a page via class
 LAYOUT & GRID STYLES
 ********************/
 .wrap {
-  width: 96%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 96%; }
 
 /********************
 LINK STYLES
@@ -1395,7 +1398,7 @@ h2,
 .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
-  margin: 0 0 .5rem 0; }
+  margin: 0 0 .5rem; }
 
 h3,
 .h3 {
@@ -1405,15 +1408,15 @@ h4,
 .h4 {
   font-size: 1.1em;
   font-weight: 400;
-  text-transform: uppercase;
-  line-height: 1.1; }
+  line-height: 1.1;
+  text-transform: uppercase; }
 
 h5,
 .h5 {
   font-size: .846em;
+  letter-spacing: 2px;
   line-height: 2.09em;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  text-transform: uppercase; }
 
 /********************
 HEADER STYLES
@@ -1425,31 +1428,28 @@ header.header {
   background-color: black; }
 
 .header {
-  background-color: transparent; }
-
-header {
-  transition: All 1s ease;
-  -webkit-transition: All 1s ease;
-  -moz-transition: All 1s ease;
-  -o-transition: All 1s ease; }
+  background-color: transparent;
+  transition: All 1s ease; }
+  .header h1 {
+    margin: 0;
+    padding: 0; }
 
 #logo {
-  margin: .25rem 0 0 1.5rem;
-  font-size: 2rem; }
-
-#logo a {
-  color: #e6e6e6;
-  text-shadow: 0 0 1px #323944; }
-  #logo a:hover, #logo a:focus {
-    color: white;
-    text-shadow: 0 0 0 #323944; }
+  font-size: 2rem;
+  margin: .25rem 0 0 1.5rem; }
+  #logo a {
+    color: #e6e6e6;
+    text-shadow: 0 0 1px #323944; }
+    #logo a:hover, #logo a:focus {
+      color: white;
+      text-shadow: 0 0 0 #323944; }
 
 /********************
 NAVIGATION STYLES
 ********************/
 .logo-wrap {
-  padding: 0;
-  margin: 0 .5rem 0 0; }
+  margin: 0 .5rem 0 0;
+  padding: 0; }
 
 nav .top-nav {
   font-size: 1.4rem;
@@ -1463,8 +1463,8 @@ nav .top-nav {
   display: inline; }
 
 footer .nav ul {
-  text-align: center;
-  overflow: auto; }
+  overflow: auto;
+  text-align: center; }
   footer .nav ul li {
     display: inline-block;
     float: none;
@@ -1479,26 +1479,8 @@ POSTS & CONTENT STYLES
   margin: 0;
   padding: 1rem 0; }
 
-article h1 {
-  margin: 0px;
-  padding: 0 0 .75rem 5px; }
-
-article h2 {
-  padding-left: 5px; }
-
 .gallery-item img {
   height: auto; }
-
-article p {
-  word-wrap: normal;
-  -moz-hyphens: none;
-  hyphens: none; }
-article header {
-  padding: 1.5em 0; }
-article footer {
-  padding: 1.5em; }
-  article footer p {
-    margin: 0; }
 
 .single-title,
 .page-title,
@@ -1512,21 +1494,41 @@ article footer {
 
 article {
   /* image alignment on a screen this size may be
-   a bit difficult. It's set to start aligning
-   and floating images at the next breakpoint,
-   but it's up to you. Feel free to change it up. */ }
+  a bit difficult. It's set to start aligning
+  and floating images at the next breakpoint,
+  but it's up to you. Feel free to change it up. */ }
+  article h1 {
+    margin: 0;
+    padding: 0 0 .75rem 5px; }
+  article h2 {
+    padding-left: 5px; }
   article p {
-    margin: 0 0 1.5em; }
+    -moz-hyphens: none;
+    hyphens: none;
+    margin: 0 0 1.5em;
+    word-wrap: normal; }
+  article ol {
+    list-style-position: inside;
+    list-style-type: decimal; }
+  article ul {
+    list-style-position: inside;
+    list-style-type: disc; }
+  article header {
+    padding: 1.5em 0; }
+  article footer {
+    padding: 1.5em; }
+    article footer p {
+      margin: 0; }
   article table {
-    width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    width: 100%; }
     article table caption {
       color: #9fa6b4;
       font-size: .75em;
+      letter-spacing: 1px;
       margin: 0 0 7px;
-      text-transform: uppercase;
-      letter-spacing: 1px; }
+      text-transform: uppercase; }
   article tr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
     article tr:nth-child(even) {
@@ -1534,8 +1536,8 @@ article {
     article tr:nth-child(odd) {
       background-color: rgba(0, 0, 0, 0.125); }
   article td {
-    padding: 7px;
-    border-right: 1px solid rgba(0, 0, 0, 0.3); }
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 7px; }
     article td:last-child {
       border-right: 0; }
   article th {
@@ -1545,16 +1547,16 @@ article {
     article th:last-child {
       border-right: 0; }
   article blockquote {
-    margin: 0 0 1.5em .75em;
-    padding: 0 0 0 .75em;
     border-left: 3px solid #2980b9;
+    color: #9fa6b4;
     font-style: italic;
-    color: #9fa6b4; }
+    margin: 0 0 1.5em .75em;
+    padding: 0 0 0 .75em; }
   article dd {
     color: #eaedf2;
     font-size: .9em;
-    margin-left: 0;
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    margin-left: 0; }
   article img {
     height: auto;
     margin: 0;
@@ -1564,22 +1566,22 @@ article {
   article .size-large,
   article .size-medium,
   article .size-thumbnail {
-    max-width: 100%;
-    height: auto; }
+    height: auto;
+    max-width: 100%; }
   article pre {
     background: #323944;
+    border-radius: 3px;
     color: #f8f9fa;
     font-size: .9em;
-    padding: 1.5em;
     margin: 0 0 1.5em;
-    border-radius: 3px; }
+    padding: 1.5em; }
 
 .wp-caption {
   max-width: 100%;
   padding: 5px; }
   .wp-caption img {
-    max-width: 100%;
     margin-bottom: 0;
+    max-width: 100%;
     width: 100%; }
   .wp-caption p.wp-caption-text {
     font-size: .85em;
@@ -1599,258 +1601,130 @@ PAGE NAVI STYLES
 .pagination {
   text-align: center; }
   .pagination ul {
-    display: inline-block;
     background-color: rgba(0, 0, 0, 0.2);
-    white-space: nowrap;
-    padding: 0;
-    clear: both;
     border-radius: 3px;
-    overflow: auto; }
-  .pagination li {
+    clear: both;
+    display: inline-block;
+    overflow: auto;
     padding: 0;
-    margin: 0;
-    float: left;
+    white-space: nowrap; }
+  .pagination li {
+    border-right: 1px solid #eaedf2;
     display: inline;
+    float: left;
+    margin: 0;
     overflow: hidden;
-    border-right: 1px solid #eaedf2; }
+    padding: 0; }
   .pagination a,
   .pagination span {
-    margin: 0;
-    text-decoration: none;
-    padding: 0;
-    line-height: 1em;
+    color: #2980b9;
+    display: block;
     font-size: 1em;
     font-weight: normal;
-    padding: .75em;
+    line-height: 1em;
+    margin: 0;
     min-width: 1em;
-    display: block;
-    color: #2980b9; }
+    padding: .75em;
+    text-decoration: none; }
     .pagination a:hover, .pagination a:focus,
     .pagination span:hover,
     .pagination span:focus {
       background-color: #2980b9;
       color: white; }
   .pagination .current {
-    cursor: default;
-    color: #5c6b80; }
+    color: #5c6b80;
+    cursor: default; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: white;
       color: #5c6b80; }
 
-page_navi
 .wp-prev-next .prev-link {
   float: left; }
-page_navi
 .wp-prev-next .next-link {
   float: right; }
-
-/*****************************************************************
-COMMENT STYLES
-*****************************************************************/
-#comments-title {
-  padding: .75em;
-  margin: 0;
-  border-top: 1px solid #f8f9fa; }
-
-.commentlist {
-  margin: 0;
-  list-style-type: none; }
-
-.comment {
-  position: relative;
-  clear: both;
-  overflow: hidden;
-  padding: 1.5em;
-  border-bottom: 1px solid #f8f9fa; }
-  .comment .comment-author {
-    padding: 7px;
-    border: 0; }
-  .comment .vcard {
-    margin-left: 50px; }
-    .comment .vcard cite.fn {
-      font-weight: 700;
-      font-style: normal; }
-    .comment .vcard time {
-      display: block;
-      font-size: .9em;
-      font-style: italic; }
-      .comment .vcard time a {
-        color: #9fa6b4;
-        text-decoration: none; }
-        .comment .vcard time a:hover {
-          text-decoration: underline; }
-    .comment .vcard .avatar {
-      position: absolute;
-      left: 16px;
-      border-radius: 50%; }
-  .comment:last-child {
-    margin-bottom: 0; }
-  .comment .children {
-    margin: 0; }
-  .comment[class*=depth-] {
-    margin-top: 1.1em; }
-  .comment.depth-1 {
-    margin-left: 0;
-    margin-top: 0; }
-  .comment:not(.depth-1) {
-    margin-top: 0;
-    margin-left: 7px;
-    padding: 7px; }
-  .comment.odd {
-    background-color: white; }
-  .comment.even {
-    background: #f8f9fa; }
-
-.category #mainbar > header {
-  display: none;
-  visibility: hidden; }
-
-.comment_content p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: .7335em 0 1.5em; }
-
-.comment-reply-link {
-  font-size: .9em;
-  float: right; }
-
-.comment-edit-link {
-  font-size: .9em;
-  font-style: italic;
-  margin: 0 7px;
-  text-decoration: none; }
-
-/*****************************************************************
-COMMENT FORM STYLES
-*****************************************************************/
-.comment-respond {
-  padding: 1.5em;
-  border-top: 1px solid #f8f9fa; }
-
-#reply-title {
-  margin: 0; }
-
-.logged-in-as {
-  color: #9fa6b4;
-  font-style: italic;
-  margin: 0; }
-  .logged-in-as a {
-    color: #5c6b80; }
-
-.comment-form-comment {
-  margin: 1.5em 0 .75em; }
-
-.form-allowed-tags {
-  padding: 1.5em;
-  background-color: #f8f9fa;
-  font-size: .9em; }
-
-#submit {
-  float: right;
-  font-size: 1em; }
-
-#comment-form-title {
-  margin: 0 0 1.1em; }
-
-#allowed_tags {
-  margin: 1.5em 10px .7335em 0; }
-
-.nocomments {
-  margin: 0 20px 1.1em; }
 
 /********************
 SIDEBARS & ASIDES
 ********************/
 .sidebar {
-  padding: 0 .5rem 0 1rem; }
-
-.sidebar textarea,
-input,
-select,
-input[type="search"] {
-  border: 0 none;
-  border-radius: 3px;
-  box-shadow: none;
-  color: #5c6b80;
-  display: inline-block;
-  float: left;
-  font-size: 1em;
-  height: 1.3rem;
-  line-height: 1rem;
-  margin-bottom: 14px;
-  padding: 0 2px !important;
-  top: .4em;
-  width: 120px;
-  vertical-align: middle; }
-
-.sidebar p {
-  word-wrap: normal;
-  -moz-hyphens: none;
-  hyphens: none;
-  padding-right: 1rem; }
-
-.sidebar .locations h3 {
-  margin: 0;
-  padding: 0;
-  font-variant: small-caps; }
-
-.sidebar .locations ul {
-  line-height: 1.2;
-  margin: 0;
-  padding: 0; }
-
-.sidebar button {
-  float: left;
-  width: 70px;
-  position: relative; }
+  padding: 20px .5rem 0 1rem; }
+  .sidebar p {
+    -moz-hyphens: none;
+    hyphens: none;
+    padding-right: 1rem;
+    word-wrap: normal; }
+  .sidebar ul {
+    list-style-type: none; }
+  .sidebar .locations ul {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0; }
+  .sidebar .locations h3 {
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0; }
+  .sidebar textarea,
+  .sidebar input,
+  .sidebar select,
+  .sidebar input[type='search'] {
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #5c6b80;
+    display: inline-block;
+    float: left;
+    font-size: 1em;
+    height: 1.3rem;
+    line-height: 1rem;
+    margin-bottom: 14px;
+    padding: 0 2px !important;
+    top: .4em;
+    vertical-align: middle;
+    width: 120px; }
+  .sidebar button {
+    float: left;
+    position: relative;
+    width: 70px; }
+  .sidebar form {
+    width: 90%; }
+  .sidebar .cat-item a {
+    color: #9baac1;
+    font-weight: normal; }
+  .sidebar .current-cat > a {
+    color: white;
+    font-weight: 700; }
+  .sidebar .children {
+    padding-left: 1.5em; }
 
 label {
+  display: none;
   float: left;
-  margin-right: 0.5rem;
-  margin: 0 0.5rem 0 0;
-  display: none; }
-
-.sidebar form {
-  width: 90%; }
-
-.sidebar .cat-item a {
-  font-weight: normal;
-  color: #9baac1; }
-
-.sidebar .current-cat > a {
-  font-weight: 700;
-  color: white; }
-
-.sidebar .children {
-  padding-left: 1.5em; }
+  margin: 0 .5rem 0 0; }
 
 .no-widgets {
-  padding: 1.5em;
-  text-align: center;
   border-radius: 2px;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  text-align: center; }
 
 /********************
 FOOTER STYLES
 ********************/
 .footer {
-  clear: both;
   background-color: rgba(0, 0, 0, 0.3);
+  clear: both;
   color: #f8f9fa; }
 
 .copyright {
   text-align: center; }
 
-.qtrans_language_chooser li {
-  float: left; }
-
 .acf-map {
-  max-width: 100%;
-  width: 100%;
-  height: 220px;
-  max-height: 80%;
   border: #9fa6b4 solid 2px;
-  margin: 0 0 1rem 0; }
+  height: 220px;
+  margin: 0 0 1rem;
+  max-height: 80%;
+  max-width: 100%;
+  width: 100%; }
 
 .gm-style .gm-style-iw {
   color: #5c6b80;
@@ -1861,52 +1735,41 @@ FOOTER STYLES
   clear: both; }
 
 .ghostbox {
-  float: right;
   background: rgba(255, 255, 255, 0.15);
-  padding: 0 .5rem .25rem;
-  margin: 0 0 .25rem 1rem; }
+  float: right;
+  margin: 0 0 .25rem 1rem;
+  padding: 0 .5rem .25rem; }
 
 .archive-title {
-  padding: 1.5rem 0 .75rem 0; }
+  padding: 1.5rem 0 .75rem; }
 
 #supersized {
   margin: 0; }
 
 #imageData #caption {
-  margin-top: .5rem;
   color: #5c6b80;
   font-size: 1.4rem;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  margin-top: .5rem; }
 
 #imageData #numberDisplay {
   color: #9fa6b4;
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin-top: .5rem;
   padding-bottom: 0; }
 
 img.alignleft {
   margin-right: 1rem; }
 
-article ul {
-  list-style-type: disc;
-  list-style-position: inside; }
-
-.sidebar ul {
-  list-style-type: none; }
-
 article nav ul,
 article .nav ul {
   list-style-type: none; }
 
-article ol {
-  list-style-type: decimal;
-  list-style-position: inside; }
-
 .player .video-wrapper {
-  text-align: center;
-  width: 100%;
+  display: inline-block;
   position: relative !important;
-  display: inline-block; }
+  text-align: center;
+  width: 100%; }
 
 .aligncenter {
   text-align: center; }
@@ -1915,21 +1778,17 @@ header h1,
 header .deck {
   margin: 0; }
 
-header h1 {
-  margin: 0;
-  padding: 0; }
-
 header .deck {
   padding-top: 10px; }
 
 .featured-block {
-  text-align: left;
+  background: white 0.2;
   padding: 0;
-  background: white 0.2; }
+  text-align: left; }
 
 .gallery-caption {
-  text-align: center;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  text-align: center; }
 
 .main-content header {
   margin-top: 1rem; }
@@ -1945,8 +1804,8 @@ tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name:
-  Author:
+  Site Name: Solarity
+  Author: Ben Beekman
   
   Stylesheet: 481px and Up Stylesheet
   
@@ -1960,12 +1819,6 @@ tweeners.
   upon your base.scss styles.
   
   ******************************************************************/
-  /*
-  IMPORTANT NOTE ABOUT SASS 3.3 & UP
-  You can't use @extend within media queries
-  anymore, so just be aware that if you drop
-  them in here, they won't work.
-  */
   /* at this larger size, we can start to align images */
   .alignleft, img.alignleft {
     display: inline;
@@ -1976,34 +1829,11 @@ tweeners.
     float: right; }
 
   .aligncenter, img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
+    clear: both;
     display: block;
-    clear: both; }
+    margin-left: auto;
+    margin-right: auto; }
 
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  .nav {
-    /* .menu is clearfixed inside mixins.scss */
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .nav li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover, .nav li a:focus {
-          color: #323944;
-          background-color: rgba(255, 255, 255, 0.8);
-          text-decoration: none; }
-
-  /* end .menu */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -2011,18 +1841,18 @@ tweeners.
   .entry-content {
     /* at this larger size, we can start to align images */ }
     .entry-content .alignleft, .entry-content img.alignleft {
-      margin-right: 1.5em;
       display: inline;
-      float: left; }
+      float: left;
+      margin-right: 1.5em; }
     .entry-content .alignright, .entry-content img.alignright {
-      margin-left: 1.5em;
       display: inline;
-      float: right; }
+      float: right;
+      margin-left: 1.5em; }
     .entry-content .aligncenter, .entry-content img.aligncenter {
-      margin-right: auto;
-      margin-left: auto;
+      clear: both;
       display: block;
-      clear: both; }
+      margin-left: auto;
+      margin-right: auto; }
 
   /* end .entry-content */
   /*********************
@@ -2067,6 +1897,8 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     width: 660px; }
+    .wrap > .last-col {
+      padding-top: 20px; }
 
   /*********************
   HEADER STYLES
@@ -2082,99 +1914,83 @@ you can add resource intensive styles.
   *********************/
   .nav {
     border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav ul {
-      margin-top: 0; }
+    margin: 0;
+    /* end .menu ul li */ }
     .nav li {
       float: left;
       position: relative;
-      /*
-      plan your menus and drop-downs wisely.
-      */
       /* showing sub-menus */ }
       .nav li a {
         border-bottom: 0;
+        color: #f2f2f2;
+        display: block;
+        padding: .75em;
         text-decoration: none;
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
+        text-shadow: 0 0 1px #323944; }
         .nav li a:hover, .nav li a:focus {
           background-color: rgba(255, 255, 255, 0.75);
-          text-decoration: none; }
+          text-decoration: none;
+          text-shadow: 0 0 0 transparent; }
+      .nav li .sub-menu li, .nav li .children li {
+        line-height: 1.2; }
+        .nav li .sub-menu li a, .nav li .children li a {
+          background-color: rgba(255, 255, 255, 0.85);
+          color: #323944;
+          padding: 10px 10px 10px 30px;
+          text-shadow: 0 0 0 transparent; }
+          .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
+            background-color: #323944 0.8;
+            color: white 1; }
+        .nav li .sub-menu li .sub-menu li a,
+        .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a,
+        .nav li .children li .children li a {
+          font-size: 1rem;
+          padding-left: 10px; }
+          .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus,
+          .nav li .sub-menu li .children li a:hover,
+          .nav li .sub-menu li .children li a:focus, .nav li .children li .sub-menu li a:hover, .nav li .children li .sub-menu li a:focus,
+          .nav li .children li .children li a:hover,
+          .nav li .children li .children li a:focus {
+            background-color: #323944 0.8;
+            color: white 1; }
+      .nav li ul {
+        margin-top: 0; }
       .nav li ul.sub-menu,
       .nav li ul.children {
-        margin-top: 0;
         border: 1px solid white 0.8;
         border-top: 0;
+        margin-top: 0;
         position: absolute;
         visibility: hidden;
         z-index: 8999;
         /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
-          /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
-          */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
-            background-color: white 0.95;
-            padding: 10px 5px 10px 10px;
-            border-right: 0;
-            display: block;
-            width: 170px;
-            border: 1px solid white 0.85;
+        .nav li ul.sub-menu li a,
+        .nav li ul.children li a {
+          background-color: white 0.95;
+          border: 1px solid white 0.85;
+          border-right: 0;
+          display: block;
+          padding: 10px 5px 10px 10px;
+          text-decoration: none;
+          width: 170px; }
+          .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+          .nav li ul.children li a:hover,
+          .nav li ul.children li a:focus {
+            background-color: #323944;
+            color: white;
             text-decoration: none; }
-            .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
-            .nav li ul.children li a:hover,
-            .nav li ul.children li a:focus {
-              background-color: #323944;
-              color: white;
-              text-decoration: none; }
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
-            border-bottom: 0; }
-          .nav li ul.sub-menu li ul,
-          .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
+        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.children li:last-child a {
+          border-bottom: 0; }
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          left: 100%;
+          top: 0; }
       .nav li:hover > ul {
         top: auto;
         visibility: visible; }
 
   /* end .nav */
-  .nav {
-    border-bottom: 0;
-    margin: 0; }
-    .nav li a {
-      display: block;
-      color: #f2f2f2;
-      text-decoration: none;
-      padding: .75em;
-      text-shadow: 0 0 1px #323944; }
-      .nav li a:hover, .nav li a:focus {
-        text-shadow: 0 0 0px transparent; }
-    .nav li .sub-menu li, .nav li .children li {
-      line-height: 1.2; }
-      .nav li .sub-menu li a, .nav li .children li a {
-        background-color: rgba(255, 255, 255, 0.85);
-        padding: 10px 10px 10px 30px;
-        text-shadow: 0px 0px 0px transparent;
-        color: #323944; }
-        .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
-          color: white 1;
-          background-color: #323944 0.8; }
-      .nav li .sub-menu li .sub-menu li a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a, .nav li .children li .children li a {
-        padding-left: 10px;
-        font-size: 1rem; }
-        .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus, .nav li .sub-menu li .children li a:hover, .nav li .sub-menu li .children li a:focus, .nav li .children li .sub-menu li a:hover, .nav li .children li .sub-menu li a:focus, .nav li .children li .children li a:hover, .nav li .children li .children li a:focus {
-          color: white 1;
-          background-color: #323944 0.8; }
-
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -2185,8 +2001,8 @@ you can add resource intensive styles.
     margin-bottom: .5rem; }
 
   .widget {
-    padding: 0 10px;
-    margin: 0 0 1rem 0; }
+    margin: 0 0 1rem;
+    padding: 0 10px; }
     .widget ul li {
       margin-bottom: .25rem;
       /* deep nesting */ }
@@ -2194,17 +2010,6 @@ you can add resource intensive styles.
         margin-top: .5rem;
         padding-left: 1em; }
 
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
   /*********************
   FOOTER STYLES
   *********************/

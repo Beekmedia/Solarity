@@ -131,13 +131,37 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "rein",
+		"height": 160.0,
+		"last_filter": "reindent",
 		"selected_items":
 		[
 			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
 				"rein",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"REIN",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"htmlco",
+				"Snippet: HTML Comment"
+			],
+			[
+				"cssco",
+				"Run CSScomb"
+			],
+			[
+				"csscom",
+				"Run CSScomb"
+			],
+			[
+				"csscomb",
+				"Run CSScomb"
 			],
 			[
 				"Snippet: ht",
@@ -395,22 +419,32 @@
 		"/Users/djbeeker/github/solarity/includes",
 		"/Users/djbeeker/github/solarity/includes/partials",
 		"/Users/djbeeker/github/solarity/library",
-		"/Users/djbeeker/github/solarity/library/images"
+		"/Users/djbeeker/github/solarity/library/scss",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints",
+		"/Users/djbeeker/github/solarity/library/scss/partials",
+		"/Users/djbeeker/github/solarity/post-formats"
 	],
 	"file_history":
 	[
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_481up.scss",
+		"/Users/djbeeker/github/solarity/functions.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
 		"/Users/djbeeker/github/solarity/single.php",
-		"/Users/djbeeker/github/solarity/header.php",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
+		"/Users/djbeeker/github/solarity/library/scss/admin.scss",
+		"/Users/djbeeker/github/solarity/post-formats/format-gallery.php",
+		"/Users/djbeeker/github/solarity/editor-style.css",
+		"/Users/djbeeker/github/solarity/.editorconfig",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
-		"/Users/djbeeker/github/solarity/index.php",
+		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_481up.scss",
+		"/Users/djbeeker/github/solarity/favicon.ico",
+		"/Users/djbeeker/github/solarity/library/admin.php",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1240up.scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1030up.scss",
+		"/Users/djbeeker/github/solarity/header.php",
+		"/Users/djbeeker/github/solarity/library/scss/editor-style.scss",
+		"/Users/djbeeker/github/solarity/index.php",
 		"/Users/djbeeker/github/solarity/library/scss/modules/_meanmenu.scss",
-		"/Users/djbeeker/github/solarity/functions.php",
 		"/Users/djbeeker/Desktop/Magenta pots and both staircases-- sharpen",
-		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
 		"/Users/djbeeker/github/solarity/page-with-sidebar.php",
 		"/Users/djbeeker/github/solarity/page.php",
 		"/Users/djbeeker/github/solarity/library/js/scripts.js",
@@ -418,7 +452,6 @@
 		"/Users/djbeeker/github/solarity/includes/partials/content-index.php",
 		"/Users/djbeeker/github/solarity/sidebar.php",
 		"/Users/djbeeker/github/solarity/library/solarity.php",
-		"/Users/djbeeker/github/solarity/library/admin.php",
 		"/Users/djbeeker/github/solarity/CHANGELOG.md",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_typography.scss",
 		"/Users/djbeeker/github/solarity/library/translation/fr_FR.mo",
@@ -438,7 +471,6 @@
 		"/Users/djbeeker/github/solarity/includes/partials/content-header.php",
 		"/Users/djbeeker/github/solarity/includes/partials/content.php",
 		"/Users/djbeeker/github/solarity/library/scss/style.scss",
-		"/Users/djbeeker/github/solarity/.editorconfig",
 		"/Users/djbeeker/github/solarity/library/css/login.css",
 		"/Users/djbeeker/github/solarity/library/css/editor-style.css",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_ie_grid.scss",
@@ -447,11 +479,9 @@
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/snippets/PHP Comment in HTML.sublime-snippet",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/untitled",
 		"/Users/djbeeker/github/solarity/includes/partials/content-page.php",
-		"/Users/djbeeker/github/solarity/post-formats/format-gallery.php",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_functions.scss",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_variables.scss",
-		"/Users/djbeeker/github/solarity/library/scss/editor-style.scss",
 		"/Users/djbeeker/github/solarity/includes/partials/content-404.php",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_normalize.scss",
 		"/Users/djbeeker/github/solarity/footer.php",
@@ -523,14 +553,11 @@
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
 		"/Users/djbeeker/github/freshops/index.php",
 		"/Users/djbeeker/Dropbox/Notes/WP Ecommerce shortcodes.txt",
-		"/Users/djbeeker/github/freshops/library/scss/breakpoints/_base.scss",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/AutoBackups (OSX).sublime-settings",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/AutoBackups/AutoBackups (OSX).sublime-settings",
-		"/Users/djbeeker/github/freshops/includes/partials/content-alpha-acid-percentages.php"
+		"/Users/djbeeker/github/freshops/library/scss/breakpoints/_base.scss"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -578,6 +605,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$content_arr",
+			"more",
 			".children",
 			".children li",
 			".nav li ul.sub-menu li a,",
@@ -703,9 +732,7 @@
 			".htaccess",
 			".alignright",
 			"backg",
-			".hentry",
-			"droid",
-			"$signika"
+			".hentry"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -913,14 +940,6 @@
 		"selected_items":
 		[
 			[
-				"768",
-				"library/scss/breakpoints/_768up.scss"
-			],
-			[
-				"fun",
-				"functions.php"
-			],
-			[
 				"func",
 				"functions.php"
 			],
@@ -929,12 +948,24 @@
 				"library/scss/breakpoints/_base.scss"
 			],
 			[
-				"index",
-				"index.php"
+				"ed",
+				"editor-style.css"
 			],
 			[
 				"bas",
 				"library/scss/breakpoints/_base.scss"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"768",
+				"library/scss/breakpoints/_768up.scss"
+			],
+			[
+				"index",
+				"index.php"
 			],
 			[
 				"76",

@@ -2,14 +2,15 @@
 <div class="wrap main-content">
 <? #Breadcrumbs via Breadcrumb NavXT plugin ?>
 	<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-	    <?php if(function_exists('bcn_display'))
-	    {
+	    <?php if(function_exists('bcn_display')) {
 	        bcn_display();
 	    }?>
 	</div>
 
 	<?php if (have_posts()): ?>
 		<?php while (have_posts()): ?>
+
+			<?php $content_arr = get_extended (get_the_content() ); ?>
 
 			<?=get_template_part('includes/partials/content', 'header')?>
 			<main>
@@ -74,7 +75,9 @@
 
 					</div> <? #.locations ?>
 				<?php endif; ?>
-					<div class="gallery-description"><?=the_field('installation_details_trans');?></div>
+					<div class="gallery-description">
+						<?php before_more(); ?>
+					</div>
 
 					<?=get_sidebar('single') ?>
 				</div> <!-- /#sidebar -->

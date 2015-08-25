@@ -6,10 +6,7 @@
 	</header> <?php // end article header ?>
 
 	<section class="entry-content cf" itemprop="articleBody">
-		<?php
-			// the content (pretty self explanatory huh)
-			the_content();
-		?>
+		<?php echo $content_arr['main']; //Display the part of the content before the more tag  ?>
 	</section> <?php // end article section ?>
 
 	<footer class="article-footer">

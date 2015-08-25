@@ -28,7 +28,7 @@ Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 // disable default dashboard widgets
 function disable_default_dashboard_widgets() {
 	global $wp_meta_boxes;
-	// unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);    // Right Now Widget
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);    // Right Now Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);        // Activity Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']); // Comments Widget
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);  // Incoming Links Widget

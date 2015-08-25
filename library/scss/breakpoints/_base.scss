@@ -1,6 +1,6 @@
 /*****************************************************************
-Site Name:
-Author:
+Site Name: Solarity
+Author: Ben Beekman
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -16,136 +16,139 @@ GENERAL STYLES
 ********************/
 
 body {
-    font-family: $droidsans;
-    font-size: 100%;
-    line-height: 1.5;
-    color: $text-grey;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: RGB(43, 48, 59);
+	background-color: rgb(43, 48, 59);
+	color: $text-grey;
+	font-family: $droidsans;
+	font-size: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
 }
 
+#searchsubmit {
+	font-size: 14px;
+}
 /*******************
 WORDPRESS BODY CLASSES
 style a page via class
 *******************/
 .home .footer {
-    // color: rgb(248, 249, 250);
-    // bottom: 40px;
-    // position: absolute;
-    // text-align: center;
-    // width: 100%;
-    // background-color: black(.25);
-    // padding-bottom: .8em;
-    #inner-footer {
-        display: none;
-        visibility: hidden;
-    }
+	// color: rgb(248, 249, 250);
+	// bottom: 40px;
+	// position: absolute;
+	// text-align: center;
+	// width: 100%;
+	// background-color: black(.25);
+	// padding-bottom: .8em;
+	#inner-footer {
+		display: none;
+		visibility: hidden;
+	}
 }
 
-.rtl {}
+
 
 // for sites that are read right to left (i.e. hebrew)
-.home {}
+
 
 // home page
-.blog {}
+
 
 // blog template page
-.archive {}
+
 
 // archive page
-.date {}
+
 
 // date archive page
-.date-paged-1 {}
+
 
 // replace the number to the corresponding page number
-.search {}
+
 
 // search page
-.search-results {}
+
 
 // search result page
-.search-no-results {}
+
 
 // no results search page
-.search-paged-1 {}
+
 
 // individual paged search (i.e. body.search-paged-3)
-.error404 {}
+
 
 // 404 page
-.single {}
+
 
 // single post page
-.postid-1 {}
+
 
 // individual post page by id (i.e. body.postid-73)
-.single-paged-1 {}
+
 
 // individual paged single (i.e. body.single-paged-3)
-.attachment {}
+
 
 // attatchment page
-.attachmentid-1 {}
+
 
 // individual attatchment page (i.e. body.attachmentid-763)
-.attachment-mime-type {}
+
 
 // style mime type pages
-.author {}
+
 
 // author page
-.author-nicename {}
+
 
 // user nicename (i.e. body.author-samueladams)
-.author-paged-1 {}
+
 
 // paged author archives (i.e. body.author-paged-4) for page 4
-.category {}
+
 
 // category page
-.category-1 {}
+
 
 // individual category page (i.e. body.category-6)
-.category-paged-1 {}
+
 
 // replace the number to the corresponding page number
-.tag {}
+
 
 // tag page
-.tag-slug {}
+
 
 // individual tag page (i.e. body.tag-news)
-.tag-paged-1 {}
+
 
 // replace the number to the corresponding page number
-.page-template {}
+
 
 // custom page template page
-.page-template-page-php {}
+
 
 // individual page template (i.e. body.page-template-contact-php
-.page-paged-1 {}
+
 
 // replace the number to the corresponding page number
-.page-parent {}
+
 
 // parent page template
-.page-child {}
+
 
 // child page template
-.parent-pageid-1 {}
+
 
 // replace the number to the corresponding page number
-.logged-in {}
+
 
 // if user is logged in
-.paged {}
+
 
 // paged items like search results or archives
-.paged-1 {}
+
 
 // individual paged (i.e. body.paged-3)
 
@@ -153,8 +156,8 @@ style a page via class
 LAYOUT & GRID STYLES
 ********************/
 .wrap {
-    width: 96%;
-    margin: 0 auto;
+	margin: 0 auto;
+	width: 96%;
 }
 
 /********************
@@ -162,21 +165,20 @@ LINK STYLES
 ********************/
 a,
 a:visited {
-    color: $link-color;
-    text-decoration: none;
-    // on hover
-    &:hover,
-    &:focus {
-        color: $link-hover;
-        text-decoration: underline;
-    }
-    // on click
-    &:active {}
-    // mobile tap color
-    &:link {
-        //  this highlights links on iPhones/iPads. so it basically works like the: hover selector for mobile devices.
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
-    }
+	color: $link-color;
+	text-decoration: none;
+
+	// on hover
+	&:hover,
+	&:focus {
+		color: $link-hover;
+		text-decoration: underline;
+	}
+	// mobile tap color
+	&:link {
+		//  this highlights links on iPhones/iPads. so it basically works like the: hover selector for mobile devices.
+		-webkit-tap-highlight-color: rgba(0, 0, 0, .3);
+	}
 }
 
 /*****************************************************************
@@ -192,183 +194,142 @@ h4,
 .h4,
 h5,
 .h5 {
-    font-weight: 500;
-    text-rendering: optimizelegibility;
-    // removing text decoration from all headline links
-    a {
-        text-decoration: none;
-    }
+	font-weight: 500;
+	text-rendering: optimizelegibility;
+	// removing text decoration from all headline links
+	a {
+		text-decoration: none;
+	}
 }
 
 h1,
 .h1 {
-    font-size: 2.5em;
-    line-height: 1.333em;
-    margin: .5rem 0;
+	font-size: 2.5em;
+	line-height: 1.333em;
+	margin: .5rem 0;
 }
 
 h2,
 .h2 {
-    font-size: 1.75em;
-    line-height: 1.4em;
-    margin: 0 0 .5rem 0;
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin: 0 0 .5rem;
 }
 
 h3,
 .h3 {
-    font-size: 1.125em;
+	font-size: 1.125em;
 }
 
 h4,
 .h4 {
-    font-size: 1.1em;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1.1;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.1;
+	text-transform: uppercase;
 }
 
 h5,
 .h5 {
-    font-size: .846em;
-    line-height: 2.09em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+	font-size: .846em;
+	letter-spacing: 2px;
+	line-height: 2.09em;
+	text-transform: uppercase;
 }
 
 /********************
 HEADER STYLES
 ********************/
 .slogan {
-    color: black(0.6);
+	color: black(.6);
 }
 
 header.header {
-		background-color: black(1);
+	background-color: black(1);
 }
-
-// .front header.header {
-//     z-index: -1;
-//     transition: All 1s ease;
-//     -webkit-transition: All 1s ease;
-//     -moz-transition: All 1s ease;
-//     -o-transition: All 1s ease;
-//     background-color: black(0);
-//     &:hover,
-//     &:active {
-//         background-color: black(1);
-//     }
-// }
 
 .header {
-    background-color: transparent;
+	background-color: transparent;
+	transition: All 1s ease;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
 }
 
-header {
-    transition: All 1s ease;
-    -webkit-transition: All 1s ease;
-    -moz-transition: All 1s ease;
-    -o-transition: All 1s ease;
-}
 
-header:hover {}
 
 #logo {
-    margin: .25rem 0 0 1.5rem;
-    font-size: 2rem;
-}
+	font-size: 2rem;
+	margin: .25rem 0 0 1.5rem;
 
-#logo a {
-    color: darken($white, 10%);
-    text-shadow: 0 0 1px $black;
-    &:hover,
-    &:focus {
-        color: $white;
-        text-shadow: 0 0 0 $black;
-    }
+	a {
+		color: darken($white, 10%);
+		text-shadow: 0 0 1px $black;
+
+		&:hover,
+		&:focus {
+			color: $white;
+			text-shadow: 0 0 0 $black;
+		}
+	}
 }
 
 /********************
 NAVIGATION STYLES
 ********************/
 .logo-wrap {
-    padding: 0;
-    margin: 0 .5rem 0 0;
+	margin: 0 .5rem 0 0;
+	padding: 0;
 }
 
 nav {
-    .top-nav {
-        font-size: 1.4rem;
-        line-height: .8;
-        margin-top: 0;
-        padding-top: 0;
-        li {
-            a {
-                padding-top: 1.2rem;
-            }
-        }
-    }
+	.top-nav {
+		font-size: 1.4rem;
+		line-height: .8;
+		margin-top: 0;
+		padding-top: 0;
+
+		li {
+			a {
+				padding-top: 1.2rem;
+			}
+		}
+	}
 }
 
-.tel {display:inline;}
+.tel {
+	display: inline;
+}
 
 footer .nav {
-    ul {
-        text-align: center;
-        overflow: auto;
-        li {
-            display: inline-block;
-            float: none;
-            position: relative;
-            a {
-                color: $light-gray;
-            }
-        }
-    }
+	ul {
+		overflow: auto;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			float: none;
+			position: relative;
+
+			a {
+				color: $light-gray;
+			}
+		}
+	}
 }
 
 /********************
 POSTS & CONTENT STYLES
 ********************/
 #container article {
-    margin: 0;
-    padding: 1rem 0;
-}
-
-article h1 {
-    margin: 0px;
-    padding: 0 0 .75rem 5px;
-}
-
-article h2 {
-    padding-left: 5px;
-}
-
-#content {
-    // margin: 1rem 0 0 1rem;
+	margin: 0;
+	padding: 1rem 0;
 }
 
 .gallery-item img {
-    height: auto;
-}
-
-article {
-    p {
-        word-wrap: normal;
-        -moz-hyphens: none;
-        hyphens: none;
-    }
-    // border: 1px solid $border-color;
-    header {
-        // border-bottom: 1px solid $light-gray;
-        padding: 1.5em 0;
-    }
-    footer {
-        padding: 1.5em;
-        // border-top: 1px solid $light-gray;
-        p {
-            margin: 0;
-        }
-    }
+	height: auto;
 }
 
 // end .hentry
@@ -376,203 +337,172 @@ article {
 .single-title,
 .page-title,
 .entry-title {
-    margin: 0;
+	margin: 0;
 }
-
-.single-title {}
-
-.page-title {}
-
-.entry-title {}
-
-.archive-title {}
-
-// want to style individual post classes? Booya!
-.post-id {}
-
-// post by id (i.e. post-3)
-.post {}
-
-// general post style
-.page {}
-
-// general article on a page style
-.attachment {}
-
-// general style on an attatchment
-.sticky {}
-
-// sticky post style
-.hentry {}
-
-// hentry class
-.category-slug {}
-
-// style by category (i.e. category-videos)
-.tag-slug {}
-
-// style by tag (i.e. tag-news)
 
 // post meta
 .byline {
-    color: $meta-gray;
-    font-style: italic;
-    margin: 0;
-    time {}
+	color: $meta-gray;
+	font-style: italic;
+	margin: 0;
 }
 
 // entry content
 article {
-    p {
-        margin: 0 0 1.5em;
-    }
-    ul,
-    ol,
-    table,
-    dl {}
-    ul,
-    ol {
-        li {}
-    }
-    ul {
-        li {}
-    }
-    ol {
-        li {}
-    }
-    table {
-        width: 100%;
-        border: 1px solid black(0.3);
-        margin-bottom: 1.5em;
-        caption {
-            color: $meta-gray;
-            font-size: .75em;
-            margin: 0 0 7px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-    }
-    tr {
-        border-bottom: 1px solid black(0.4);
-        &:nth-child(even) {
-            background-color: black(0.225);
-        }
-        &:nth-child(odd) {
-            background-color: black(0.125);
-        }
-    }
-    td {
-        padding: 7px;
-        border-right: 1px solid black(0.3);
-        &:last-child {
-            border-right: 0;
-        }
-    }
-    th {
-        background-color: black(0.25);
-        border-bottom: 1px solid solid black(0.4);
-        border-right: 1px solid black(0.4);
-        &:last-child {
-            border-right: 0;
-        }
-    }
-    blockquote {
-        margin: 0 0 1.5em .75em;
-        padding: 0 0 0 .75em;
-        border-left: 3px solid $blue;
-        font-style: italic;
-        color: $meta-gray;
-        &:before {}
-    }
-    dl {}
-    dt {}
-    dd {
-        color: $gray;
-        font-size: .9em;
-        margin-left: 0;
-        margin-bottom: 1.5em;
-    }
-    img {
-        height: auto;
-        margin: 0;
-        width: 100%;
-    }
-    //
-    /* image alignment on a screen this size may be
-     a bit difficult. It's set to start aligning
-     and floating images at the next breakpoint,
-     but it's up to you. Feel free to change it up. */
-    .alignleft,
-    img.alignleft {}
-    .alignright,
-    img.alignright {}
-    .aligncenter,
-    img.aligncenter {}
-    .size-auto,
-    .size-full,
-    .size-large,
-    .size-medium,
-    .size-thumbnail {
-        max-width: 100%;
-        height: auto;
-    }
-    pre {
-        background: $black;
-        color: $light-gray;
-        font-size: .9em;
-        padding: 1.5em;
-        margin: 0 0 1.5em;
-        border-radius: 3px;
-    }
+
+	h1 {
+		margin: 0;
+		padding: 0 0 .75rem 5px;
+	}
+
+	h2 {
+		padding-left: 5px;
+	}
+
+	p {
+		-moz-hyphens: none;
+		hyphens: none;
+		margin: 0 0 1.5em;
+		word-wrap: normal;
+	}
+
+	ol {
+		list-style-position: inside;
+		list-style-type: decimal;
+	}
+
+	ul {
+		list-style-position: inside;
+		list-style-type: disc;
+	}
+
+	header {
+		padding: 1.5em 0;
+	}
+
+	footer {
+		padding: 1.5em;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	table {
+		border: 1px solid black(.3);
+		margin-bottom: 1.5em;
+		width: 100%;
+
+		caption {
+			color: $meta-gray;
+			font-size: .75em;
+			letter-spacing: 1px;
+			margin: 0 0 7px;
+			text-transform: uppercase;
+		}
+	}
+
+	tr {
+		border-bottom: 1px solid black(.4);
+
+		&:nth-child(even) {
+			background-color: black(.225);
+		}
+
+		&:nth-child(odd) {
+			background-color: black(.125);
+		}
+	}
+
+	td {
+		border-right: 1px solid black(.3);
+		padding: 7px;
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	th {
+		background-color: black(.25);
+		border-bottom: 1px solid solid black(.4);
+		border-right: 1px solid black(.4);
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	blockquote {
+		border-left: 3px solid $blue;
+		color: $meta-gray;
+		font-style: italic;
+		margin: 0 0 1.5em .75em;
+		padding: 0 0 0 .75em;
+	}
+
+	dd {
+		color: $gray;
+		font-size: .9em;
+		margin-bottom: 1.5em;
+		margin-left: 0;
+	}
+
+	img {
+		height: auto;
+		margin: 0;
+		width: 100%;
+	}
+	//
+	/* image alignment on a screen this size may be
+	a bit difficult. It's set to start aligning
+	and floating images at the next breakpoint,
+	but it's up to you. Feel free to change it up. */
+
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		height: auto;
+		max-width: 100%;
+	}
+
+	pre {
+		background: $black;
+		border-radius: 3px;
+		color: $light-gray;
+		font-size: .9em;
+		margin: 0 0 1.5em;
+		padding: 1.5em;
+	}
 }
 
 // end .entry-content
 
 .wp-caption {
-    max-width: 100%;
-    // background: #eee;
-    padding: 5px;
-    // images inside wp-caption
-    img {
-        max-width: 100%;
-        margin-bottom: 0;
-        width: 100%;
-    }
-    p.wp-caption-text {
-        font-size: .85em;
-        margin: 4px 0 7px;
-        text-align: center;
-    }
+	max-width: 100%;
+	padding: 5px;
+
+	// images inside wp-caption
+	img {
+		margin-bottom: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: .85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
 }
 
 // end .wp-caption
 
-// image gallery styles
-.gallery {
-    dl {
-        a {}
-        img {}
-    }
-    dt {}
-    dd {}
-}
-
-// end .gallery
-
-// gallery caption styles
-.gallery-caption {}
-
-.size-full {}
-
-.size-large {}
-
-.size-medium {}
-
-.size-thumbnail {}
-
 // the tag output
 .tags {
-    margin: 0;
+	margin: 0;
 }
 
 /*****************************************************************
@@ -580,536 +510,293 @@ PAGE NAVI STYLES
 *****************************************************************/
 .pagination,
 .wp-prev-next {
-    margin: 1.5em 0;
+	margin: 1.5em 0;
 }
 
 .pagination {
-    text-align: center;
-    ul {
-        display: inline-block;
-        background-color: black(0.2);
-        white-space: nowrap;
-        padding: 0;
-        clear: both;
-        border-radius: 3px;
-        overflow: auto;
-    }
-    li {
-        padding: 0;
-        margin: 0;
-        float: left;
-        display: inline;
-        overflow: hidden;
-        border-right: 1px solid $gray;
-    }
-    a,
-    span {
-        margin: 0;
-        text-decoration: none;
-        padding: 0;
-        line-height: 1em;
-        font-size: 1em;
-        font-weight: normal;
-        padding: .75em;
-        min-width: 1em;
-        display: block;
-        color: $blue;
-        &:hover,
-        &:focus {
-            background-color: $blue;
-            color: $white;
-        }
-    }
-    .current {
-        cursor: default;
-        color: $text-color;
-        &:hover,
-        &:focus {
-            background-color: $white;
-            color: $text-color;
-        }
-    }
+	text-align: center;
+
+	ul {
+		background-color: black(.2);
+		border-radius: 3px;
+		clear: both;
+		display: inline-block;
+		overflow: auto;
+		padding: 0;
+		white-space: nowrap;
+	}
+
+	li {
+		border-right: 1px solid $gray;
+		display: inline;
+		float: left;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	a,
+	span {
+		color: $blue;
+		display: block;
+		font-size: 1em;
+		font-weight: normal;
+		line-height: 1em;
+		margin: 0;
+		min-width: 1em;
+		padding: .75em;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+
+	.current {
+		color: $text-color;
+		cursor: default;
+
+		&:hover,
+		&:focus {
+			background-color: $white;
+			color: $text-color;
+		}
+	}
 }
 
 // end .solarity_
 
-page_navi
+//page_navi
+
 .wp-prev-next {
-    ul {}
-    .prev-link {
-        float: left;
-    }
-    .next-link {
-        float: right;
-    }
+	.prev-link {
+		float: left;
+	}
+
+	.next-link {
+		float: right;
+	}
 }
 
 // end .wp-prev-next
-
-/*****************************************************************
-COMMENT STYLES
-*****************************************************************/
-
-// h3 comment title
-#comments-title {
-    padding: .75em;
-    margin: 0;
-    border-top: 1px solid $light-gray;
-    // number of comments span
-    span {}
-}
-
-.comment-nav {
-    ul {
-        li {}
-    }
-}
-
-.commentlist {
-    margin: 0;
-    list-style-type: none;
-}
-
-.comment {
-    position: relative;
-    clear: both;
-    overflow: hidden;
-    padding: 1.5em;
-    border-bottom: 1px solid $light-gray;
-    .comment-author {
-        padding: 7px;
-        border: 0;
-    }
-    // vcard
-    .vcard {
-        margin-left: 50px;
-        cite.fn {
-            font-weight: 700;
-            font-style: normal;
-            a.url {}
-        }
-        time {
-            display: block;
-            font-size: .9em;
-            font-style: italic;
-            a {
-                color: $meta-gray;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        .photo {}
-        .avatar {
-            position: absolute;
-            left: 16px;
-            border-radius: 50%;
-        }
-    }
-    // end .commentlist .vcard
-    &:last-child {
-        margin-bottom: 0;
-    }
-    .children {
-        margin: 0;
-        li {}
-        // variations
-        .comment {}
-        .alt {}
-        .odd {}
-        .even {}
-        .depth-1 {}
-        // change number for different depth
-        .byuser {}
-        .bypostauthor {}
-        .comment-author-admin {}
-    }
-    // end children
-    &[class*=depth-] {
-        margin-top: 1.1em;
-    }
-    &.depth-1 {
-        margin-left: 0;
-        margin-top: 0;
-    }
-    &:not(.depth-1) {
-        margin-top: 0;
-        margin-left: 7px;
-        padding: 7px;
-    }
-    &.depth-2 {}
-    &.depth-3 {}
-    &.depth-4 {}
-    &.depth-5 {}
-    // general comment classes
-    &.alt {}
-    &.odd {
-        background-color: $white;
-    }
-    &.even {
-        background: $light-gray;
-    }
-    &.parent {}
-    &.comment {}
-    &.children {}
-    &.pingback {}
-    &.bypostauthor {}
-    &.comment-author {}
-    &.comment-author-admin {}
-    &.thread-alt {}
-    &.thread-odd {}
-    &.thread-even {}
-}
-
-.category #mainbar > header {
-    display: none;
-    visibility: hidden;
-}
-
-// comment meta
-.comment-meta {
-    a {}
-}
-
-.commentmetadata {
-    a {}
-}
-
-// comment content
-.comment_content {
-    p {
-        font-size: 1em;
-        line-height: 1.5em;
-        margin: .7335em 0 1.5em;
-    }
-}
-
-// end .commentlist .comment_content
-
-// comment reply link
-.comment-reply-link {
-    @extend .blue-btn;
-    font-size: .9em;
-    float: right;
-    &:hover,
-    &:focus {}
-}
-
-//end .commentlist .comment-reply-link
-
-//edit comment link
-.comment-edit-link {
-    font-size: .9em;
-    font-style: italic;
-    margin: 0 7px;
-    text-decoration: none;
-}
-
-/*****************************************************************
-COMMENT FORM STYLES
-*****************************************************************/
-.comment-respond {
-    @extend .cf;
-    padding: 1.5em;
-    border-top: 1px solid $light-gray;
-}
-
-#reply-title {
-    margin: 0;
-}
-
-.logged-in-as {
-    color: $meta-gray;
-    font-style: italic;
-    margin: 0;
-    a {
-        color: $text-color;
-    }
-}
-
-.comment-form-comment {
-    margin: 1.5em 0 .75em;
-}
-
-.form-allowed-tags {
-    padding: 1.5em;
-    background-color: $light-gray;
-    font-size: .9em;
-}
-
-// comment submit button
-#submit {
-    @extend .blue-btn;
-    float: right;
-    font-size: 1em;
-}
-
-// comment form title
-#comment-form-title {
-    margin: 0 0 1.1em;
-}
-
-// cancel comment reply link
-#cancel-comment-reply {
-    a {}
-}
-
-// logged in comments
-.comments-logged-in-as {}
-
-// allowed tags
-#allowed_tags {
-    margin: 1.5em 10px .7335em 0;
-}
-
-// no comments
-.nocomments {
-    margin: 0 20px 1.1em;
-}
 
 /********************
 SIDEBARS & ASIDES
 ********************/
 .sidebar {
-    padding: 0 .5rem 0 1rem;
-}
+	padding: 20px .5rem 0 1rem;
 
-.sidebar textarea,
-input,
-select,
-input[type="search"] {
-    border: 0 none;
-    border-radius: 3px;
-    box-shadow: none;
-    color: rgb(92, 107, 128);
-    display: inline-block;
-    float: left;
-    font-size: 1em;
-    height: 1.3rem;
-    line-height: 1rem;
-    margin-bottom: 14px;
-    padding: 0 2px !important;
-    top: .4em;
-    width: 120px;
-    vertical-align: middle;
-}
+	p {
+		-moz-hyphens: none;
+		hyphens: none;
+		padding-right: 1rem;
+		word-wrap: normal;
+	}
 
-.sidebar p {
-    word-wrap: normal;
-    -moz-hyphens: none;
-    hyphens: none;
-    padding-right: 1rem;
-}
+	ul {
+		list-style-type: none;
+	}
 
-.sidebar .locations h3 {
-    margin: 0;
-    padding: 0;
-    font-variant: small-caps;
-}
+	.locations {
+		ul {
+			line-height: 1.2;
+			margin: 0;
+			padding: 0;
+		}
 
-.sidebar .locations ul {
-    line-height: 1.2;
-    margin: 0;
-    padding: 0;
-}
+		h3 {
+			font-variant: small-caps;
+			margin: 0;
+			padding: 0;
+		}
+	}
 
-.sidebar button {
-    float: left;
-    width: 70px;
-    position: relative;
-}
+	textarea,
+	input,
+	select,
+	input[type='search'] {
+		border: 0 none;
+		border-radius: 3px;
+		box-shadow: none;
+		color: rgb(92, 107, 128);
+		display: inline-block;
+		float: left;
+		font-size: 1em;
+		height: 1.3rem;
+		line-height: 1rem;
+		margin-bottom: 14px;
+		padding: 0 2px !important;
+		top: .4em;
+		vertical-align: middle;
+		width: 120px;
+	}
+
+	button {
+		float: left;
+		position: relative;
+		width: 70px;
+	}
+
+	form {
+		width: 90%;
+	}
+
+	.cat-item a {
+		color: darken($gray, 25%);
+		font-weight: normal;
+	}
+
+	.current-cat > a {
+		color: $white;
+		font-weight: 700;
+	}
+
+	.children {
+		padding-left: 1.5em;
+	}
+} //end sidebar
 
 label {
-    float: left;
-    // padding-top: 0.4em;
-    margin-right: 0.5rem;
-    margin: 0 0.5rem 0 0;
-    display: none;
+	display: none;
+	float: left;
+	margin: 0 .5rem 0 0;
 }
 
-.sidebar form {
-    width: 90%;
-}
 
-.sidebar .cat-item a {
-    font-weight: normal;
-    color: darken($gray, 25%);
-}
-
-.sidebar .current-cat > a {
-    font-weight: 700;
-    color: $white;
-}
-
-.sidebar .children {
-    padding-left: 1.5em;
-}
-
-.widgettitle {}
 
 .widget {
-    ul {
-        li {
-            &:first-child {}
-            &:last-child {}
-            a {}
-            // deep nesting
-            ul {}
-        }
-    }
-}
+	ul {
+		li {
+				// deep nesting
+			}
+		}
+	}
 
 .no-widgets {
-    // background-color: $white;
-    padding: 1.5em;
-    text-align: center;
-    // border: 1px solid $border-color;
-    border-radius: 2px;
-    margin-bottom: 1.5em;
+	// border: 1px solid $border-color;
+	border-radius: 2px;
+	margin-bottom: 1.5em;
+	// background-color: $white;
+	padding: 1.5em;
+	text-align: center;
 }
 
 /********************
 FOOTER STYLES
 ********************/
 .footer {
-    clear: both;
-    background-color: black(0.3);
-    color: $light-gray;
+	background-color: black(.3);
+	clear: both;
+	color: $light-gray;
 }
 
-.footer-links {
-    ul {
-        li {}
-    }
-}
+
 
 // end .footer-links
 
 .copyright {
-    text-align: center;
-}
-
-.qtrans_language_chooser li {
-    float: left;
+	text-align: center;
 }
 
 //gallery acf additions
 //location map
 .acf-map {
-    max-width: 100%;
-    width: 100%;
-    height: 220px;
-    max-height: 80%;
-    border: $meta-gray solid 2px;
-    margin: 0 0 1rem 0;
+	border: $meta-gray solid 2px;
+	height: 220px;
+	margin: 0 0 1rem;
+	max-height: 80%;
+	max-width: 100%;
+	width: 100%;
 }
 
 .gm-style .gm-style-iw {
-    color: $text-color;
-    font-size: 13px;
-    font-weight: 300;
+	color: $text-color;
+	font-size: 13px;
+	font-weight: 300;
 }
 
 .gallery {
-    clear: both;
+	clear: both;
 }
 
 .ghostbox {
-    float: right;
-    background: white(0.15);
-    padding: 0 .5rem .25rem;
-    margin: 0 0 .25rem 1rem;
+	background: white(.15);
+	float: right;
+	margin: 0 0 .25rem 1rem;
+	padding: 0 .5rem .25rem;
 }
 
 .archive-title {
-    padding: 1.5rem 0 .75rem 0;
+	padding: 1.5rem 0 .75rem;
 }
+
+//gallery plugin styles start here
 
 #supersized {
-    margin: 0;
+	margin: 0;
 }
 
+
 #imageData #caption {
-    margin-top: .5rem;
-    color: $text-color;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+	color: $text-color;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	margin-top: .5rem;
 }
 
 #imageData #numberDisplay {
-    color: $meta-gray;
-    font-size: 1.0rem;
-    margin-top: .5rem;
-    padding-bottom: 0;
+	color: $meta-gray;
+	font-size: 1rem;
+	margin-top: .5rem;
+	padding-bottom: 0;
 }
 
 img.alignleft {
-    margin-right: 1rem;
-}
-
-article ul {
-    list-style-type: disc;
-    list-style-position: inside;
-}
-
-.sidebar ul {
-    list-style-type: none;
+	margin-right: 1rem;
 }
 
 article nav ul,
 article .nav ul {
-    list-style-type: none;
-}
-
-article ol {
-    list-style-type: decimal;
-    list-style-position: inside;
+	list-style-type: none;
 }
 
 .player .video-wrapper {
-    text-align: center;
-    width: 100%;
-    position: relative !important;
-    display: inline-block;
+	display: inline-block;
+	position: relative !important;
+	text-align: center;
+	width: 100%;
 }
 
 .aligncenter {
-    text-align: center;
+	text-align: center;
 }
 
 header h1,
 header .deck {
-    margin: 0;
-}
-
-header h1 {
-    // padding-right: 2rem;
-    // padding-left: 1rem;
-    // float: left;
-    margin: 0;
-    padding: 0;
+	margin: 0;
 }
 
 header .deck {
-    padding-top: 10px;
+	padding-top: 10px;
 }
 
 .featured-block {
-    text-align: left;
-    padding: 0;
-    background: $white 0.2;
+	background: $white .2;
+	padding: 0;
+	text-align: left;
 }
 
 .gallery-caption {
-    text-align: center;
-    padding: 0 2rem;
+	padding: 0 2rem;
+	text-align: center;
 }
 
 .main-content header {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .entry-content {
-    margin-top: 20px;
+	margin-top: 20px;
 }

@@ -247,10 +247,6 @@ add_action('wp_enqueue_scripts', 'solarity_fonts');
 
 
 /************* Enqueue Scripts and Styles *************/
-
-
-
-
 function pluralize($count, $singular, $plural = false) //pluralize a word if count value other than 1 (i.e. Installation(s))
 {
    if (!$plural) $plural = $singular . 's';
@@ -278,5 +274,43 @@ function the_post_thumbnail_caption() { //display featured image caption with th
     echo '<span>'.$thumbnail_image[0]->post_excerpt.'</span>';
   }
 }
-//
-/* DON'T DELETE THIS CLOSING TAG */ ?>
+
+function my_acf_format_value_for_api($value, $post_id, $field){
+    return str_replace( ']]>', ']]>', apply_filters( 'the_content', $value) );
+}
+
+function my_on_init(){
+    if(!is_admin()){
+        remove_all_filters('acf/format_value_for_api/type=wysiwyg');
+        add_filter('acf/format_value_for_api/type=wysiwyg', 'my_acf_format_value_for_api', 10, 3);
+    }
+}
+add_action('init', 'my_on_init');
+
+// Custom Excerpts
+
+function before_more() {
+	global $post;
+	$content = $post->post_excerpt;
+
+	// return only the content before the more tag
+	$morestring = '<!--more-->';
+	$explodemore = explode($morestring, $post->post_content);
+	$beforemore = $explodemore[0]; // Get content before the more-tag
+
+// Make sure to return the content
+	return $beforemore;
+}
+
+
+function after_more() {
+	global $post;
+	$content = $post->post_excerpt;
+
+	// return only the content after the more tag
+	$morestring = '<!--more-->';
+	$explodemore = explode($morestring, $post->post_content);
+	$aftermore = $explodemore[1];
+}
+
+//* DON'T DELETE THIS CLOSING TAG */ ?>

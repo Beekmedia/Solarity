@@ -162,8 +162,8 @@ whatever you use in here.
 
 ******************************************************************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: Solarity
+Author: Ben Beekman
 
 Stylesheet: 481px and Up Stylesheet
 
@@ -177,12 +177,6 @@ so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
 ******************************************************************/
-/*
-IMPORTANT NOTE ABOUT SASS 3.3 & UP
-You can't use @extend within media queries
-anymore, so just be aware that if you drop
-them in here, they won't work.
-*/
 /* at this larger size, we can start to align images */
 .alignleft, img.alignleft {
   display: inline;
@@ -193,34 +187,11 @@ them in here, they won't work.
   float: right; }
 
 .aligncenter, img.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
+  clear: both;
   display: block;
-  clear: both; }
+  margin-left: auto;
+  margin-right: auto; }
 
-/*********************
-NAVIGATION STYLES
-*********************/
-.nav {
-  /* .menu is clearfixed inside mixins.scss */
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav li {
-    /*
-    plan your menus and drop-downs wisely.
-    */ }
-    .nav li a {
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
-      .nav li a:hover, .nav li a:focus {
-        color: #323944;
-        background-color: white(0.8);
-        text-decoration: none; }
-
-/* end .menu */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -228,18 +199,18 @@ POSTS & CONTENT STYLES
 .entry-content {
   /* at this larger size, we can start to align images */ }
   .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
     display: inline;
-    float: left; }
+    float: left;
+    margin-right: 1.5em; }
   .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
     display: inline;
-    float: right; }
+    float: right;
+    margin-left: 1.5em; }
   .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
+    clear: both;
     display: block;
-    clear: both; }
+    margin-left: auto;
+    margin-right: auto; }
 
 /* end .entry-content */
 /*********************
@@ -277,6 +248,8 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   width: 660px; }
+  .wrap > .last-col {
+    padding-top: 20px; }
 
 /*********************
 HEADER STYLES
@@ -292,99 +265,83 @@ NAVIGATION STYLES
 *********************/
 .nav {
   border: 0;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav ul {
-    margin-top: 0; }
+  margin: 0;
+  /* end .menu ul li */ }
   .nav li {
     float: left;
     position: relative;
-    /*
-    plan your menus and drop-downs wisely.
-    */
     /* showing sub-menus */ }
     .nav li a {
       border-bottom: 0;
+      color: #f2f2f2;
+      display: block;
+      padding: .75em;
       text-decoration: none;
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
+      text-shadow: 0 0 1px #323944; }
       .nav li a:hover, .nav li a:focus {
         background-color: white(0.75);
-        text-decoration: none; }
+        text-decoration: none;
+        text-shadow: 0 0 0 transparent; }
+    .nav li .sub-menu li, .nav li .children li {
+      line-height: 1.2; }
+      .nav li .sub-menu li a, .nav li .children li a {
+        background-color: white(0.85);
+        color: #323944;
+        padding: 10px 10px 10px 30px;
+        text-shadow: 0 0 0 transparent; }
+        .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
+          background-color: #323944 0.8;
+          color: white 1; }
+      .nav li .sub-menu li .sub-menu li a,
+      .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a,
+      .nav li .children li .children li a {
+        font-size: 1rem;
+        padding-left: 10px; }
+        .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus,
+        .nav li .sub-menu li .children li a:hover,
+        .nav li .sub-menu li .children li a:focus, .nav li .children li .sub-menu li a:hover, .nav li .children li .sub-menu li a:focus,
+        .nav li .children li .children li a:hover,
+        .nav li .children li .children li a:focus {
+          background-color: #323944 0.8;
+          color: white 1; }
+    .nav li ul {
+      margin-top: 0; }
     .nav li ul.sub-menu,
     .nav li ul.children {
-      margin-top: 0;
       border: 1px solid white 0.8;
       border-top: 0;
+      margin-top: 0;
       position: absolute;
       visibility: hidden;
       z-index: 8999;
       /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-        if you need to go deeper, go nuts
-        just remember deeper menus suck
-        for usability. k, bai.
-        */ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          background-color: white 0.95;
-          padding: 10px 5px 10px 10px;
-          border-right: 0;
-          display: block;
-          width: 170px;
-          border: 1px solid white 0.85;
+      .nav li ul.sub-menu li a,
+      .nav li ul.children li a {
+        background-color: white 0.95;
+        border: 1px solid white 0.85;
+        border-right: 0;
+        display: block;
+        padding: 10px 5px 10px 10px;
+        text-decoration: none;
+        width: 170px; }
+        .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+        .nav li ul.children li a:hover,
+        .nav li ul.children li a:focus {
+          background-color: #323944;
+          color: white;
           text-decoration: none; }
-          .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
-          .nav li ul.children li a:hover,
-          .nav li ul.children li a:focus {
-            background-color: #323944;
-            color: white;
-            text-decoration: none; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-        .nav li ul.sub-menu li ul,
-        .nav li ul.children li ul {
-          top: 0;
-          left: 100%; }
+      .nav li ul.sub-menu li:last-child a,
+      .nav li ul.children li:last-child a {
+        border-bottom: 0; }
+      .nav li ul.sub-menu li ul,
+      .nav li ul.children li ul {
+        left: 100%;
+        top: 0; }
     .nav li:hover > ul {
       top: auto;
       visibility: visible; }
 
 /* end .nav */
-.nav {
-  border-bottom: 0;
-  margin: 0; }
-  .nav li a {
-    display: block;
-    color: #f2f2f2;
-    text-decoration: none;
-    padding: .75em;
-    text-shadow: 0 0 1px #323944; }
-    .nav li a:hover, .nav li a:focus {
-      text-shadow: 0 0 0px transparent; }
-  .nav li .sub-menu li, .nav li .children li {
-    line-height: 1.2; }
-    .nav li .sub-menu li a, .nav li .children li a {
-      background-color: white(0.85);
-      padding: 10px 10px 10px 30px;
-      text-shadow: 0px 0px 0px transparent;
-      color: #323944; }
-      .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus, .nav li .children li a:hover, .nav li .children li a:focus {
-        color: white 1;
-        background-color: #323944 0.8; }
-    .nav li .sub-menu li .sub-menu li a, .nav li .sub-menu li .children li a, .nav li .children li .sub-menu li a, .nav li .children li .children li a {
-      padding-left: 10px;
-      font-size: 1rem; }
-      .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus, .nav li .sub-menu li .children li a:hover, .nav li .sub-menu li .children li a:focus, .nav li .children li .sub-menu li a:hover, .nav li .children li .sub-menu li a:focus, .nav li .children li .children li a:hover, .nav li .children li .children li a:focus {
-        color: white 1;
-        background-color: #323944 0.8; }
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -395,8 +352,8 @@ SIDEBARS & ASIDES
   margin-bottom: .5rem; }
 
 .widget {
-  padding: 0 10px;
-  margin: 0 0 1rem 0; }
+  margin: 0 0 1rem;
+  padding: 0 10px; }
   .widget ul li {
     margin-bottom: .25rem;
     /* deep nesting */ }
@@ -404,17 +361,6 @@ SIDEBARS & ASIDES
       margin-top: .5rem;
       padding-left: 1em; }
 
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
 /*********************
 FOOTER STYLES
 *********************/
