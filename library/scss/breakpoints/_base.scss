@@ -14,7 +14,13 @@ and will be used across all viewports.
 /********************
 GENERAL STYLES
 ********************/
+.full-width {
+	margin-top: 5px;
+}
 
+.social-buttons {
+	margin-top: 3px;
+}
 body {
 	background-color: rgb(43, 48, 59);
 	color: $text-grey;
@@ -698,6 +704,7 @@ FOOTER STYLES
 
 .copyright {
 	text-align: center;
+	display: block;
 }
 
 //gallery acf additions
@@ -789,7 +796,7 @@ header .deck {
 }
 
 .gallery-caption {
-	padding: 0 2rem;
+	padding: 0 2rem 2rem;
 	text-align: center;
 }
 

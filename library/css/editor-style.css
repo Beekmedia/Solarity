@@ -259,6 +259,7 @@ body#tinymce.wp-editor {
   some nice typographical defaults
   more here: http://www.newnet-soft.com/blog/csstypography
   */
+  /* Text meant only for screen readers. */
   /******************************************************************
   Site Name:
   Author:
@@ -348,8 +349,8 @@ body#tinymce.wp-editor {
   probably best not to use it. I mean, were you going to anyway? */
   color: #5c6b80;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
   font-size: 100%;
+  -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   padding: 1.5em 1.5em 0;
   	/*********************
@@ -574,6 +575,31 @@ body#tinymce.wp-editor {
     -ms-font-feature-settings: "liga", "dlig";
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig"; }
+  body#tinymce.wp-editor .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden; }
+  body#tinymce.wp-editor .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
     color: #fba504;
     text-decoration: none;
@@ -646,8 +672,10 @@ body#tinymce.wp-editor {
     margin-left: 0; }
   body#tinymce.wp-editor img {
     height: auto;
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1.5em;
     max-width: 100%; }
+    body#tinymce.wp-editor img.mce-wp-more {
+      height: 1em !important; }
   body#tinymce.wp-editor .size-auto,
   body#tinymce.wp-editor .size-full,
   body#tinymce.wp-editor .size-large,
@@ -665,15 +693,18 @@ body#tinymce.wp-editor {
   @media only screen and (min-width: 481px) {
     body#tinymce.wp-editor {
       /* at this larger size, we can start to align images */ }
-      body#tinymce.wp-editor .alignleft, body#tinymce.wp-editor img.alignleft {
+      body#tinymce.wp-editor .alignleft,
+      body#tinymce.wp-editor img.alignleft {
         display: inline;
         float: left;
         margin-right: 1.5em; }
-      body#tinymce.wp-editor .alignright, body#tinymce.wp-editor img.alignright {
+      body#tinymce.wp-editor .alignright,
+      body#tinymce.wp-editor img.alignright {
         display: inline;
         float: right;
         margin-left: 1.5em; }
-      body#tinymce.wp-editor .aligncenter, body#tinymce.wp-editor img.aligncenter {
+      body#tinymce.wp-editor .aligncenter,
+      body#tinymce.wp-editor img.aligncenter {
         clear: both;
         display: block;
         margin-left: auto;

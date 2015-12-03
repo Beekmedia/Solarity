@@ -78,7 +78,7 @@ function rw_title( $title, $sep, $seplocation ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " {$sep} " . sprintf( __( 'Page %s', 'dbt' ), max( $paged, $page ) );
+		$title .= " {$sep} " . sprintf( __( 'Page %s', 'solarity' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -178,7 +178,10 @@ function solarity_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(125, 125, true);
+	set_post_thumbnail_size(150, 150, true);
+
+//default media embed size
+if ( ! isset( $content_width ) ) $content_width = 800;
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
@@ -191,6 +194,12 @@ function solarity_theme_support() {
 			)
 	);
 
+	// Add theme support for HTML5 Semantic Markup
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+
+	// Add theme support for document Title tag
+	add_theme_support( 'title-tag' );
+
 	// rss thingy
 	add_theme_support('automatic-feed-links');
 
@@ -199,15 +208,7 @@ function solarity_theme_support() {
 	// adding post format support
 	add_theme_support( 'post-formats',
 		array(
-			'aside',             // title less blurb
-			'gallery',           // gallery of images
-			'link',              // quick link to other site
-			'image',             // an image
-			'quote',             // a quick quote
-			'status',            // a Facebook like status update
-			'video',             // video
-			'audio',             // audio
-			'chat'               // chat transcript
+			'gallery'           // gallery of images
 		)
 	);
 

@@ -524,6 +524,34 @@ p {
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
 
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
 /******************************************************************
 Site Name:
 Author:
@@ -1318,6 +1346,12 @@ and will be used across all viewports.
 /********************
 GENERAL STYLES
 ********************/
+.full-width {
+  margin-top: 5px; }
+
+.social-buttons {
+  margin-top: 3px; }
+
 body {
   background-color: #2b303b;
   color: #f8f9fa;
@@ -1716,7 +1750,8 @@ FOOTER STYLES
   color: #f8f9fa; }
 
 .copyright {
-  text-align: center; }
+  text-align: center;
+  display: block; }
 
 .acf-map {
   border: #9fa6b4 solid 2px;
@@ -1787,7 +1822,7 @@ header .deck {
   text-align: left; }
 
 .gallery-caption {
-  padding: 0 2rem;
+  padding: 0 2rem 2rem;
   text-align: center; }
 
 .main-content header {
@@ -1905,6 +1940,9 @@ you can add resource intensive styles.
   *********************/
   .logo-wrap {
     float: left; }
+
+  .social-buttons {
+    float: right; }
 
   .top-nav {
     padding-top: 0; }

@@ -8,25 +8,13 @@
 ___________________________________________________________________________________________________*/
 ?>
 <?php
-if(is_front_page()):
-    if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar1')) :
-        dynamic_sidebar('sidebar1');
-    endif;
-
-elseif (is_home() || is_archive() || is_tag() || is_tax() || is_page()):
-
+if(is_home() || is_archive() || is_tag() || is_tax() || is_category() || (is_page() ) ) :
     if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar')) :
-
-        dynamic_sidebar('Blog Sidebar');
-
-    else:
-
+    	dynamic_sidebar('Blog Sidebar');
     endif;
-
-elseif (is_singular('post')):
-
-    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('single')):
-        dynamic_sidebar('single');
+elseif (is_singular('post') ) :
+    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('single') ) :
+    	dynamic_sidebar('single');
     else:
     endif;
 endif;

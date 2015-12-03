@@ -1,4 +1,5 @@
-<?php # The content loop for the index page. ?>
+<?php # The content loop for tag pages, category pages and other archives. ?>
+
 <section class="entry-content cf">
 	<div class="group linkcontainer">
 		<div class="d-3of7 t-1of3 m-all">
@@ -7,7 +8,7 @@
 				rel="bookmark"
 				title="<?php the_title_attribute(); ?>"
 			>
-				<?php the_post_thumbnail( 'medium' ); ?>
+				<?php the_post_thumbnail( 'large' ); ?>
 			</a>
 		</div>
 		<div class="d-4of7 t-2of3 m-all last-col">
@@ -22,7 +23,7 @@
 				</a>
 			</h3>
 
-			<?php the_excerpt(''); ?>
+			<?php the_excerpt(); ?>
 
 		</div>
 	</div>

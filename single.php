@@ -1,27 +1,27 @@
-<?=get_header()?>
+<?php get_header(); ?>
+<?php global $more; ?>
+
 <div class="wrap main-content">
-<? #Breadcrumbs via Breadcrumb NavXT plugin ?>
-	<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-	    <?php if(function_exists('bcn_display')) {
-	        bcn_display();
-	    }?>
+	<div class="full-width">
+		<?php	if (function_exists('synved_social_share_markup')) echo '<div class="social-buttons">' . synved_social_share_markup() . '</div>'; ?>
+		<?php #Breadcrumbs via Breadcrumb NavXT plugin ?>
+		<?php if(function_exists('bcn_display')) echo '<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">' . bcn_display() . '</div>'; ?>
 	</div>
 
 	<?php if (have_posts()): ?>
 		<?php while (have_posts()): ?>
 
-			<?php $content_arr = get_extended (get_the_content() ); ?>
 
-			<?=get_template_part('includes/partials/content', 'header')?>
+			<?php get_template_part('includes/partials/content', 'header'); ?>
 			<main>
 
 				<div id="mainbar" class="m-all t-2of3 d-2of3 first-col">
 
-					<?=the_post()?>
+					<?php the_post(); ?>
 
-					<article id="post-<?=the_ID()?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<section id="installation-map">
-							<?#map appears in main column before content when visible ?>
+							<?php #map appears in main column before content when visible ?>
 							<?php if( have_rows('locations') ): ?>
 								<div class="acf-map">
 									<?php while ( have_rows('locations') ) : the_row();
@@ -37,18 +37,17 @@
 									<?php endwhile; ?>
 
 								</div>
-
-								<?php wp_reset_query(); ?>
-
-							<?php endif; ?>
-							<?# #end map ?>
+							<?php endif; //end map ?>
 						</section>
 
 
 						<section>
+							<?php get_template_part('includes/partials/content', 'single'); ?>
 
-							<?=get_template_part('includes/partials/content', 'single')?>
-
+							<?php
+								$more=0; //display only the part before the more tag
+								the_content('');
+							?>
 						</section>
 					</article>
 				</div>
@@ -56,10 +55,11 @@
 				<div id="sidebar" class="sidebar m-all t-1of3 d-1of3 last-col" role="complementary">
 
 
-				<? # On single gallery pages, the sidebar is preceded by project details ?>
-				<?php if( have_rows('locations') ): ?>
+				<?php # On single gallery pages, the sidebar is preceded by project details ?>
+				<?php if (has_post_format('gallery') ):
+					if( have_rows('locations') ): ?>
 					<div class="locations">
-						<? //print a list of locations of the installations
+						<?php //print a list of locations of the installations
 						$rows = get_field('locations');
 						$row_count = count($rows);
 						echo '<h3>' . pluralize($row_count, 'Installation Location', 'Installation Locations');
@@ -67,27 +67,31 @@
 
 						while ( have_rows('locations') ) : the_row(); ?>
 							<ul><strong><?php echo the_sub_field('title'); ?></strong><?php
-							?>, <?php echo the_sub_field('description'); ?></ul> <?
-
+							?>, <?php echo the_sub_field('description'); ?></ul> <?php
 						endwhile;
-
-					wp_reset_query();?>
-
-					</div> <? #.locations ?>
+?>
+					</div> <?php #.locations ?>
 				<?php endif; ?>
 					<div class="gallery-description">
-						<?php before_more(); ?>
+						<?php
+							$content = get_extended(get_the_content() );
+							$content = after_more($content); //we only want the part after the more tag of the content (the rest is output above)
+							$content = apply_filters('the_content', $content); //apply the standard Wordpress content filter to the output
+							$content = str_replace(']]>', ']]>', $content); //see above
+							echo $content;
+						?>
 					</div>
+				<?php endif; ?>
 
-					<?=get_sidebar('single') ?>
+				<?php get_sidebar(); ?>
 				</div> <!-- /#sidebar -->
 			<?php endwhile; ?>
 
 		<?php else: ?>
 
-			<?=get_template_part('includes/partials/content', 'none')?>
+			<?php get_template_part('includes/partials/content', 'none'); ?>
 
 		<?php endif; ?>
 	</div>
 </main>
-<?=get_footer()?>
+<?php get_footer(); ?>

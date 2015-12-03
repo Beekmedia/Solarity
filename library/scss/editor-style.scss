@@ -27,8 +27,8 @@ body#tinymce.wp-editor {
 	@import 'partials/mixins';
 	color: $text-color;
 	font-family: $droidsans;
-	-webkit-font-smoothing: antialiased;
 	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
 	padding: 1.5em 1.5em 0;
 
@@ -95,6 +95,7 @@ body#tinymce.wp-editor {
 		border: 1px solid $gray;
 		margin-bottom: 1.5em;
 		width: 100%;
+
 		caption {
 			color: $meta-gray;
 			font-size: .75em;
@@ -106,6 +107,7 @@ body#tinymce.wp-editor {
 
 	tr {
 		border-bottom: 1px solid $gray;
+
 		&:nth-child(even) {
 			background-color: $light-gray;
 		}
@@ -114,6 +116,7 @@ body#tinymce.wp-editor {
 	td {
 		border-right: 1px solid $gray;
 		padding: 7px;
+
 		&:last-child {
 			border-right: 0;
 		}
@@ -123,6 +126,7 @@ body#tinymce.wp-editor {
 		background-color: $light-gray;
 		border-bottom: 1px solid $gray;
 		border-right: 1px solid $gray;
+
 		&:last-child {
 			border-right: 0;
 		}
@@ -135,17 +139,24 @@ body#tinymce.wp-editor {
 		margin: 0 0 1.5em .75em;
 		padding: 0 0 0 .75em;
 	}
+
 	dd {
 		color: #787878;
 		font-size: .9em;
 		margin-bottom: 1.5em;
 		margin-left: 0;
 	}
+
 	img {
 		height: auto;
-		margin: 0 0 1.5em 0;
+		margin: 0 0 1.5em;
 		max-width: 100%;
+
+		&.mce-wp-more {
+			height: 1em !important;
+		}
 	}
+
 	.size-auto,
 	.size-full,
 	.size-large,
@@ -154,6 +165,7 @@ body#tinymce.wp-editor {
 		height: auto;
 		max-width: 100%;
 	}
+
 	pre {
 		background: $black;
 		border-radius: 3px;
@@ -170,21 +182,26 @@ body#tinymce.wp-editor {
 	*********************/
 	@media only screen and (min-width: 481px) {
 			/* at this larger size, we can start to align images */
-			.alignleft, img.alignleft {
-				display: inline;
-				float: left;
-				margin-right: 1.5em;
-			}
-			.alignright, img.alignright {
-				display: inline;
-				float: right;
-				margin-left: 1.5em;
-			}
-			.aligncenter, img.aligncenter {
-				clear: both;
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
+		.alignleft,
+		img.alignleft {
+			display: inline;
+			float: left;
+			margin-right: 1.5em;
+		}
+
+		.alignright,
+		img.alignright {
+			display: inline;
+			float: right;
+			margin-left: 1.5em;
+		}
+
+		.aligncenter,
+		img.aligncenter {
+			clear: both;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
 			}
 		}
 	}

@@ -131,16 +131,16 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 160.0,
-		"last_filter": "reindent",
+		"height": 375.0,
+		"last_filter": "rein",
 		"selected_items":
 		[
 			[
-				"reindent",
+				"rein",
 				"Indentation: Reindent Lines"
 			],
 			[
-				"rein",
+				"reindent",
 				"Indentation: Reindent Lines"
 			],
 			[
@@ -426,13 +426,13 @@
 	],
 	"file_history":
 	[
-		"/Users/djbeeker/github/solarity/functions.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
 		"/Users/djbeeker/github/solarity/single.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
+		"/Users/djbeeker/github/solarity/editor-style.css",
+		"/Users/djbeeker/github/solarity/functions.php",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
 		"/Users/djbeeker/github/solarity/library/scss/admin.scss",
 		"/Users/djbeeker/github/solarity/post-formats/format-gallery.php",
-		"/Users/djbeeker/github/solarity/editor-style.css",
 		"/Users/djbeeker/github/solarity/.editorconfig",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_481up.scss",
@@ -557,7 +557,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -605,6 +605,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$before_more",
+			"image",
 			"$content_arr",
 			"more",
 			".children",
@@ -730,9 +732,7 @@
 			"#logo",
 			"																			",
 			".htaccess",
-			".alignright",
-			"backg",
-			".hentry"
+			".alignright"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,6 +939,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"edi",
+				"editor-style.css"
+			],
 			[
 				"func",
 				"functions.php"

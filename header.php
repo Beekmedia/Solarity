@@ -35,7 +35,7 @@
     <?php wp_head(); ?>
     <?php // end of wordpress head ?>
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script src="http://maps.google.com/maps/api/js" type="text/javascript"></script>
 
     <?php // drop Google Analytics Here ?>
     <?php // end analytics ?>
@@ -75,6 +75,5 @@
 ); ?>
 
               </nav>
-
         </div>
 </header>

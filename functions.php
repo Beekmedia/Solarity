@@ -81,6 +81,7 @@ add_image_size( 'portrait-large', 600, 1000, true );
 add_image_size( 'portrait-med', 300, 500, true );
 add_image_size( 'portrait-small', 150, 250, true );
 
+add_image_size( 'square-small', 150, 150, true );
 add_image_size( 'icon', 72, 72, true );
 
 add_filter( 'image_size_names_choose', 'solarity_custom_image_sizes' );
@@ -93,6 +94,7 @@ function solarity_custom_image_sizes( $sizes ) {
 				'portrait-large' => __('600px by 1000px', 'solarity'),
 				'portrait-med' => __('300px by 500px', 'solarity'),
 				'portrait-small' => __('150px by 250px', 'solarity'),
+				'square-small' => __('150px by 150px', 'solarity'),
 				'icon' => __('72px by 72px', 'solarity')
 		) );
 }
@@ -210,13 +212,13 @@ function solarity_comments( $comment, $args, $depth ) {
 			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
 				<div class="alert alert-info">
-					<p><?php _e( 'Your comment is awaiting moderation.', 'solarity' ) ?></p>
+					<p><?php _e( 'Your comment is awaiting moderation.', 'solarity' ); ?></p>
 				</div>
 			<?php endif; ?>
 			<section class="comment_content cf">
 				<?php comment_text() ?>
 			</section>
-			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
 		</article>
 	</div>
 	<?php // </li> is added by WordPress automatically ?>
@@ -256,13 +258,13 @@ function pluralize($count, $singular, $plural = false) //pluralize a word if cou
 
 
 //Make embedded Vimeo and other videos bigger (screen size permitting)
-#add_filter( 'embed_defaults', 'bigger_embed_size' );
+add_filter( 'embed_defaults', 'bigger_embed_size' );
 
-#function bigger_embed_size() {
-# return array(	 'width' => 960,
-# 		'height' => 530,
-# 	);
-#}
+function bigger_embed_size() {
+ return array(	 'width' => 960,
+ 		'height' => 530,
+ 	);
+}
 
 function the_post_thumbnail_caption() { //display featured image caption with the_post_thumbnail_caption();
   global $post;
@@ -287,23 +289,7 @@ function my_on_init(){
 }
 add_action('init', 'my_on_init');
 
-// Custom Excerpts
-
-function before_more() {
-	global $post;
-	$content = $post->post_excerpt;
-
-	// return only the content before the more tag
-	$morestring = '<!--more-->';
-	$explodemore = explode($morestring, $post->post_content);
-	$beforemore = $explodemore[0]; // Get content before the more-tag
-
-// Make sure to return the content
-	return $beforemore;
-}
-
-
-function after_more() {
+function after_more($content) {
 	global $post;
 	$content = $post->post_excerpt;
 
@@ -311,6 +297,12 @@ function after_more() {
 	$morestring = '<!--more-->';
 	$explodemore = explode($morestring, $post->post_content);
 	$aftermore = $explodemore[1];
+	// Make sure to return the content
+	$content = $aftermore;
+	return $content;
 }
+
+add_filter( 'after_more', 'wpautop' ); //apply the content filter to the after_more() output
+
 
 //* DON'T DELETE THIS CLOSING TAG */ ?>
