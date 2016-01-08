@@ -6,7 +6,6 @@
 
 	# Add special partial template names here:
 	$special = array(
-		'front',
 		'by-type',
 	);
 ?>

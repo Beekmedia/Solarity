@@ -21,7 +21,7 @@
 
 	<footer class="article-footer">
 
-		<p><?php _e( 'This is the 404.php template.', 'solarity' ); ?></p>
+		<p><?php _e( 'This is the content-404.php template.', 'solarity' ); ?></p>
 
 	</footer>
 

@@ -11,6 +11,8 @@ For more info, check out the codex:
 http://codex.wordpress.org/Editor_Style
 
 ******************************************************************/
+@import url( 'style.css' );
+body { padding: 0; background: #fff; }
 /* Wrap the entire post style inside the TinyMCE selector, as suggested
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {

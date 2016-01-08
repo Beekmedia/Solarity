@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sort",
+				"sort_chronologically()	mixed"
+			],
+			[
 				"list-s",
 				"list-style-type"
 			],
@@ -123,6 +127,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 14321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1436,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/js/libs/supersized.shutter.min.js",
+			"settings":
+			{
+				"buffer_size": 7255,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -131,7 +159,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 392.0,
 		"last_filter": "rein",
 		"selected_items":
 		[
@@ -392,7 +420,7 @@
 				"Snippet: <?php foreach (…) … <?php endforeach ?>"
 			]
 		],
-		"width": 579.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -419,39 +447,62 @@
 		"/Users/djbeeker/github/solarity/includes",
 		"/Users/djbeeker/github/solarity/includes/partials",
 		"/Users/djbeeker/github/solarity/library",
+		"/Users/djbeeker/github/solarity/library/css",
+		"/Users/djbeeker/github/solarity/library/fonts",
+		"/Users/djbeeker/github/solarity/library/images",
+		"/Users/djbeeker/github/solarity/library/img",
+		"/Users/djbeeker/github/solarity/library/js",
+		"/Users/djbeeker/github/solarity/library/js/libs",
 		"/Users/djbeeker/github/solarity/library/scss",
-		"/Users/djbeeker/github/solarity/library/scss/breakpoints",
 		"/Users/djbeeker/github/solarity/library/scss/partials",
-		"/Users/djbeeker/github/solarity/post-formats"
+		"/Users/djbeeker/github/solarity/library/theme"
 	],
 	"file_history":
 	[
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/djbeeker/github/solarity/header.php",
+		"/Users/djbeeker/github/solarity/library/js/supersized-json.js",
+		"/Users/djbeeker/github/solarity/library/theme/supersized.shutter.js",
 		"/Users/djbeeker/github/solarity/single.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
-		"/Users/djbeeker/github/solarity/editor-style.css",
+		"/Users/djbeeker/github/solarity/index.php",
 		"/Users/djbeeker/github/solarity/functions.php",
+		"/Users/djbeeker/github/solarity/library/js/libs/supersized.shutter.min.js",
+		"/Users/djbeeker/Downloads/buildinternet-supersized-d6ed282 4/slideshow/demo.html",
+		"/Users/djbeeker/github/solarity/library/css/supersized.css",
+		"/Users/djbeeker/github/solarity/page.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-page.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-front.php",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_base.scss",
+		"/Users/djbeeker/github/solarity/includes/partials/content-header.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-single.php",
+		"/Users/djbeeker/github/solarity/footer.php",
+		"/Users/djbeeker/github/solarity/library/solarity.php",
+		"/Users/djbeeker/github/solarity/includes/partials/content-index.php",
+		"/Users/djbeeker/github/solarity/library/js/libs/supersized.js",
+		"/Users/djbeeker/github/solarity/library/js/scripts.js",
+		"/Users/djbeeker/github/solarity/library/js/gmaps.js",
+		"/Users/djbeeker/github/solarity/library/admin.php",
+		"/Users/djbeeker/github/solarity/.jshintrc",
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/djbeeker/github/solarity/includes/partials/content.php",
+		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
+		"/Users/djbeeker/github/solarity/library/js/libs/supersized.min.js",
+		"/Users/djbeeker/github/solarity/analyticstracking.php",
+		"/Users/djbeeker/github/solarity/editor-style.css",
 		"/Users/djbeeker/github/solarity/library/scss/admin.scss",
 		"/Users/djbeeker/github/solarity/post-formats/format-gallery.php",
 		"/Users/djbeeker/github/solarity/.editorconfig",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_768up.scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_481up.scss",
 		"/Users/djbeeker/github/solarity/favicon.ico",
-		"/Users/djbeeker/github/solarity/library/admin.php",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1240up.scss",
 		"/Users/djbeeker/github/solarity/library/scss/breakpoints/_1030up.scss",
-		"/Users/djbeeker/github/solarity/header.php",
 		"/Users/djbeeker/github/solarity/library/scss/editor-style.scss",
-		"/Users/djbeeker/github/solarity/index.php",
 		"/Users/djbeeker/github/solarity/library/scss/modules/_meanmenu.scss",
 		"/Users/djbeeker/Desktop/Magenta pots and both staircases-- sharpen",
 		"/Users/djbeeker/github/solarity/page-with-sidebar.php",
-		"/Users/djbeeker/github/solarity/page.php",
-		"/Users/djbeeker/github/solarity/library/js/scripts.js",
 		"/Users/djbeeker/github/solarity/style.css",
-		"/Users/djbeeker/github/solarity/includes/partials/content-index.php",
 		"/Users/djbeeker/github/solarity/sidebar.php",
-		"/Users/djbeeker/github/solarity/library/solarity.php",
 		"/Users/djbeeker/github/solarity/CHANGELOG.md",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_typography.scss",
 		"/Users/djbeeker/github/solarity/library/translation/fr_FR.mo",
@@ -468,27 +519,20 @@
 		"/Users/djbeeker/github/solarity/.gitignore",
 		"/Users/djbeeker/github/solarity/comments.php",
 		"/Users/djbeeker/github/solarity/library/translation/fr_FR.po",
-		"/Users/djbeeker/github/solarity/includes/partials/content-header.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content.php",
 		"/Users/djbeeker/github/solarity/library/scss/style.scss",
 		"/Users/djbeeker/github/solarity/library/css/login.css",
 		"/Users/djbeeker/github/solarity/library/css/editor-style.css",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_ie_grid.scss",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/djbeeker/github/solarity/readme.md",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/snippets/PHP Comment in HTML.sublime-snippet",
 		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/untitled",
-		"/Users/djbeeker/github/solarity/includes/partials/content-page.php",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_functions.scss",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_variables.scss",
 		"/Users/djbeeker/github/solarity/includes/partials/content-404.php",
 		"/Users/djbeeker/github/solarity/library/scss/partials/_normalize.scss",
-		"/Users/djbeeker/github/solarity/footer.php",
 		"/Users/djbeeker/github/solarity/search.php",
 		"/Users/djbeeker/github/solarity/includes/partials/content-none.php",
 		"/Users/djbeeker/Sites/webapps/solar/wp-content/themes/solarity/header.php",
-		"/Users/djbeeker/github/solarity/includes/partials/content-front.php",
 		"/Users/djbeeker/github/solarity/includes/partials/content-home.php",
 		"/Users/djbeeker/github/solarity/library/scss/config.rb",
 		"/Users/djbeeker/Sites/webapps/bbcms/.htaccess",
@@ -542,22 +586,11 @@
 		"/Users/djbeeker/github/freshops/includes/partials/content-testimonials.php",
 		"/Users/djbeeker/github/freshops/library/scss/partials/_pending.scss",
 		"/Users/djbeeker/github/freshops/search.php",
-		"/Users/djbeeker/github/freshops/includes/cart/single_rhizome_variety.php",
-		"/Users/djbeeker/github/freshops/includes/cart/single_product_builtin.php",
-		"/Applications/XAMPP/xamppfiles/etc/httpd.conf.bak",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/one-line-hover-to-view-all-css.sublime-snippet",
-		"/Applications/XAMPP/xamppfiles/etc/httpd.conf",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/PHP.sublime-settings",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Colorsublime.sublime-settings",
-		"/Users/djbeeker/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
-		"/Users/djbeeker/github/freshops/index.php",
-		"/Users/djbeeker/Dropbox/Notes/WP Ecommerce shortcodes.txt",
-		"/Users/djbeeker/github/freshops/library/scss/breakpoints/_base.scss"
+		"/Users/djbeeker/github/freshops/includes/cart/single_rhizome_variety.php"
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -605,6 +638,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"plugins_url",
+			"play",
+			"content",
+			"slides",
+			"plugin",
+			"post_permalink",
+			"solarity_scr",
 			"$before_more",
 			"image",
 			"$content_arr",
@@ -725,14 +765,7 @@
 			"top-nav",
 			"menu",
 			"top-nav",
-			"#logo",
-			"logo",
-			"The Main Menu",
-			"image",
-			"#logo",
-			"																			",
-			".htaccess",
-			".alignright"
+			"#logo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -878,8 +911,308 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"apply_syntax_touched": true,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"editorconfig": true,
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_newline_at_eof_on_save": true,
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax_mgr_loaded": true,
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								625,
+								625
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"apply_syntax_touched": true,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"editorconfig": true,
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_newline_at_eof_on_save": true,
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax_mgr_loaded": true,
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 244.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "library/js/libs/supersized.shutter.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6661,
+								6661
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"apply_syntax_touched": true,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"editorconfig": true,
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax_mgr_loaded": true,
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1219.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -940,28 +1273,40 @@
 		"selected_items":
 		[
 			[
-				"edi",
-				"editor-style.css"
+				"fun",
+				"functions.php"
+			],
+			[
+				"header",
+				"header.php"
 			],
 			[
 				"func",
 				"functions.php"
 			],
 			[
-				"base",
-				"library/scss/breakpoints/_base.scss"
-			],
-			[
-				"ed",
-				"editor-style.css"
+				"supe",
+				"library/css/supersized.css"
 			],
 			[
 				"bas",
 				"library/scss/breakpoints/_base.scss"
 			],
 			[
-				"fun",
-				"functions.php"
+				"head",
+				"header.php"
+			],
+			[
+				"base",
+				"library/scss/breakpoints/_base.scss"
+			],
+			[
+				"edi",
+				"editor-style.css"
+			],
+			[
+				"ed",
+				"editor-style.css"
 			],
 			[
 				"768",
@@ -978,10 +1323,6 @@
 			[
 				"ba",
 				"library/scss/breakpoints/_base.scss"
-			],
-			[
-				"header",
-				"header.php"
 			],
 			[
 				"funct",
@@ -1024,10 +1365,6 @@
 				"content/themes/freshops/functions.php"
 			],
 			[
-				"head",
-				"wp-content/themes/freshops/header.php"
-			],
-			[
 				"function",
 				"wp-content/themes/freshops/functions.php"
 			]
@@ -1060,7 +1397,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 376.0,
+	"side_bar_width": 203.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

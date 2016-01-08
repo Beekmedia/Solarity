@@ -7,7 +7,7 @@
 				rel="bookmark"
 				title="<?php the_title_attribute(); ?>"
 			>
-				<?php the_post_thumbnail( 'medium' ); ?>
+				<?php the_post_thumbnail('landscape-med', array('class' => 'aligncenter')); ?>
 			</a>
 		</div>
 		<div class="d-4of7 t-2of3 m-all last-col">

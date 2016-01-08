@@ -212,13 +212,16 @@ upon your base.scss styles.
 
 .alignright, img.alignright {
   display: inline;
-  float: right; }
+  float: right;
+  padding-left: .75rem; }
 
 .aligncenter, img.aligncenter {
   clear: both;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: center;
+  float: none; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -288,7 +291,7 @@ HEADER STYLES
 .social-buttons {
   float: right; }
 
-.top-nav {
+header .top-nav {
   padding-top: 0; }
 
 /*********************

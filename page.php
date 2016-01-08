@@ -6,35 +6,38 @@ get_header();
 ?>
 
 <div class="wrap">
+	<?php //no breadcrumbs or social toolbar for pages with no sidebar
+	//breadcrumbs_and_social_buttons();
+	?>
+	<?php if (have_posts()) :
 
-<?php if (have_posts()) :
+	while (have_posts()):
 
-    while (have_posts()):
+	the_post();
+?>
 
-        the_post();
-        ?>
+<article id="post-<?php echo the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-            <article id="post-<?php echo the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<section id="content" itemprop="articleBody">
 
-                <section id="content" itemprop="articleBody">
+		<?php get_template_part('includes/partials/content', 'page'); ?>
 
-                    <?php get_template_part('includes/partials/content', 'page');?>
+	</section> <!-- /#content -->
 
-                </section> <!-- /#content -->
+</article>
+<?php
+endwhile;
 
-            </article>
+else:
 
-    <?php
+get_template_part('includes/partials/content', 'none');
 
-    endwhile;
+endif;
 
-    else:
-
-            get_template_part('includes/partials/content', 'none');
-
-    endif;
-    ?>
+?>
 
 </div>
 
-<?php echo get_footer(); ?>
+<?php echo get_footer();
+supersized_suffix();
+?>

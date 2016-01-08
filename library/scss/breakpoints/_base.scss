@@ -14,6 +14,22 @@ and will be used across all viewports.
 /********************
 GENERAL STYLES
 ********************/
+#supersized {
+	display: block;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+}
+
+.margin-top {
+	margin-top: 3rem;
+}
+
 .full-width {
 	margin-top: 5px;
 }
@@ -21,6 +37,15 @@ GENERAL STYLES
 .social-buttons {
 	margin-top: 3px;
 }
+
+.sidebar .social-buttons {
+	float: left;
+}
+
+.bne-testimonial-slider-wrapper {
+	background: black(0.8);
+}
+
 body {
 	background-color: rgb(43, 48, 59);
 	color: $text-grey;
@@ -224,7 +249,10 @@ h2,
 
 h3,
 .h3 {
+	font-weight: bold;
 	font-size: 1.125em;
+	margin-top: 1rem;
+	margin-bottom: 0;
 }
 
 h4,
@@ -247,12 +275,17 @@ h5,
 HEADER STYLES
 ********************/
 .slogan {
-	color: black(.6);
+	color: black(0.5);
+}
+
+.home header.header {
+	background-color: black(.6);
 }
 
 header.header {
 	background-color: black(1);
 }
+
 
 .header {
 	background-color: transparent;
@@ -292,7 +325,7 @@ NAVIGATION STYLES
 
 nav {
 	.top-nav {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		line-height: .8;
 		margin-top: 0;
 		padding-top: 0;
@@ -320,7 +353,10 @@ footer .nav {
 			position: relative;
 
 			a {
-				color: $light-gray;
+				color: $solar-orange;
+				&:hover, &:link, &:active, &:focus {
+					color: darken($solar-orange, 25%);
+				}
 			}
 		}
 	}
@@ -359,10 +395,12 @@ article {
 	h1 {
 		margin: 0;
 		padding: 0 0 .75rem 5px;
+		line-height: 1;
 	}
 
 	h2 {
 		padding-left: 5px;
+		line-height: 1.33;
 	}
 
 	p {
@@ -375,6 +413,9 @@ article {
 	ol {
 		list-style-position: inside;
 		list-style-type: decimal;
+		li {
+			list-style-type: decimal;
+		}
 	}
 
 	ul {
@@ -383,7 +424,7 @@ article {
 	}
 
 	header {
-		padding: 1.5em 0;
+		padding: 1.5em 0 0 0;
 	}
 
 	footer {
@@ -440,11 +481,9 @@ article {
 	}
 
 	blockquote {
-		border-left: 3px solid $blue;
-		color: $meta-gray;
+		color: $white;
 		font-style: italic;
-		margin: 0 0 1.5em .75em;
-		padding: 0 0 0 .75em;
+		font-weight: bold;
 	}
 
 	dd {
@@ -610,6 +649,7 @@ SIDEBARS & ASIDES
 			line-height: 1.2;
 			margin: 0;
 			padding: 0;
+			list-style-type: disc;
 		}
 
 		h3 {
@@ -786,7 +826,7 @@ header .deck {
 }
 
 header .deck {
-	padding-top: 10px;
+	padding-top: 0;
 }
 
 .featured-block {
@@ -806,4 +846,8 @@ header .deck {
 
 .entry-content {
 	margin-top: 20px;
+}
+
+.single-format-gallery .arve-wrapper {
+	margin: 0;
 }

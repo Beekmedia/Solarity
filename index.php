@@ -1,36 +1,59 @@
 <?php get_header(); ?>
 
-	<div id="content" class="fix wrap">
 
-        <div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
+<div id="content" class="fix wrap">
+	<?php breadcrumbs_and_social_buttons(); ?>
+
+	<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
 
 		<?php get_sidebar(); ?>
 
-        </div> <!-- /#sidebar -->
+	</div> <!-- /#sidebar -->
 
-        <div id="mainbar" class="m-all t-2of3 d-5of7 last-col">
+	<div id="mainbar" class="m-all t-2of3 d-5of7 last-col">
 
-<?php get_template_part('includes/partials/content', 'header');?>
+		<?php get_template_part('includes/partials/content', 'header'); ?>
 
-<?php if (have_posts()):
-    while (have_posts()): the_post(); ?>
+		<?php //chronological posts for climate category only (the rest are newest first)
+			$args_order='';
+			if (is_category('climate-change-sustainability')):
+				$args_order= 'ASC'; //newest at the bottom
+			else:
+				$args_order= 'DESC';
+			endif;
 
-        <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-        		<?php get_template_part('includes/partials/content', 'index'); ?>
-        </article>
+			// WP_Query arguments
+			$args = array (
+			'cat' 		=> '14',
+			'orderby'	=> 'date', //sorted by date
+			'order'		=> $args_order
+			);
+		?>
 
-    <?php endwhile; ?>
+			<?php global $wp_query;
+			// The Query
+			$the_query = new WP_Query( $args );
 
-    <?php else: ?>
+			// The Loop
+			if ( $the_query->have_posts() ):
+				while ( $the_query->have_posts() ) :
+					$the_query->the_post(); ?>
+					<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<?php get_template_part('includes/partials/content', 'index'); ?>
+					</article>
 
-    <?php get_template_part('includes/partials/content', 'none'); ?>
+				<?php endwhile; ?>
 
-    <?php
-endif;
-?>
+			<?/* Restore original Post Data */
+			wp_reset_postdata(); ?>
+			<?php else: ?>
 
-        </div> <!-- /#mainbar -->
+				<?php get_template_part('includes/partials/content', 'none'); ?>
 
-<?php get_footer(); ?>
+			<?php endif; ?>
 
-    </div>
+			</div> <!-- /#mainbar -->
+
+	<?php get_footer(); ?>
+
+</div>

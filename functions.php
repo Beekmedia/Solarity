@@ -63,7 +63,6 @@ function solarity_ahoy() {
 // let's get this party started
 add_action( 'after_setup_theme', 'solarity_ahoy' );
 
-
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
@@ -73,14 +72,16 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'landscape-large', 1200, 300, true );
-add_image_size( 'landscape-med', 600, 200, true );
-add_image_size( 'landscape-small', 300, 100, true );
+add_image_size( 'landscape-large', 1200, 856, true );
+add_image_size( 'landscape-med', 600, 428, true );
+add_image_size( 'landscape-small', 300, 214, true );
 
-add_image_size( 'portrait-large', 600, 1000, true );
-add_image_size( 'portrait-med', 300, 500, true );
-add_image_size( 'portrait-small', 150, 250, true );
+add_image_size( 'portrait-large', 856, 1200, true );
+add_image_size( 'portrait-med', 428, 600, true );
+add_image_size( 'portrait-small', 214, 300, true );
 
+add_image_size('square-lg', 500, 500, true);
+add_image_size('square-med', 300, 300, true);
 add_image_size( 'square-small', 150, 150, true );
 add_image_size( 'icon', 72, 72, true );
 
@@ -88,12 +89,14 @@ add_filter( 'image_size_names_choose', 'solarity_custom_image_sizes' );
 
 function solarity_custom_image_sizes( $sizes ) {
 		return array_merge( $sizes, array(
-				'landscape-large' => __('1200px by 300px', 'solarity'),
-				'landscape-med' => __('600px by 150px', 'solarity'),
-				'landscape-small' => __('300px by 100px', 'solarity'),
-				'portrait-large' => __('600px by 1000px', 'solarity'),
+				'landscape-large' => __('1200px by 856px', 'solarity'),
+				'landscape-med' => __('600px by 428px', 'solarity'),
+				'landscape-small' => __('300px by 214px', 'solarity'),
+				'portrait-large' => __('856px by 1200px', 'solarity'),
 				'portrait-med' => __('300px by 500px', 'solarity'),
 				'portrait-small' => __('150px by 250px', 'solarity'),
+				'square-lg' => __('500px by 500px', 'solarity'),
+				'square-med' => __('300px by 300px', 'solarity'),
 				'square-small' => __('150px by 150px', 'solarity'),
 				'icon' => __('72px by 72px', 'solarity')
 		) );
@@ -140,6 +143,7 @@ function solarity_theme_customizer($wp_customize) {
 	// Uncomment the following to change the default section titles
 	$wp_customize->get_section('colors')->title = __( 'Theme Colors', 'solarity' );
 	$wp_customize->get_section('background_image')->title = __( 'Images', 'solarity' );
+
 }
 
 add_action( 'customize_register', 'solarity_theme_customizer' );
@@ -248,7 +252,6 @@ add_action('wp_enqueue_scripts', 'solarity_fonts');
 
 
 
-/************* Enqueue Scripts and Styles *************/
 function pluralize($count, $singular, $plural = false) //pluralize a word if count value other than 1 (i.e. Installation(s))
 {
    if (!$plural) $plural = $singular . 's';
@@ -305,4 +308,103 @@ function after_more($content) {
 add_filter( 'after_more', 'wpautop' ); //apply the content filter to the after_more() output
 
 
+
+function supersized_suffix() {
+	if (is_front_page()) { ?>
+		<!--Thumbnail Navigation-->
+	<div id="prevthumb"></div>
+	<div id="nextthumb"></div>
+
+	<!--Arrow Navigation-->
+	<a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a>
+
+	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div>
+
+	<!--Time Bar-->
+	<div id="progress-back" class="load-item">
+		<div id="progress-bar"></div>
+	</div>
+
+	<!--Control Bar-->
+	<div id="controls-wrapper" class="load-item">
+		<div id="controls">
+
+			<a id="play-button"><img id="pauseplay" src="<?php echo get_stylesheet_directory_uri() . '/library/img/pause.png' ?>"/></a>
+
+			<!--Slide counter-->
+			<div id="slidecounter">
+				<span class="slidenumber"></span> / <span class="totalslides"></span>
+			</div>
+
+			<!--Slide captions displayed here-->
+			<div id="slidecaption"></div>
+
+			<!--Thumb Tray button-->
+			<a id="tray-button"><img id="tray-arrow" src="<?php echo get_stylesheet_directory_uri() . '/library/img/button-tray-up.png'; ?>"/></a>
+
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+
+		</div>
+	</div>
+	<?php  }
+}
+
+function sort_chronologically() { //sort only the sustainability section in chronological order
+	if (is_category('climate-change-sustainability')) {
+		// WP_Query arguments
+		$args = array (
+			'cat'                    => '14',
+			'order'                  => 'ASC', //newest at the bottom
+			'orderby'                => 'date' //sorted by date
+		);
+	}
+}
+
+
+function breadcrumbs_and_social_buttons() { ?>
+	<?php if (function_exists('synved_social_share_markup')) { ?><div class="alignright">
+	<?php echo synved_social_share_markup();?></div><?php } ?>
+	<?php #Breadcrumbs via Yoast SEO plugin ?>
+	<?php if ( function_exists('yoast_breadcrumb') )
+	{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+<?php }
+
+
+
+//enqueuing custom scripts and styles for the templates that use them only
+function enqueue_front_page() { //the slideshow called only on the home page
+	if( is_front_page() ) {
+		//enqueue supersized styles
+		 wp_register_style( 'supersized-css', get_stylesheet_directory_uri() . '/supersized/css/supersized.min.css', array(), '2.0.1');
+		 wp_enqueue_style('supersized-css');
+	             wp_register_style( 'supersized-shutter-css', get_stylesheet_directory_uri() . '/supersized/theme/supersized.shutter.min.css', array(), '2.0.1');
+	             wp_enqueue_style('supersized-shutter-css');
+
+
+	             //enqueue supersized scripts
+		wp_register_script('jquery-easing', get_stylesheet_directory_uri() . '/supersized/js/jquery.easing.min.js', array('jquery'));
+		wp_register_script ('supersized', get_stylesheet_directory_uri() . '/supersized/js/supersized.3.2.7.min.js', array('jquery'), 1, TRUE);
+		wp_register_script ('supersized-shutter', get_stylesheet_directory_uri() . '/supersized/theme/supersized.shutter.min.js', array('jquery'), 1, TRUE);
+		wp_register_script ('supersized-json', get_stylesheet_directory_uri() . '/supersized/supersized-json.js', array('jquery'), 1, TRUE);
+
+		wp_enqueue_script('jquery-easing');
+		wp_enqueue_script ( 'supersized' );
+		wp_enqueue_script ( 'supersized-shutter' );
+		wp_enqueue_script ( 'supersized-json' );
+	}
+}
+
+function enqueue_single_gallery() { //map-related JS called only on single gallery pages
+	if (has_post_format('gallery') ) {
+		wp_register_script ('gmaps-api', 'https://maps.googleapis.com/maps/api/js?v=3.exp', array('jquery'), 1, TRUE);
+		wp_register_script ('gmaps-bgb', get_stylesheet_directory_uri() . '/library/js/gmaps.js', array('jquery'), 1, TRUE);
+		wp_enqueue_script( 'gmaps-api' );
+		wp_enqueue_script( 'gmaps-bgb' );
+	}
+}
 //* DON'T DELETE THIS CLOSING TAG */ ?>

@@ -1346,11 +1346,31 @@ and will be used across all viewports.
 /********************
 GENERAL STYLES
 ********************/
+#supersized {
+  display: block;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999; }
+
+.margin-top {
+  margin-top: 3rem; }
+
 .full-width {
   margin-top: 5px; }
 
 .social-buttons {
   margin-top: 3px; }
+
+.sidebar .social-buttons {
+  float: left; }
+
+.bne-testimonial-slider-wrapper {
+  background: rgba(0, 0, 0, 0.8); }
 
 body {
   background-color: #2b303b;
@@ -1436,7 +1456,10 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.125em; }
+  font-weight: bold;
+  font-size: 1.125em;
+  margin-top: 1rem;
+  margin-bottom: 0; }
 
 h4,
 .h4 {
@@ -1456,7 +1479,10 @@ h5,
 HEADER STYLES
 ********************/
 .slogan {
-  color: rgba(0, 0, 0, 0.6); }
+  color: rgba(0, 0, 0, 0.5); }
+
+.home header.header {
+  background-color: rgba(0, 0, 0, 0.6); }
 
 header.header {
   background-color: black; }
@@ -1486,7 +1512,7 @@ NAVIGATION STYLES
   padding: 0; }
 
 nav .top-nav {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: .8;
   margin-top: 0;
   padding-top: 0; }
@@ -1504,7 +1530,9 @@ footer .nav ul {
     float: none;
     position: relative; }
     footer .nav ul li a {
-      color: #f8f9fa; }
+      color: #fba504; }
+      footer .nav ul li a:hover, footer .nav ul li a:link, footer .nav ul li a:active, footer .nav ul li a:focus {
+        color: #7d5302; }
 
 /********************
 POSTS & CONTENT STYLES
@@ -1533,9 +1561,11 @@ article {
   but it's up to you. Feel free to change it up. */ }
   article h1 {
     margin: 0;
-    padding: 0 0 .75rem 5px; }
+    padding: 0 0 .75rem 5px;
+    line-height: 1; }
   article h2 {
-    padding-left: 5px; }
+    padding-left: 5px;
+    line-height: 1.33; }
   article p {
     -moz-hyphens: none;
     hyphens: none;
@@ -1544,11 +1574,13 @@ article {
   article ol {
     list-style-position: inside;
     list-style-type: decimal; }
+    article ol li {
+      list-style-type: decimal; }
   article ul {
     list-style-position: inside;
     list-style-type: disc; }
   article header {
-    padding: 1.5em 0; }
+    padding: 1.5em 0 0 0; }
   article footer {
     padding: 1.5em; }
     article footer p {
@@ -1581,11 +1613,9 @@ article {
     article th:last-child {
       border-right: 0; }
   article blockquote {
-    border-left: 3px solid #2980b9;
-    color: #9fa6b4;
+    color: white;
     font-style: italic;
-    margin: 0 0 1.5em .75em;
-    padding: 0 0 0 .75em; }
+    font-weight: bold; }
   article dd {
     color: #eaedf2;
     font-size: .9em;
@@ -1692,7 +1722,8 @@ SIDEBARS & ASIDES
   .sidebar .locations ul {
     line-height: 1.2;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    list-style-type: disc; }
   .sidebar .locations h3 {
     font-variant: small-caps;
     margin: 0;
@@ -1814,7 +1845,7 @@ header .deck {
   margin: 0; }
 
 header .deck {
-  padding-top: 10px; }
+  padding-top: 0; }
 
 .featured-block {
   background: white 0.2;
@@ -1830,6 +1861,9 @@ header .deck {
 
 .entry-content {
   margin-top: 20px; }
+
+.single-format-gallery .arve-wrapper {
+  margin: 0; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -1861,13 +1895,16 @@ tweeners.
 
   .alignright, img.alignright {
     display: inline;
-    float: right; }
+    float: right;
+    padding-left: .75rem; }
 
   .aligncenter, img.aligncenter {
     clear: both;
     display: block;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    text-align: center;
+    float: none; }
 
   /*********************
   POSTS & CONTENT STYLES
@@ -1944,7 +1981,7 @@ you can add resource intensive styles.
   .social-buttons {
     float: right; }
 
-  .top-nav {
+  header .top-nav {
     padding-top: 0; }
 
   /*********************

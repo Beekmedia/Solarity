@@ -91,8 +91,8 @@ function solarity_rss_version() { return ''; }
 // remove WP version from scripts
 function solarity_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
-		$src = remove_query_arg( 'ver', $src );
-	return $src;
+	$src = remove_query_arg( 'ver', $src );
+return $src;
 }
 
 // remove injected CSS for recent comments widget
@@ -121,6 +121,7 @@ SCRIPTS & ENQUEUEING
 *********************/
 
 // loading modernizr and jquery, and reply script
+
 function solarity_scripts_and_styles() {
 
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
@@ -136,13 +137,15 @@ function solarity_scripts_and_styles() {
 		// ie-only style sheet
 		wp_register_style( 'solarity-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
+		wp_register_style( 'supersized-css', get_stylesheet_directory_uri() . '/library/css/supersized.css', array(), '', 'all' );
+
 		// comment reply script for threaded comments
 		if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
 		//adding scripts file in the footer
-		wp_register_script( 'solarity-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'solarity-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), 1, TRUE);
 
 		//meanmenu for mobile nav
 		wp_register_script ('meanmenu', get_stylesheet_directory_uri() . '/library/js/libs/jquery.meanmenu.js', array('jquery'), 1, TRUE);
@@ -162,8 +165,10 @@ function solarity_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script('meanmenu');
-		wp_enqueue_script( 'solarity-js' );
+		enqueue_front_page();
+		enqueue_single_gallery();
 
+		wp_enqueue_script( 'solarity-js' );
 	}
 }
 
@@ -178,14 +183,14 @@ function solarity_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(150, 150, true);
+	set_post_thumbnail_size(200, 300, true);
 
-//default media embed size
-if ( ! isset( $content_width ) ) $content_width = 800;
+	//default media embed size
+	if ( ! isset( $content_width ) ) $content_width = 800;
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
-			array(
+	array(
 			'default-image' => '',    // background image default
 			'default-color' => '',    // background color default (dont add the #)
 			'wp-head-callback' => '_custom_background_cb',
@@ -204,12 +209,35 @@ if ( ! isset( $content_width ) ) $content_width = 800;
 	add_theme_support('automatic-feed-links');
 
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
+	// Register Theme Features
+	function custom_header_addition()  {
+
+		// Add theme support for Custom Header
+		add_theme_support( 'custom-header',
+		array(
+		'default-image'          => '',
+		'width'                  => 960,
+		'height'                 => 150,
+		'flex-width'             => true,
+		'flex-height'            => true,
+		'uploads'                => true,
+		'random-default'         => false,
+		'header-text'            => true,
+		'default-text-color'     => '#FFFFFF',
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+		)
+		);
+	}
+
+	add_action( 'after_setup_theme', 'custom_header_addition' );
 
 	// adding post format support
 	add_theme_support( 'post-formats',
-		array(
+	array(
 			'gallery'           // gallery of images
-		)
+			)
 	);
 
 	// wp menus
@@ -217,10 +245,10 @@ if ( ! isset( $content_width ) ) $content_width = 800;
 
 	// registering wp3+ menus
 	register_nav_menus(
-		array(
+	array(
 			'main-nav' => __( 'The Main Menu', 'solarity' ),   // main nav in header
 			'footer-links' => __( 'Footer Links', 'solarity' ) // secondary nav in footer
-		)
+			)
 	);
 } /* end solarity theme support */
 
@@ -239,17 +267,17 @@ function solarity_related_posts() {
 			$tag_arr .= $tag->slug . ',';
 		}
 		$args = array(
-			'tag' => $tag_arr,
-			'numberposts' => 5, /* you can change this to show more */
-			'post__not_in' => array($post->ID)
+		'tag' => $tag_arr,
+		'numberposts' => 5, /* you can change this to show more */
+		'post__not_in' => array($post->ID)
 		);
 		$related_posts = get_posts( $args );
 		if($related_posts) {
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-			<?php endforeach; }
+			<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+		<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'solarity' ) . '</li>'; ?>
+		<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'solarity' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
@@ -265,20 +293,20 @@ function solarity_page_navi() {
 	global $wp_query;
 	$bignum = 999999999;
 	if ( $wp_query->max_num_pages <= 1 )
-		return;
-	echo '<nav class="pagination">';
-	echo paginate_links( array(
-		'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-		'format'       => '',
-		'current'      => max( 1, get_query_var('paged') ),
-		'total'        => $wp_query->max_num_pages,
-		'prev_text'    => '&larr;',
-		'next_text'    => '&rarr;',
-		'type'         => 'list',
-		'end_size'     => 3,
-		'mid_size'     => 3
-	) );
-	echo '</nav>';
+	return;
+echo '<nav class="pagination">';
+echo paginate_links( array(
+'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+'format'       => '',
+'current'      => max( 1, get_query_var('paged') ),
+'total'        => $wp_query->max_num_pages,
+'prev_text'    => '&larr;',
+'next_text'    => '&rarr;',
+'type'         => 'list',
+'end_size'     => 3,
+'mid_size'     => 3
+) );
+echo '</nav>';
 } /* end page navi */
 
 /*********************

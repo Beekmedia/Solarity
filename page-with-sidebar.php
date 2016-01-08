@@ -3,6 +3,9 @@
 <?php get_header(); ?>
 
 <div class="wrap">
+	<?php if ( ! is_page( array('type', 'location') ) ) :
+		breadcrumbs_and_social_buttons();
+	endif; ?>
 
 	<?php if (have_posts()): ?>
 
