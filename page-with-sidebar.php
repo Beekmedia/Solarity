@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <div class="wrap">
-	<?php if ( ! is_page( array('type', 'location') ) ) :
+	<?php if ( ! is_page( array('type', 'location') ) ) : //hide breadcrumbs for Type and Location pages
 		breadcrumbs_and_social_buttons();
 	endif; ?>
 

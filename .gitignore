@@ -104,3 +104,5 @@ Thumbs.db
 /wp-config.php
 /content/*/*
 !/content/*/*.php
+
+*.sublime-workspace
