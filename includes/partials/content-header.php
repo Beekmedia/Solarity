@@ -44,8 +44,4 @@
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-
-	<?php if (is_category()): ?>
-		<?php echo '<p class="category-description">' . category_description() . '</p>'; ?>
-	<?php endif; ?>
 </header>

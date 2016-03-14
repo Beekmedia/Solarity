@@ -7,6 +7,9 @@
 	<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
 
 		<?php get_sidebar(); ?>
+		<?php if (is_category()): ?>
+			<?php echo '<p class="category-description">' . category_description() . '</p>'; ?>
+		<?php endif; ?>
 
 	</div> <!-- /#sidebar -->
 
@@ -18,34 +21,44 @@
 			$args_order='';
 			if (is_category('climate-change-sustainability')):
 				$args_order= 'ASC'; //newest at the bottom
-			else:
-				$args_order= 'DESC';
-			endif;
 
-			// WP_Query arguments
-			$args = array (
-			'cat' 		=> '14',
-			'orderby'	=> 'date', //sorted by date
-			'order'		=> $args_order
-			);
-		?>
+				//for the climate change section, reverse the sort order
+				$args = array (
+					'cat' 		=> '14',
+					'orderby'	=> 'date', //sorted by date
+					'order'		=> $args_order
+				);
 
-			<?php global $wp_query;
-			// The Query
-			$the_query = new WP_Query( $args );
+				global $wp_query;
+					// The Query
+				$the_query = new WP_Query( $args );
 
-			// The Loop
-			if ( $the_query->have_posts() ):
-				while ( $the_query->have_posts() ) :
-					$the_query->the_post(); ?>
+				if ( $the_query->have_posts() ):
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post(); ?>
+
+						<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<?php get_template_part('includes/partials/content', 'index'); ?>
+						</article>
+
+					<?php endwhile; ?>
+
+				<?/* Restore original Post Data */
+				wp_reset_postdata(); ?>
+				<?php else: ?>
+
+					<?php get_template_part('includes/partials/content', 'none'); ?>
+
+				<?php endif; ?> //end $the_query
+			<?php	elseif (have_posts() ):
+				//otherwise, use the normal loop
+				 while ( have_posts() ) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						<?php get_template_part('includes/partials/content', 'index'); ?>
 					</article>
 
 				<?php endwhile; ?>
 
-			<?/* Restore original Post Data */
-			wp_reset_postdata(); ?>
 			<?php else: ?>
 
 				<?php get_template_part('includes/partials/content', 'none'); ?>

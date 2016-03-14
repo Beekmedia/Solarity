@@ -106,3 +106,5 @@ Thumbs.db
 !/content/*/*.php
 
 *.sublime-workspace
+
+*.sublime-workspace

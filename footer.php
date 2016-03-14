@@ -21,7 +21,7 @@
 			?>
 		</nav>
 
-		<div class="source-org copyright">&copy;&nbsp;<?php echo date('Y'); ?>&nbsp;Peter Erskine,&nbsp;all rights reserved. &#8226;&nbsp;<a href="contact">Email Peter Erskine</a>&nbsp;&#8226; <span class="vcard"><span class="tel">(310)663-4442</span></span>&nbsp;&#8226; English only, please</p>
+		<div class="source-org copyright">&copy;&nbsp;<?php echo date('Y'); ?>&nbsp;Peter Erskine,&nbsp;all rights reserved. &#8226;&nbsp;<a href="/contact">Email Peter Erskine</a>&nbsp;&#8226; <span class="vcard"><span class="tel">(310)663-4442</span></span>&nbsp;&#8226; English only, please</p>
 		</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>
