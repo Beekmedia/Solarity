@@ -5,11 +5,12 @@
 	<?php breadcrumbs_and_social_buttons(); ?>
 
 	<div id="sidebar" class="sidebar m-all t-1of3 d-2of7 first-col" role="complementary">
-
-		<?php get_sidebar(); ?>
 		<?php if (is_category()): ?>
 			<?php echo '<p class="category-description">' . category_description() . '</p>'; ?>
 		<?php endif; ?>
+		<div>
+			<?php get_sidebar(); ?>
+		</div>
 
 	</div> <!-- /#sidebar -->
 

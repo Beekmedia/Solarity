@@ -1,5 +1,5 @@
 <?php
-/*This code tests conditions for 3 separate widget areas:
+/*This code tests conditions for 2 separate widget areas:
 •
 'id'            => 'main_sidebar',, 'name'          => __( 'Main Sidebar', 'solarity' ),
                                             The home page and any other non-blog, non-product pages
@@ -15,6 +15,7 @@ if(is_home() || is_archive() || is_tag() || is_tax() || is_category() || (is_pag
 elseif (is_singular('post') ) :
     if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('single') ) :
     	dynamic_sidebar('single');
+
     else:
     endif;
 endif; //end single sidebar
