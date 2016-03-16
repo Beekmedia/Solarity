@@ -30,37 +30,37 @@
 		thumbnail_navigation: 0, // Thumbnail navigation
 		slides: [ // Slideshow Images
 			{
-				image: 'http://sh0000p.com/wp-content/uploads/2015/12/Natures-Rainbow-light-art-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/12/Natures-Rainbow-light-art-1200x856.jpg',
 				title: 'NATURE\'S MOST BEAUTIFUL LIGHT, Corvallis, Oregon, USA'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/12/CROMOS-train-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/12/CROMOS-train-1200x856.jpg',
 				title: 'CROMOS, Milan Central Station, Milan, Italy'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/12/healing-light-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/12/healing-light-1200x856.jpg',
 				title: 'HEALING LIGHT, Eisenhower Luci Curci Cancer Center, California, USA'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/12/ecstasy-of-santa-lucia-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/12/ecstasy-of-santa-lucia-1200x856.jpg',
 				title: 'THE ECSTASY OF SANTA LUCIA, Church of Santa Lucia de Ocon, La Rioja, Spain'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/12/sun-painting-lafayette-library-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/12/sun-painting-lafayette-library-1200x856.jpg',
 				title: 'SUN PAINTING, Lafayette Library, California, USA'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/11/Environmental-performance-art-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/11/Environmental-performance-art-1200x856.jpg',
 				title: 'SECRETS OF THE SUN: MILLENNIAL MEDITATIONS, Erskine Studio, Venice, California, USA'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/11/Library-solar-public-art-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/11/Library-solar-public-art-1200x856.jpg',
 				title: 'TRACERY RAINBOW, Fontana Library, California, USA'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/11/Light-Sculpture-installation-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/11/Light-Sculpture-installation-1200x856.jpg',
 				title: '52 WEEKS 4 SEASONS, Moreno Valley, California, USA'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/11/Church-rainbow-light-art-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/11/Church-rainbow-light-art-1200x856.jpg',
 				title: 'THE ECSTASY OF SANTA LUCIA, Church of Santa Lucia de Ocon, Spain'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/11/Prism-Light-art-Rome-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/11/Prism-Light-art-Rome-1200x856.jpg',
 				title: 'NEW LIGHT ON ROME 2000, Ancient Roman Forum, Rome, Italy'
 			}, {
-				image: 'http://sh0000p.com/wp-content/uploads/2015/12/Solar-Public-Light-Art-1200x856.jpg',
+				image: 'http://erskinesolarart.net/wp-content/uploads/2015/12/Solar-Public-Light-Art-1200x856.jpg',
 				title: 'CROMOS, Rome Termini Railway Station, Rome, Italy'
 			}
 		],

@@ -9,10 +9,8 @@
 		<?php elseif (is_home()): ?>
 			<?php # Blog page: ?>
 		<?php elseif (is_category()): ?>
-			<?//php _e('Category: ', 'solarity'); ?>
 			<?php single_cat_title();?>
 		<?php elseif (is_tag()): ?>
-			<span><?//php _e('Tag: ', 'solarity'); ?></span>
 			<?php single_tag_title(); ?>
 		<?php elseif (is_author()) : ?>
 			<?php global $post;

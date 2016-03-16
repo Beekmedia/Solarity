@@ -31,7 +31,7 @@
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 <script type="text/javascript">
-	var templateUrl = '<?= get_bloginfo("template_url"); ?>'; //used for the js root
+	var templateUrl = '<?php echo esc_url( get_template_directory_uri() ); ?>'; //used for the js root
 </script>
 <?php // wordpress head functions ?>
 
