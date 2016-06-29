@@ -137,7 +137,6 @@ function solarity_scripts_and_styles() {
 		// ie-only style sheet
 		wp_register_style( 'solarity-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
-		wp_register_style( 'supersized-css', get_stylesheet_directory_uri() . '/library/css/supersized.css', array(), '', 'all' );
 
 		// comment reply script for threaded comments
 		if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

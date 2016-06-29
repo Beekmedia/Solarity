@@ -333,7 +333,7 @@ function supersized_suffix() {
 	<div id="controls-wrapper" class="load-item">
 		<div id="controls">
 
-			<a id="play-button"><img id="pauseplay" src="<?php echo get_stylesheet_directory_uri() . '/library/img/pause.png' ?>"/></a>
+			<a id="play-button"><img id="pauseplay" src="<?php echo get_stylesheet_directory_uri() . '/supersized/img/pause.png' ?>"/></a>
 
 			<!--Slide counter-->
 			<div id="slidecounter">
@@ -344,7 +344,7 @@ function supersized_suffix() {
 			<div id="slidecaption"></div>
 
 			<!--Thumb Tray button-->
-			<a id="tray-button"><img id="tray-arrow" src="<?php echo get_stylesheet_directory_uri() . '/library/img/button-tray-up.png'; ?>"/></a>
+			<a id="tray-button"><img id="tray-arrow" src="<?php echo get_stylesheet_directory_uri() . '/supersized/img/button-tray-up.png'; ?>"/></a>
 
 			<!--Navigation-->
 			<ul id="slide-list"></ul>

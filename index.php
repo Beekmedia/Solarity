@@ -50,7 +50,7 @@
 
 					<?php get_template_part('includes/partials/content', 'none'); ?>
 
-				<?php endif; ?> //end $the_query
+				<?php endif; //end $the_query ?>
 			<?php	elseif (have_posts() ):
 				//otherwise, use the normal loop
 				 while ( have_posts() ) : the_post(); ?>
